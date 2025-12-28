@@ -2,8 +2,8 @@ name: Auto-update Swedish shelter data
 
 on:
   schedule:
-    # Run every Monday at 3 AM UTC (4 AM CET / 5 AM CEST)
-    - cron: '0 3 * * 1'
+    # Run every night at 3 AM UTC (4 AM CET / 5 AM CEST)
+    - cron: '0 3 * * *'
   
   workflow_dispatch:  # Allow manual trigger from GitHub Actions tab
 
