@@ -26,12 +26,6 @@ jobs:
         run: |
           pip install requests
       
-      - name: Download update script
-        run: |
-          # Download the generate script from main Tilfluktsrom repository
-          curl -o generate_sweden_json.py https://raw.githubusercontent.com/avimedia/Tilfluktsrom/main/scripts/generate_sweden_json.py
-          chmod +x generate_sweden_json.py
-      
       - name: Generate Swedish shelter data
         run: |
           echo "Starting data generation from MSB ArcGIS API..."
