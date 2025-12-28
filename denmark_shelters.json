@@ -1,0 +1,326 @@
+{
+  "type": "FeatureCollection",
+  "name": "Beskyttelsesrum Danmark",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.5683,
+          55.6761
+        ]
+      },
+      "properties": {
+        "romnr": 1,
+        "plasser": 150,
+        "adresse": "Rådhuspladsen 1, 1550 København",
+        "datauttaksdato": "2025-12-28"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.5819,
+          55.6867
+        ]
+      },
+      "properties": {
+        "romnr": 2,
+        "plasser": 200,
+        "adresse": "Nørrebrogade 20, 2200 København",
+        "datauttaksdato": "2025-12-28"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.5923,
+          55.6995
+        ]
+      },
+      "properties": {
+        "romnr": 3,
+        "plasser": 120,
+        "adresse": "Østerbrogade 45, 2100 København",
+        "datauttaksdato": "2025-12-28"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.5608,
+          55.6733
+        ]
+      },
+      "properties": {
+        "romnr": 4,
+        "plasser": 180,
+        "adresse": "Vesterbrogade 10, 1620 København",
+        "datauttaksdato": "2025-12-28"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.5594,
+          55.7041
+        ]
+      },
+      "properties": {
+        "romnr": 5,
+        "plasser": 90,
+        "adresse": "Jagtvej 69, 2200 København",
+        "datauttaksdato": "2025-12-28"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.2039,
+          56.1629
+        ]
+      },
+      "properties": {
+        "romnr": 6,
+        "plasser": 180,
+        "adresse": "Aarhus Rådhus, 8000 Aarhus",
+        "datauttaksdato": "2025-12-28"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.2107,
+          56.1572
+        ]
+      },
+      "properties": {
+        "romnr": 7,
+        "plasser": 130,
+        "adresse": "Mejlgade 35, 8000 Aarhus",
+        "datauttaksdato": "2025-12-28"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.2063,
+          56.1496
+        ]
+      },
+      "properties": {
+        "romnr": 8,
+        "plasser": 110,
+        "adresse": "Søndergade 12, 8000 Aarhus",
+        "datauttaksdato": "2025-12-28"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.3833,
+          55.4038
+        ]
+      },
+      "properties": {
+        "romnr": 9,
+        "plasser": 90,
+        "adresse": "Rådhustorvet 5, 5000 Odense",
+        "datauttaksdato": "2025-12-28"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.3885,
+          55.3959
+        ]
+      },
+      "properties": {
+        "romnr": 10,
+        "plasser": 85,
+        "adresse": "Vestergade 25, 5000 Odense",
+        "datauttaksdato": "2025-12-28"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.9216,
+          57.0488
+        ]
+      },
+      "properties": {
+        "romnr": 11,
+        "plasser": 100,
+        "adresse": "Nytorv 1, 9000 Aalborg",
+        "datauttaksdato": "2025-12-28"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.9185,
+          57.0464
+        ]
+      },
+      "properties": {
+        "romnr": 12,
+        "plasser": 75,
+        "adresse": "Boulevarden 13, 9000 Aalborg",
+        "datauttaksdato": "2025-12-28"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.4591,
+          55.4764
+        ]
+      },
+      "properties": {
+        "romnr": 13,
+        "plasser": 95,
+        "adresse": "Torvegade 74, 6700 Esbjerg",
+        "datauttaksdato": "2025-12-28"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.0365,
+          56.4607
+        ]
+      },
+      "properties": {
+        "romnr": 14,
+        "plasser": 70,
+        "adresse": "Erik Menveds Plads 1, 8900 Randers",
+        "datauttaksdato": "2025-12-28"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.472,
+          55.4904
+        ]
+      },
+      "properties": {
+        "romnr": 15,
+        "plasser": 80,
+        "adresse": "Akseltorv 8, 6000 Kolding",
+        "datauttaksdato": "2025-12-28"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.8501,
+          55.8607
+        ]
+      },
+      "properties": {
+        "romnr": 16,
+        "plasser": 65,
+        "adresse": "Rådhustorvet 4, 8700 Horsens",
+        "datauttaksdato": "2025-12-28"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.5357,
+          55.709
+        ]
+      },
+      "properties": {
+        "romnr": 17,
+        "plasser": 75,
+        "adresse": "Willy Sørensens Plads 1, 7100 Vejle",
+        "datauttaksdato": "2025-12-28"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.0803,
+          55.6415
+        ]
+      },
+      "properties": {
+        "romnr": 18,
+        "plasser": 85,
+        "adresse": "Stændertorvet 1, 4000 Roskilde",
+        "datauttaksdato": "2025-12-28"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.9736,
+          56.1364
+        ]
+      },
+      "properties": {
+        "romnr": 19,
+        "plasser": 70,
+        "adresse": "Torvet 1, 7400 Herning",
+        "datauttaksdato": "2025-12-28"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.5487,
+          56.1697
+        ]
+      },
+      "properties": {
+        "romnr": 20,
+        "plasser": 60,
+        "adresse": "Søvej 1, 8600 Silkeborg",
+        "datauttaksdato": "2025-12-28"
+      }
+    }
+  ]
+}
