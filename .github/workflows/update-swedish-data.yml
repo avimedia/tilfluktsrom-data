@@ -1,0 +1,78 @@
+name: Auto-update Swedish shelter data
+
+on:
+  schedule:
+    # Run every Monday at 3 AM UTC (4 AM CET / 5 AM CEST)
+    - cron: '0 3 * * 1'
+  
+  workflow_dispatch:  # Allow manual trigger from GitHub Actions tab
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Install Python dependencies
+        run: |
+          pip install requests
+      
+      - name: Download update script
+        run: |
+          # Download the generate script from main Tilfluktsrom repository
+          curl -o generate_sweden_json.py https://raw.githubusercontent.com/avimedia/Tilfluktsrom/main/scripts/generate_sweden_json.py
+          chmod +x generate_sweden_json.py
+      
+      - name: Generate Swedish shelter data
+        run: |
+          echo "Starting data generation from MSB ArcGIS API..."
+          python3 generate_sweden_json.py
+          echo "Data generation completed"
+      
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if git diff --quiet sweden_shelters.json; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No changes detected in shelter data"
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "Changes detected in shelter data"
+          fi
+      
+      - name: Get file stats
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          echo "New file size:"
+          ls -lh sweden_shelters.json
+          echo ""
+          echo "Number of shelters:"
+          grep -c '"type": "Feature"' sweden_shelters.json || echo "0"
+      
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "GitHub Actions Bot"
+          git add sweden_shelters.json
+          git commit -m "Auto-update Swedish shelter data - $(date +%Y-%m-%d)"
+          git push
+      
+      - name: No changes message
+        if: steps.check_changes.outputs.changed == 'false'
+        run: |
+          echo "✅ No changes detected. Data is already up to date."
+      
+      - name: Success message
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          echo "✅ Successfully updated Swedish shelter data and pushed to GitHub Pages"
