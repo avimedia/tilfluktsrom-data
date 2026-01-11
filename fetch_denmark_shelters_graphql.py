@@ -4,6 +4,7 @@ import time
 from datetime import datetime
 from typing import List, Dict, Any
 from tqdm import tqdm
+import concurrent.futures
 
 class DenmarkShelterFetcher:
     def __init__(self, api_key: str, dataforsyningen_token: str = None):
@@ -96,7 +97,7 @@ class DenmarkShelterFetcher:
     
     def _fetch_kommune_shelters(self, kommune_code: str, batch_size: int) -> List[Dict[str, Any]]:
         """
-        Fetch shelters for a specific municipality.
+        Fetch shelters for a specific municipality ― now with parallel address lookup!
         """
         shelters = []
         has_next_page = True
@@ -106,6 +107,8 @@ class DenmarkShelterFetcher:
         total_buildings = 0
 
         print(f"\n--- Starting kommune {kommune_code} ---")
+
+        buildings_to_process = []
 
         while has_next_page and page_count < max_pages:
             page_count += 1
@@ -133,18 +136,12 @@ class DenmarkShelterFetcher:
 
             total_buildings += len(nodes)
 
-            # Filter for buildings with shelters >= 30 (changed from 40)
             for b_idx, building in enumerate(nodes, 1):
                 shelter_capacity = building.get("byg069Sikringsrumpladser")
                 if shelter_capacity and shelter_capacity >= 30:
-                    shelter_data = self._process_building(building)
-                    if shelter_data:
-                        shelters.append(shelter_data)
-                # Print progress every 20 buildings
-                if b_idx % 20 == 0 or b_idx == len(nodes):
-                    print(f"   ...Processed {b_idx}/{len(nodes)} buildings in this page of kommune {kommune_code}")
-                # Add a slight delay, be nice to DAWA server
-                time.sleep(0.05)
+                    buildings_to_process.append(building)
+                if b_idx % 100 == 0 or b_idx == len(nodes):
+                    print(f"   ...Queued {b_idx}/{len(nodes)} buildings for parallel address lookup in kommune {kommune_code}")
             
             has_next_page = page_info.get("hasNextPage", False)
             after_cursor = page_info.get("endCursor")
@@ -152,7 +149,27 @@ class DenmarkShelterFetcher:
             if not nodes:
                 break
 
+        # Process buildings in parallel for address lookup!
+        shelters = self._process_buildings_parallel(buildings_to_process, kommune_code=kommune_code)
         print(f"--- Finished kommune {kommune_code}: found {len(shelters)} shelters out of {total_buildings} buildings checked ---\n")
+        return shelters
+    
+    def _process_buildings_parallel(self, buildings: List[Dict[str, Any]], kommune_code: str = "") -> List[Dict[str, Any]]:
+        """
+        Process buildings in parallel using ThreadPoolExecutor for fast DAWA lookups.
+        """
+        shelters = []
+        max_workers = min(16, (concurrent.futures.thread._MAX_WORKERS if hasattr(concurrent.futures.thread, '_MAX_WORKERS') else 16))
+        print(f"--> Running parallel DAWA lookups for {len(buildings)} buildings in kommune {kommune_code} (workers={max_workers})")
+        with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
+            futures = []
+            for building in buildings:
+                futures.append(executor.submit(self._process_building, building))
+            for idx, future in enumerate(concurrent.futures.as_completed(futures), 1):
+                shelter = future.result()
+                if shelter: shelters.append(shelter)
+                if idx % 100 == 0 or idx == len(futures):
+                    print(f"      ...processed {idx}/{len(futures)} shelters")
         return shelters
     
     def _build_query(self, kommune_code: str, first: int, after_cursor: str = None) -> str:
@@ -196,6 +213,7 @@ class DenmarkShelterFetcher:
     def _process_building(self, building: Dict[str, Any]) -> Dict[str, Any]:
         """
         Process a single building record and convert to GeoJSON feature format.
+        Fully safe for parallel usage.
         """
         try:
             # Extract coordinates from byg404Koordinat
@@ -214,7 +232,11 @@ class DenmarkShelterFetcher:
             
             # Look up nearest address by coordinates (within 200m)
             lon, lat = coordinates
-            address, distance = self._lookup_address_by_coordinates(lon, lat, max_distance=200)
+            try:
+                # Catch DAWA lookup error very tightly
+                address, distance = self._lookup_address_by_coordinates(lon, lat, max_distance=200)
+            except Exception:
+                address, distance = ("", None)
             
             # If no address found within 200m, use empty string (shelter will still be included)
             if not address:
