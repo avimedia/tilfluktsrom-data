@@ -621,9 +621,18 @@ class DenmarkShelterFetcher:
 
 
 def main():
-    # API keys
-    BBR_API_KEY = "n31WJRdIAq7lmpRalX5svlz1rzSQeXuPZoXnnv8r41O4OtzdxfcSETQJ8bU7ppYF9lclkQzFGxfxT8mIPda82GMgy6YVMdGaZ"
-    DATAFORSYNINGEN_TOKEN = "71b18ff9d7fa03229a141a394acef6cb"
+    # REMOVE: Old hardcoded API keys
+    # ADD: Read API keys from environment variables
+    BBR_API_KEY = os.environ.get("BBR_API_KEY")
+    DATAFORSYNINGEN_TOKEN = os.environ.get("DATAFORSYNINGEN_TOKEN")
+    
+    if not BBR_API_KEY:
+        print("❌ ERROR: BBR_API_KEY environment variable not set!")
+        print("Please set it with: export BBR_API_KEY='your-key-here'")
+        exit(1)
+    
+    if not DATAFORSYNINGEN_TOKEN:
+        print("⚠ WARNING: DATAFORSYNINGEN_TOKEN not set - address lookups may be limited")
     
     print("="*60)
     print("Danish Shelter Data Fetcher (BBR GraphQL)")
