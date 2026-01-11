@@ -1,0 +1,71 @@
+name: Auto-update Norwegian shelter data
+
+on:
+  schedule:
+    # Run every Monday at 2:00 AM UTC (3:00 AM CET / 4:00 AM CEST)
+    - cron: '0 2 * * 1'
+  workflow_dispatch:  # Allow manual trigger from GitHub Actions tab
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: |
+          pip install requests
+
+      - name: Generate Norwegian shelter data
+        run: |
+          echo "Starting data generation from GeoNorge..."
+          python3 fetch_norway_shelters.py
+          echo "Data generation completed"
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if git diff --quiet docs/norway_shelters.json; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No changes detected in shelter data"
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "Changes detected in shelter data"
+          fi
+
+      - name: Get file stats
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          echo "New file size:"
+          ls -lh docs/norway_shelters.json
+          echo ""
+          echo "Number of shelters:"
+          grep -c '"type": "Feature"' docs/norway_shelters.json || echo "0"
+
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "GitHub Actions Bot"
+          git add docs/norway_shelters.json
+          git commit -m "Auto-update Norwegian shelter data - $(date +%Y-%m-%d)"
+          git push
+
+      - name: No changes message
+        if: steps.check_changes.outputs.changed == 'false'
+        run: |
+          echo "✅ No changes detected. Data is already up to date."
+
+      - name: Success message
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          echo "✅ Successfully updated Norwegian shelter data and pushed to GitHub Pages"
