@@ -201,7 +201,7 @@ class DenmarkShelterFetcher:
     
     def _process_buildings_parallel(self, buildings: List[Dict[str, Any]], kommune_code: str = "") -> List[Dict[str, Any]]:
         shelters = []
-        max_workers = min(16, (os.cpu_count() or 8))  # Safe default for all environments
+        max_workers = min(16, (os.cpu_count() or 8))  # UNIVERSAL: never use concurrent.futures.thread
         print(f"--> Running parallel DAWA lookups for {len(buildings)} buildings in kommune {kommune_code} (workers={max_workers})")
         with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
             futures = []
