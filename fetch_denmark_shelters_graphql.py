@@ -201,7 +201,7 @@ class DenmarkShelterFetcher:
     
     def _process_buildings_parallel(self, buildings: List[Dict[str, Any]], kommune_code: str = "") -> List[Dict[str, Any]]:
         shelters = []
-        max_workers = min(16, (concurrent.futures.thread._MAX_WORKERS if hasattr(concurrent.futures.thread, '_MAX_WORKERS') else 16))
+        max_workers = min(16, (os.cpu_count() or 8))  # Safe default for all environments
         print(f"--> Running parallel DAWA lookups for {len(buildings)} buildings in kommune {kommune_code} (workers={max_workers})")
         with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
             futures = []
@@ -209,11 +209,12 @@ class DenmarkShelterFetcher:
                 futures.append(executor.submit(self._process_building, building))
             for idx, future in enumerate(concurrent.futures.as_completed(futures), 1):
                 try:
-                    shelter = future.result(timeout=30)  # each individual shelter must finish or error in 30s
+                    shelter = future.result(timeout=30)  # Ensure each shelter lookup fails fast if DAWA/network stalls
                 except Exception as e:
                     print(f"     [Parallel error] DAWA lookup error: {str(e)}")
                     shelter = None
-                if shelter: shelters.append(shelter)
+                if shelter:
+                    shelters.append(shelter)
                 if idx % 100 == 0 or idx == len(futures):
                     print(f"      ...processed {idx}/{len(futures)} shelters")
         return shelters
