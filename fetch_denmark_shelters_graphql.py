@@ -6,6 +6,7 @@ from typing import List, Dict, Any
 from tqdm import tqdm
 import concurrent.futures
 import os
+import threading
 
 def load_partial_shelters(path="partial_denmark_shelters.json"):
     if os.path.exists(path):
@@ -21,6 +22,14 @@ def save_partial_shelters(shelters, processed_kommuner, path="partial_denmark_sh
             "shelters": shelters,
             "processed_kommuner": list(processed_kommuner)
         }, f, ensure_ascii=False, indent=2)
+
+def start_heartbeat(interval=100):
+    def beat():
+        while True:
+            print("⏳ Still working, please be patient...")
+            time.sleep(interval)
+    t = threading.Thread(target=beat, daemon=True)
+    t.start()
 
 class DenmarkShelterFetcher:
     def __init__(self, api_key: str, dataforsyningen_token: str = None):
@@ -71,6 +80,8 @@ class DenmarkShelterFetcher:
         self.address_success_count = 0
     
     def fetch_shelters(self, batch_size: int = 500, max_retries: int = 3) -> List[Dict[str, Any]]:
+        start_heartbeat(300) # Heartbeat every 5 minutes
+
         all_shelters, processed_kommuner = load_partial_shelters()
         start_time = time.time()
         
@@ -87,29 +98,37 @@ class DenmarkShelterFetcher:
                 success = False
                 retry_count = 0
                 kommune_shelters = []
+
+                # Max time per municipality in seconds (force skip if really stuck)
+                kommune_force_timeout = 5 * 60
+
+                def process_kommune():
+                    return self._fetch_kommune_shelters(kommune_code, batch_size)
                 
-                while retry_count < max_retries and not success:
-                    try:
-                        kommune_shelters = self._fetch_kommune_shelters(kommune_code, batch_size)
+                try:
+                    with concurrent.futures.ThreadPoolExecutor(max_workers=1) as execpool:
+                        future = execpool.submit(process_kommune)
+                        kommune_shelters = future.result(timeout=kommune_force_timeout)
                         all_shelters.extend(kommune_shelters)
                         success = True
-                    except requests.exceptions.Timeout:
-                        retry_count += 1
-                        print(f"\ntimeout, retrying {kommune_name} ({retry_count}/{max_retries})...", end=" ", flush=True)
-                        time.sleep(2)
-                    except Exception as e:
-                        print(f"\n✗ error with {kommune_name}: {str(e)[:50]}")
-                        retry_count += 1
-                        time.sleep(2)
-                
-                processed_kommuner.add(kommune_code)
-                # Save partial after each completed kommune to file
-                save_partial_shelters(all_shelters, processed_kommuner)
-                
-                # Progress print
+                except concurrent.futures.TimeoutError:
+                    print(f"\n🚨 Force skipping {kommune_name} after {kommune_force_timeout/60:.1f} minutes due to timeout.")
+                    # Don't add to processed_kommuner so it can be retried in a rerun
+                    continue
+                except Exception as e:
+                    print(f"\n✗ error with {kommune_name}: {str(e)[:200]}")
+                    retry_count += 1
+                    time.sleep(2)
+                    # We still mark this try for force-continue
+
+                if success:
+                    processed_kommuner.add(kommune_code)
+                    # Save partial after each completed kommune to file
+                    save_partial_shelters(all_shelters, processed_kommuner)
+            
                 elapsed = time.time() - start_time
-                est_total = elapsed / idx * len(self.municipality_codes)
-                print(f"\n✓ Progress: {idx}/{len(self.municipality_codes)}: {kommune_name} done. {len(all_shelters)} shelters so far.")
+                est_total = elapsed / max(idx, 1) * len(self.municipality_codes)
+                print(f"\n✓ Progress: {idx}/{len(self.municipality_codes)}: {kommune_name} done or skipped. {len(all_shelters)} shelters so far.")
                 print(f"Elapsed: {elapsed/60:.1f} min | Estimated total: {est_total/60:.1f} min\n")
 
         except Exception as outer_e:
@@ -181,9 +200,6 @@ class DenmarkShelterFetcher:
         return shelters
     
     def _process_buildings_parallel(self, buildings: List[Dict[str, Any]], kommune_code: str = "") -> List[Dict[str, Any]]:
-        """
-        Process buildings in parallel using ThreadPoolExecutor for fast DAWA lookups.
-        """
         shelters = []
         max_workers = min(16, (concurrent.futures.thread._MAX_WORKERS if hasattr(concurrent.futures.thread, '_MAX_WORKERS') else 16))
         print(f"--> Running parallel DAWA lookups for {len(buildings)} buildings in kommune {kommune_code} (workers={max_workers})")
@@ -192,7 +208,11 @@ class DenmarkShelterFetcher:
             for building in buildings:
                 futures.append(executor.submit(self._process_building, building))
             for idx, future in enumerate(concurrent.futures.as_completed(futures), 1):
-                shelter = future.result()
+                try:
+                    shelter = future.result(timeout=30)  # each individual shelter must finish or error in 30s
+                except Exception as e:
+                    print(f"     [Parallel error] DAWA lookup error: {str(e)}")
+                    shelter = None
                 if shelter: shelters.append(shelter)
                 if idx % 100 == 0 or idx == len(futures):
                     print(f"      ...processed {idx}/{len(futures)} shelters")
@@ -425,35 +445,19 @@ class DenmarkShelterFetcher:
     def _lookup_address_by_coordinates(self, lon: float, lat: float, max_distance: int = 100) -> tuple:
         """
         Look up nearest address by coordinates using DAWA circle search.
-        Uses WGS84 coordinates (EPSG:4326).
-        
-        Args:
-            lon: Longitude in WGS84
-            lat: Latitude in WGS84  
-            max_distance: Maximum acceptable distance in meters (default 100m)
-            
-        Returns:
-            tuple: (address_string, distance_in_meters) or (None, None) if not found
+        Now with tighter timeouts.
         """
         cache_key = f"{lon:.6f},{lat:.6f}"
-        
         # Check cache first
         if cache_key in self.address_cache:
             cached = self.address_cache.get(cache_key)
             return (cached, None) if cached else (None, None)
-        
         self.address_lookup_count += 1
-        
-        # Only show debug for first few
         debug = self.address_lookup_count <= 3
-        
         if debug:
             print(f"\n  [DEBUG] Looking up nearest address for: {lat:.6f}°N, {lon:.6f}°E")
             print(f"  [DEBUG] Max acceptable distance: {max_distance}m")
-        
         try:
-            # Use DAWA's circle search with a larger search radius
-            # We'll filter by distance ourselves
             search_radius = 500  # Search in a 500m radius
             url = f"{self.dawa_base_url}/adgangsadresser"
             params = {
@@ -461,65 +465,46 @@ class DenmarkShelterFetcher:
                 "srid": "4326",
                 "struktur": "mini"
             }
-            
             if self.dataforsyningen_token:
                 params["token"] = self.dataforsyningen_token
-            
-            response = requests.get(url, params=params, timeout=5)
-            
+            response = requests.get(url, params=params, timeout=5)  # request fails fast
             if debug:
                 print(f"  [DEBUG] Response status: {response.status_code}")
-            
             if response.status_code == 200:
                 data = response.json()
-                
                 if isinstance(data, list) and len(data) > 0:
-                    # Calculate distance to first (closest) address
                     addr_data = data[0]
                     addr_lon = addr_data.get("x", 0)
                     addr_lat = addr_data.get("y", 0)
-                    
-                    # Calculate approximate distance in meters
-                    # Simple haversine for small distances
                     import math
                     dlat = math.radians(addr_lat - lat)
                     dlon = math.radians(addr_lon - lon)
                     a = math.sin(dlat/2)**2 + math.cos(math.radians(lat)) * math.cos(math.radians(addr_lat)) * math.sin(dlon/2)**2
                     c = 2 * math.asin(math.sqrt(a))
-                    distance = 6371000 * c  # Earth radius in meters
-                    
+                    distance = 6371000 * c
                     if debug:
                         print(f"  [DEBUG] Nearest address distance: {distance:.1f}m")
-                    
-                    # Only accept if within max_distance
                     if distance > max_distance:
                         if debug:
                             print(f"  [DEBUG] ✗ Address too far ({distance:.1f}m > {max_distance}m)\n")
                         self.address_cache[cache_key] = None
                         return (None, None)
-                    
                     vejnavn = addr_data.get("vejnavn", "")
                     husnr = addr_data.get("husnr", "")
                     postnr = addr_data.get("postnr", "")
                     postnrnavn = addr_data.get("postnrnavn", "")
-                    
                     if vejnavn and husnr:
                         address = f"{vejnavn} {husnr}"
                         if postnr and postnrnavn:
                             address += f", {postnr} {postnrnavn}"
-                        
                         self.address_cache[cache_key] = address
                         self.address_success_count += 1
-                        
                         if debug:
                             print(f"  [DEBUG] ✓ Resolved to: {address} (distance: {distance:.1f}m)\n")
-                        
                         return (address, round(distance))
-                
         except Exception as e:
             if debug:
                 print(f"  [DEBUG] ✗ Error: {str(e)}\n")
-        
         self.address_cache[cache_key] = None
         return (None, None)
 
