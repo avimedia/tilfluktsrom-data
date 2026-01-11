@@ -103,11 +103,11 @@ if __name__ == "__main__":
         print("\n❌ FAILED to download data")
         exit(1)
     geojson = convert_to_app_format(arcgis_features)
-   output_dir = "docs"
-os.makedirs(output_dir, exist_ok=True)
-output_file = os.path.join(output_dir, "sweden_shelters.json")
-with open(output_file, "w", encoding="utf-8") as f:
-    json.dump(geojson, f, ensure_ascii=False, indent=2)
+    output_dir = "docs"
+    os.makedirs(output_dir, exist_ok=True)
+    output_file = os.path.join(output_dir, "sweden_shelters.json")
+    with open(output_file, "w", encoding="utf-8") as f:
+        json.dump(geojson, f, ensure_ascii=False, indent=2)
     print(f"\n✅ SUCCESS! File saved as: {output_file}")
     file_size_mb = os.path.getsize(output_file) / 1024 / 1024
     print(f"📊 File size: {file_size_mb:.2f} MB")
