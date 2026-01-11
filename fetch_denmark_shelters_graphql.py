@@ -5,6 +5,22 @@ from datetime import datetime
 from typing import List, Dict, Any
 from tqdm import tqdm
 import concurrent.futures
+import os
+
+def load_partial_shelters(path="partial_denmark_shelters.json"):
+    if os.path.exists(path):
+        print(f"Loading previous partial results from {path}")
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            return data.get("shelters", []), set(data.get("processed_kommuner", []))
+    return [], set()
+
+def save_partial_shelters(shelters, processed_kommuner, path="partial_denmark_shelters.json"):
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump({
+            "shelters": shelters,
+            "processed_kommuner": list(processed_kommuner)
+        }, f, ensure_ascii=False, indent=2)
 
 class DenmarkShelterFetcher:
     def __init__(self, api_key: str, dataforsyningen_token: str = None):
@@ -55,41 +71,51 @@ class DenmarkShelterFetcher:
         self.address_success_count = 0
     
     def fetch_shelters(self, batch_size: int = 500, max_retries: int = 3) -> List[Dict[str, Any]]:
-        """
-        Fetch all buildings with byg069Sikringsrumpladser >= 40 from BBR.
-        """
-        all_shelters = []
+        all_shelters, processed_kommuner = load_partial_shelters()
         start_time = time.time()
         
-        print("\nStarting GraphQL query for Danish shelters...")
-        print("Note: Fetching buildings by municipality and filtering for shelters...")
+        print("\nStarting GraphQL query for Danish shelters... (partial results loaded, {} shelters from {} kommuner)".format(
+            len(all_shelters), len(processed_kommuner)))
         print(f"Processing {len(self.municipality_codes)} municipalities...\n")
         
-        for idx, kommune_code in enumerate(tqdm(self.municipality_codes, desc="Municipalities", ncols=80), 1):
-            kommune_name = "København (Copenhagen)" if kommune_code == "0101" else f"Kommune {kommune_code}"
-            success = False
-            retry_count = 0
-            kommune_shelters = []
-            
-            while retry_count < max_retries and not success:
-                try:
-                    kommune_shelters = self._fetch_kommune_shelters(kommune_code, batch_size)
-                    all_shelters.extend(kommune_shelters)
-                    success = True
-                except requests.exceptions.Timeout:
-                    retry_count += 1
-                    print(f"\ntimeout, retrying {kommune_name} ({retry_count}/{max_retries})...", end=" ", flush=True)
-                    time.sleep(2)
-                except Exception as e:
-                    print(f"\n✗ error with {kommune_name}: {str(e)[:50]}")
-                    break
+        try:
+            for idx, kommune_code in enumerate(tqdm(self.municipality_codes, desc="Municipalities", ncols=80), 1):
+                if kommune_code in processed_kommuner:
+                    print(f"⏩ Skipping kommune {kommune_code} (already processed)")
+                    continue
+                kommune_name = "København (Copenhagen)" if kommune_code == "0101" else f"Kommune {kommune_code}"
+                success = False
+                retry_count = 0
+                kommune_shelters = []
+                
+                while retry_count < max_retries and not success:
+                    try:
+                        kommune_shelters = self._fetch_kommune_shelters(kommune_code, batch_size)
+                        all_shelters.extend(kommune_shelters)
+                        success = True
+                    except requests.exceptions.Timeout:
+                        retry_count += 1
+                        print(f"\ntimeout, retrying {kommune_name} ({retry_count}/{max_retries})...", end=" ", flush=True)
+                        time.sleep(2)
+                    except Exception as e:
+                        print(f"\n✗ error with {kommune_name}: {str(e)[:50]}")
+                        retry_count += 1
+                        time.sleep(2)
+                
+                processed_kommuner.add(kommune_code)
+                # Save partial after each completed kommune to file
+                save_partial_shelters(all_shelters, processed_kommuner)
+                
+                # Progress print
+                elapsed = time.time() - start_time
+                est_total = elapsed / idx * len(self.municipality_codes)
+                print(f"\n✓ Progress: {idx}/{len(self.municipality_codes)}: {kommune_name} done. {len(all_shelters)} shelters so far.")
+                print(f"Elapsed: {elapsed/60:.1f} min | Estimated total: {est_total/60:.1f} min\n")
 
-            # Always show progress for every municipality
-            elapsed = time.time() - start_time
-            est_total = elapsed / idx * len(self.municipality_codes)
-            print(f"\n✓ Progress: {idx}/{len(self.municipality_codes)}: {kommune_name} done. {len(all_shelters)} shelters so far.")
-            print(f"Elapsed: {elapsed/60:.1f} min | Estimated total: {est_total/60:.1f} min\n")
-        
+        except Exception as outer_e:
+            print(f"\n💥 Unhandled error: {str(outer_e)}")
+            print("Partial results saved. You can re-run the script to resume.")
+
         print(f"\n{'='*60}")
         print(f"Total shelters found: {len(all_shelters)}")
         print(f"{'='*60}")
@@ -528,9 +554,6 @@ class DenmarkShelterFetcher:
         return ", ".join(parts) if parts else "Ukendt adresse"
     
     def save_to_geojson(self, shelters: List[Dict[str, Any]], output_file: str):
-        """
-        Save shelters to GeoJSON file.
-        """
         geojson = {
             "type": "FeatureCollection",
             "name": "Beskyttelsesrum Danmark",
@@ -541,6 +564,13 @@ class DenmarkShelterFetcher:
             json.dump(geojson, f, ensure_ascii=False, indent=2)
         
         print(f"\n✓ Saved {len(shelters)} shelters to {output_file}")
+
+        # Remove partial on full success
+        try:
+            os.remove("partial_denmark_shelters.json")
+            print("Removed partial progress file (full run completed)")
+        except Exception:
+            pass
         
         # Show address lookup statistics
         if self.address_lookup_count > 0:
