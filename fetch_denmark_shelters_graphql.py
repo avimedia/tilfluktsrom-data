@@ -443,10 +443,17 @@ class DenmarkShelterFetcher:
         
         return (lon_deg, lat_deg)
     
-    def _lookup_address_by_coordinates(self, lon: float, lat: float, max_distance: int = 100) -> tuple:
+    def _lookup_address_by_coordinates(self, lon: float, lat: float, max_distance: int = 200) -> tuple:
         """
         Look up nearest address by coordinates using DAWA circle search.
-        Now with tighter timeouts.
+        Uses WGS84 coordinates (EPSG:4326).
+
+        Args:
+            lon: Longitude in WGS84
+            lat: Latitude in WGS84  
+            max_distance: Maximum acceptable distance in meters (default 200m)
+        Returns:
+            tuple: (address_string, distance_in_meters) or (None, None) if not found
         """
         cache_key = f"{lon:.6f},{lat:.6f}"
         # Check cache first
@@ -458,8 +465,10 @@ class DenmarkShelterFetcher:
         if debug:
             print(f"\n  [DEBUG] Looking up nearest address for: {lat:.6f}°N, {lon:.6f}°E")
             print(f"  [DEBUG] Max acceptable distance: {max_distance}m")
+
+        # First, try adgangsadresser (entrance addresses)
         try:
-            search_radius = 500  # Search in a 500m radius
+            search_radius = 500
             url = f"{self.dawa_base_url}/adgangsadresser"
             params = {
                 "cirkel": f"{lon},{lat},{search_radius}",
@@ -468,9 +477,9 @@ class DenmarkShelterFetcher:
             }
             if self.dataforsyningen_token:
                 params["token"] = self.dataforsyningen_token
-            response = requests.get(url, params=params, timeout=5)  # request fails fast
+            response = requests.get(url, params=params, timeout=5)
             if debug:
-                print(f"  [DEBUG] Response status: {response.status_code}")
+                print(f"  [DEBUG] Response status: {response.status_code} adgangsadresser")
             if response.status_code == 200:
                 data = response.json()
                 if isinstance(data, list) and len(data) > 0:
@@ -484,28 +493,72 @@ class DenmarkShelterFetcher:
                     c = 2 * math.asin(math.sqrt(a))
                     distance = 6371000 * c
                     if debug:
-                        print(f"  [DEBUG] Nearest address distance: {distance:.1f}m")
-                    if distance > max_distance:
-                        if debug:
-                            print(f"  [DEBUG] ✗ Address too far ({distance:.1f}m > {max_distance}m)\n")
-                        self.address_cache[cache_key] = None
-                        return (None, None)
-                    vejnavn = addr_data.get("vejnavn", "")
-                    husnr = addr_data.get("husnr", "")
-                    postnr = addr_data.get("postnr", "")
-                    postnrnavn = addr_data.get("postnrnavn", "")
-                    if vejnavn and husnr:
-                        address = f"{vejnavn} {husnr}"
-                        if postnr and postnrnavn:
-                            address += f", {postnr} {postnrnavn}"
-                        self.address_cache[cache_key] = address
-                        self.address_success_count += 1
-                        if debug:
-                            print(f"  [DEBUG] ✓ Resolved to: {address} (distance: {distance:.1f}m)\n")
-                        return (address, round(distance))
+                        print(f"  [DEBUG] Nearest adgangsadresser distance: {distance:.1f}m")
+                    if distance <= max_distance:
+                        vejnavn = addr_data.get("vejnavn", "")
+                        husnr = addr_data.get("husnr", "")
+                        postnr = addr_data.get("postnr", "")
+                        postnrnavn = addr_data.get("postnrnavn", "")
+                        if vejnavn and husnr:
+                            address = f"{vejnavn} {husnr}"
+                            if postnr and postnrnavn:
+                                address += f", {postnr} {postnrnavn}"
+                            self.address_cache[cache_key] = address
+                            self.address_success_count += 1
+                            if debug:
+                                print(f"  [DEBUG] ✓ Resolved to: {address} (distance: {distance:.1f}m)\n")
+                            return (address, round(distance))
         except Exception as e:
             if debug:
-                print(f"  [DEBUG] ✗ Error: {str(e)}\n")
+                print(f"  [DEBUG] ✗ Error adgangsadresser: {str(e)}\n")
+
+        # Fallback: try a broad search in 'adresser' endpoint
+        try:
+            url = f"{self.dawa_base_url}/adresser"
+            params = {
+                "cirkel": f"{lon},{lat},500",
+                "srid": "4326",
+                "struktur": "mini"
+            }
+            if self.dataforsyningen_token:
+                params["token"] = self.dataforsyningen_token
+            response = requests.get(url, params=params, timeout=5)
+            if debug:
+                print(f"  [DEBUG] Response status: {response.status_code} adresser")
+            if response.status_code == 200:
+                data = response.json()
+                if isinstance(data, list) and len(data) > 0:
+                    addr_data = data[0]
+                    addr_lon = addr_data.get("x", 0)
+                    addr_lat = addr_data.get("y", 0)
+                    import math
+                    dlat = math.radians(addr_lat - lat)
+                    dlon = math.radians(addr_lon - lon)
+                    a = math.sin(dlat/2)**2 + math.cos(math.radians(lat)) * math.cos(math.radians(addr_lat)) * math.sin(dlon/2)**2
+                    c = 2 * math.asin(math.sqrt(a))
+                    distance = 6371000 * c
+                    if debug:
+                        print(f"  [DEBUG] Nearest adresser distance: {distance:.1f}m")
+                    if distance <= max_distance:
+                        vejnavn = addr_data.get("vejnavn", "")
+                        husnr = addr_data.get("husnr", "")
+                        postnr = addr_data.get("postnr", "")
+                        postnrnavn = addr_data.get("postnrnavn", "")
+                        if vejnavn and husnr:
+                            address = f"{vejnavn} {husnr}"
+                            if postnr and postnrnavn:
+                                address += f", {postnr} {postnrnavn}"
+                            self.address_cache[cache_key] = address
+                            self.address_success_count += 1
+                            if debug:
+                                print(f"  [DEBUG] ✓ Resolved to: {address} (distance: {distance:.1f}m) [fallback: adresser]\n")
+                            return (address, round(distance))
+        except Exception as e:
+            if debug:
+                print(f"  [DEBUG] ✗ Error adresser fallback: {str(e)}\n")
+
+        # Optionally, further fallback: reverse API
+
         self.address_cache[cache_key] = None
         return (None, None)
 
