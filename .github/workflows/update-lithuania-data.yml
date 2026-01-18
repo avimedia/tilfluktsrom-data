@@ -1,5 +1,4 @@
-
-name: Update Lithuania Shelters Data
+name: Update Lithuanian Shelter Data
 
 on:
   schedule:
@@ -23,191 +22,21 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-// -           pip install geopandas pyogrio requests
           pip install geopandas pyogrio requests fiona
 
       - name: Download and extract Lithuania .gdb file
         run: |
           echo "Downloading Lithuania shelter data..."
           wget -O PAGD_civiline_sauga.zip "https://www.geoportal.lt/download/opendata/PAGD/PAGD_civiline_sauga.zip"
-// -           unzip -q PAGD_civiline_sauga.zip || echo "Unzip completed with warnings"
           echo "Extracting..."
           unzip -o PAGD_civiline_sauga.zip
           echo "✓ Downloaded and extracted"
-// -           ls -la
           echo ""
           echo "Contents:"
           ls -laR
           echo ""
           echo "Checking for .gdb directory:"
           find . -name "*.gdb" -type d
-
-      - name: Create converter script
-        run: |
-          cat > convert_lithuania_gdb.py << 'EOFPYTHON'
-          #!/usr/bin/env python3
-          import geopandas as gpd
-          import json
-          from datetime import datetime
-          import pandas as pd
-          import os
-          import fiona
-          
-          print("="*70)
-          print("Lithuanian Shelter Data Converter")
-          print("="*70)
-          
-// -           gdb_path = "PAGD_civiline_sauga.gdb"
-// -           print(f"Reading {gdb_path}...")
-// -           gdf = gpd.read_file(gdb_path, layer="Priedangos")
-// -           print(f"Found {len(gdf)} shelters")
-          # Find the .gdb directory
-          gdb_path = None
-          for root, dirs, files in os.walk("."):
-              for d in dirs:
-                  if d.endswith(".gdb"):
-                      gdb_path = os.path.join(root, d)
-                      break
-              if gdb_path:
-                  break
-          
-          if not gdb_path:
-              print("ERROR: Could not find .gdb directory")
-              exit(1)
-          
-          print(f"Found GDB: {gdb_path}")
-          
-          # List available layers
-          print("\nAvailable layers:")
-          layers = fiona.listlayers(gdb_path)
-          for layer in layers:
-              print(f"  - {layer}")
-          
-          # Try to find the shelter layer
-          shelter_layer = None
-          for layer in layers:
-              if 'priedang' in layer.lower() or 'prieglob' in layer.lower() or 'shelter' in layer.lower():
-                  shelter_layer = layer
-                  break
-          
-          if not shelter_layer:
-              print("\nERROR: Could not find shelter layer. Using first layer.")
-              shelter_layer = layers[0] if layers else None
-          
-          if not shelter_layer:
-              print("ERROR: No layers found in GDB")
-              exit(1)
-          
-          print(f"\nReading layer: {shelter_layer}")
-          gdf = gpd.read_file(gdb_path, layer=shelter_layer)
-          print(f"Found {len(gdf)} features")
-          
-          print("\nColumn names:")
-          print(gdf.columns.tolist())
-          
-          print("\nFirst row:")
-          print(gdf.head(1))
-          
-          gdf = gdf.to_crs("EPSG:4326")
-          
-          features = []
-          for idx, row in gdf.iterrows():
-              try:
-                  lon, lat = row.geometry.x, row.geometry.y
-                  
-                  # Try different possible field names
-                  address_parts = []
-// -                   if row.get('gatve') and not pd.isna(row['gatve']):
-// -                       address_parts.append(str(row['gatve']))
-// -                   if row.get('namo_numeris') and not pd.isna(row['namo_numeris']):
-// -                       address_parts.append(str(row['namo_numeris']))
-// -                   if row.get('gyvenviete') and not pd.isna(row['gyvenviete']):
-// -                       address_parts.append(str(row['gyvenviete']))
-// -                   if row.get('savivaldybe') and not pd.isna(row['savivaldybe']):
-// -                       address_parts.append(str(row['savivaldybe']))
-                  for field in ['gatve', 'GATVE', 'street', 'adresas', 'ADRESAS']:
-                      if field in row.index and row.get(field) and not pd.isna(row[field]):
-                          address_parts.append(str(row[field]))
-                          break
-                  
-// -                   address = ", ".join(address_parts) if address_parts else "Unknown address"
-                  for field in ['namo_numeris', 'NAMO_NUMERIS', 'house_number']:
-                      if field in row.index and row.get(field) and not pd.isna(row[field]):
-                          address_parts.append(str(row[field]))
-                          break
-                  
-                  for field in ['gyvenviete', 'GYVENVIETE', 'city', 'miestas', 'MIESTAS']:
-                      if field in row.index and row.get(field) and not pd.isna(row[field]):
-                          address_parts.append(str(row[field]))
-                          break
-                  
-                  for field in ['savivaldybe', 'SAVIVALDYBE', 'municipality']:
-                      if field in row.index and row.get(field) and not pd.isna(row[field]):
-                          address_parts.append(str(row[field]))
-                          break
-                  
-                  address = ", ".join(address_parts) if address_parts else f"Location {idx+1}"
-                  
-                  capacity = 0
-// -                   if row.get('gyventoju_skaicius') and not pd.isna(row['gyventoju_skaicius']):
-// -                       capacity = int(row['gyventoju_skaicius'])
-                  for field in ['gyventoju_skaicius', 'GYVENTOJU_SKAICIUS', 'capacity', 'talpa', 'TALPA', 'plasser', 'PLASSER']:
-                      if field in row.index and row.get(field) and not pd.isna(row[field]):
-                          try:
-                              capacity = int(row[field])
-                              break
-                          except:
-                              pass
-                  
-                  date_str = datetime.now().strftime("%Y-%m-%d")
-// -                   if row.get('atnaujinimo_data') and not pd.isna(row['atnaujinimo_data']):
-// -                       date_str = row['atnaujinimo_data'].strftime("%Y-%m-%d")
-                  for field in ['atnaujinimo_data', 'ATNAUJINIMO_DATA', 'updated', 'date']:
-                      if field in row.index and row.get(field) and not pd.isna(row[field]):
-                          try:
-                              date_str = pd.to_datetime(row[field]).strftime("%Y-%m-%d")
-                              break
-                          except:
-                              pass
-                  
-                  romnr = idx + 100000
-                  
-                  feature = {
-                      "type": "Feature",
-                      "geometry": {"type": "Point", "coordinates": [lon, lat]},
-                      "properties": {
-                          "romnr": romnr,
-                          "plasser": capacity,
-                          "adresse": address,
-                          "adresse_avstand": None,
-                          "datauttaksdato": date_str
-                      }
-                  }
-                  features.append(feature)
-                  
-                  if idx < 3:
-                      print(f"\nShelter {idx + 1}:")
-                      print(f"  Address: {address}")
-                      print(f"  Capacity: {capacity}")
-                      print(f"  Coordinates: ({lon:.6f}, {lat:.6f})")
-              
-              except Exception as e:
-// -                   print(f"Error processing shelter {idx}: {e}")
-                  print(f"Error processing feature {idx}: {e}")
-          
-          geojson = {
-              "type": "FeatureCollection",
-              "name": "Būstinės apsaugos prieglobos vietos (Lithuania)",
-              "features": features
-          }
-          
-          with open("lithuania_shelters.json", 'w', encoding='utf-8') as f:
-              json.dump(geojson, f, ensure_ascii=False, indent=2)
-          
-          print(f"\n{'='*70}")
-          print(f"SUCCESS! Converted {len(features)} shelters")
-          print(f"{'='*70}")
-          EOFPYTHON
 
       - name: Run Lithuania shelter converter
         run: |
@@ -226,4 +55,3 @@ jobs:
           git diff --staged --quiet || git commit -m "Auto-update Lithuania shelter data [skip ci]"
           git pull --rebase origin main || true
           git push
-
