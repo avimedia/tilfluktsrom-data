@@ -2,7 +2,7 @@ name: Update Lithuania Shelters Data
 
 on:
   schedule:
-    - cron: '30 3 * * 1'  # Every Monday at 03:30 UTC
+    - cron: '0 4 1 * *'  # First day of each month at 04:00 UTC (data updates monthly)
   workflow_dispatch:      # Allows manual run
 
 jobs:
@@ -22,11 +22,18 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests
+          pip install geopandas pyogrio requests
 
-      - name: Run Lithuania shelter fetcher script
+      - name: Download and extract Lithuania .gdb file
         run: |
-          python fetch_lithuania_shelters.py
+          echo "Downloading Lithuania shelter data..."
+          wget -O PAGD_civiline_sauga.zip "https://www.geoportal.lt/download/opendata/PAGD/PAGD_civiline_sauga.zip"
+          unzip -q PAGD_civiline_sauga.zip
+          echo "✓ Downloaded and extracted"
+
+      - name: Run Lithuania shelter converter
+        run: |
+          python convert_lithuania_gdb.py
 
       - name: Move lithuania_shelters.json to docs (for GitHub Pages)
         run: |
