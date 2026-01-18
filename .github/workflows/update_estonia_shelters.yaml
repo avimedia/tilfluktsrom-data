@@ -26,14 +26,14 @@ jobs:
       
       - name: Run Estonian shelter scraper
         run: |
-          cd DSB-JSON
+          cd Tilfluktsrom/Tilfluktsrom/DSB-JSON
           python fetch_estonia_shelters.py
       
       - name: Check if data was generated
         run: |
-          if [ -f "DSB-JSON/estonia_shelters.json" ]; then
+          if [ -f "Tilfluktsrom/Tilfluktsrom/DSB-JSON/estonia_shelters.json" ]; then
             echo "✓ Estonia shelter data generated successfully"
-            wc -l DSB-JSON/estonia_shelters.json
+            wc -l Tilfluktsrom/Tilfluktsrom/DSB-JSON/estonia_shelters.json
           else
             echo "✗ Failed to generate Estonia shelter data"
             exit 1
@@ -43,6 +43,6 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add DSB-JSON/estonia_shelters.json
+          git add Tilfluktsrom/Tilfluktsrom/DSB-JSON/estonia_shelters.json
           git diff --staged --quiet || git commit -m "Update Estonian shelter data (automated)"
           git push
