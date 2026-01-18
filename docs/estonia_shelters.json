@@ -1,0 +1,5756 @@
+{
+  "type": "FeatureCollection",
+  "name": "Avalikud varjumiskohad (Estonia)",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:4326"
+    }
+  },
+  "metadata": {
+    "source": "Maa-amet (Estonian Land Board)",
+    "provider": "Päästeamet (Estonian Rescue Board)",
+    "downloaded": "2026-01-18 14:46:25",
+    "total_shelters": 302
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.536529167170716,
+          58.28003275219822
+        ]
+      },
+      "properties": {
+        "id": "LÕ45321",
+        "name": "Nõo Põhikool",
+        "address": "Tartu maakond, Nõo vald, Nõo alevik, K. Aigro tn 3",
+        "county": "Tartu maakond",
+        "municipality": "Nõo vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.47086805801903,
+          58.252003200704145
+        ]
+      },
+      "properties": {
+        "id": "LÄ24594",
+        "name": "Valsimaja",
+        "address": "Saare maakond, Saaremaa vald, Kuressaare linn, Ravila tn 1a",
+        "county": "Saare maakond",
+        "municipality": "Saaremaa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.17860221769925,
+          57.925245057098756
+        ]
+      },
+      "properties": {
+        "id": "LÕ19919",
+        "name": "Õru Lasteaed-Algkool",
+        "address": "Valga maakond, Valga vald, Õru alevik, Ringtee 13",
+        "county": "Valga maakond",
+        "municipality": "Valga vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.276262408175267,
+          59.39764543991273
+        ]
+      },
+      "properties": {
+        "id": "ID76495",
+        "name": "Wiru Spordikeskus - Kohtla-Järve Spordikeskus",
+        "address": "Ida-Viru maakond, Kohtla-Järve linn, Järve linnaosa, Järveküla tee 41",
+        "county": "Ida-Viru maakond",
+        "municipality": "Kohtla-Järve linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.49325593323207,
+          59.23623349571408
+        ]
+      },
+      "properties": {
+        "id": "ID13975",
+        "name": "Illuka kool",
+        "address": "Ida-Viru maakond, Alutaguse vald, Illuka küla, Hariduse/1",
+        "county": "Ida-Viru maakond",
+        "municipality": "Alutaguse vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.312181221821564,
+          59.094374836973095
+        ]
+      },
+      "properties": {
+        "id": "ID78109",
+        "name": "Iisaku gümnaasium",
+        "address": "Ida-Viru maakond, Alutaguse vald, Iisaku alevik, Tartu mnt 62",
+        "county": "Ida-Viru maakond",
+        "municipality": "Alutaguse vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.161440766973072,
+          59.1837374482157
+        ]
+      },
+      "properties": {
+        "id": "PÕ99751",
+        "name": "Kose Kultuurikeskus",
+        "address": "Harju maakond, Kose vald, Kose alevik, Hariduse tn 2",
+        "county": "Harju maakond",
+        "municipality": "Kose vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.136708965877506,
+          58.599470336178456
+        ]
+      },
+      "properties": {
+        "id": "LÕ45332",
+        "name": "Alatskivi siselasketiir",
+        "address": "Tartu maakond, Peipsiääre vald, Alatskivi alevik, Kooli tn 1a",
+        "county": "Tartu maakond",
+        "municipality": "Peipsiääre vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.75335373315427,
+          58.66328439798274
+        ]
+      },
+      "properties": {
+        "id": "LÕ45333",
+        "name": "Pilistvere kirikla (mõisahoone)",
+        "address": "Viljandi maakond, Põhja-Sakala vald, Pilistvere küla, Pilistvere kirikla",
+        "county": "Viljandi maakond",
+        "municipality": "Põhja-Sakala vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.277076848537103,
+          59.39898378117205
+        ]
+      },
+      "properties": {
+        "id": "ID62612",
+        "name": "Veltsi Lasteaed-Algkool",
+        "address": "Lääne-Viru maakond, Rakvere vald, Veltsi küla, Veltsi tee 9",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Rakvere vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.216085411507883,
+          59.25085817721744
+        ]
+      },
+      "properties": {
+        "id": "ID52104",
+        "name": "Lasila Põhikool",
+        "address": "Lääne-Viru maakond, Rakvere vald, Lasila küla, Vahtra pst 17/1",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Rakvere vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.41541126955897,
+          59.34853723397859
+        ]
+      },
+      "properties": {
+        "id": "ID58761",
+        "name": "Lasteaed Kalevipoeg",
+        "address": "Ida-Viru maakond, Jõhvi vald, Jõhvi linn, Hariduse tn 7",
+        "county": "Ida-Viru maakond",
+        "municipality": "Jõhvi vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.19812040986072,
+          59.3728803598226
+        ]
+      },
+      "properties": {
+        "id": "ID56841",
+        "name": "Kultuurimaja Rugodiv",
+        "address": "Ida-Viru maakond, Narva linn, A. Puškini tn 8",
+        "county": "Ida-Viru maakond",
+        "municipality": "Narva linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.04539032007918,
+          59.37267567580399
+        ]
+      },
+      "properties": {
+        "id": "ID34921",
+        "name": "Kiviõli Riigikool",
+        "address": "Ida-Viru maakond, Lüganuse vald, Lüganuse alevik, Kiviõli tee 25/1",
+        "county": "Ida-Viru maakond",
+        "municipality": "Lüganuse vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.793151635256475,
+          59.005692702044314
+        ]
+      },
+      "properties": {
+        "id": "LÄ42577",
+        "name": "Rapla Riigimaja",
+        "address": "Rapla maakond, Rapla vald, Rapla linn, Tallinna mnt 14",
+        "county": "Rapla maakond",
+        "municipality": "Rapla vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.782047108940432,
+          59.42716132206473
+        ]
+      },
+      "properties": {
+        "id": "PÕ98501",
+        "name": "RKAS büroohoone maa-aluneparkla",
+        "address": "Harju maakond, Tallinn, Lasnamäe linnaosa, Lasnamäe tn 2",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.59378371242382,
+          59.17026419862537
+        ]
+      },
+      "properties": {
+        "id": "ID65615",
+        "name": "Roela Kool",
+        "address": "Lääne-Viru maakond, Vinni vald, Roela alevik, Järve tn 1",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Vinni vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.59641217605959,
+          58.36547561144579
+        ]
+      },
+      "properties": {
+        "id": "LÕ87847",
+        "name": "Sakala keskus",
+        "address": "Viljandi maakond, Viljandi linn, Tallinna tn 5",
+        "county": "Viljandi maakond",
+        "municipality": "Viljandi linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.50225026845193,
+          58.43084038712024
+        ]
+      },
+      "properties": {
+        "id": "LÄ16812",
+        "name": "Sauga Teenuskeskus",
+        "address": "Pärnu maakond, Tori vald, Sauga alevik, Selja tee 1a",
+        "county": "Pärnu maakond",
+        "municipality": "Tori vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.653548873692063,
+          58.405750372076966
+        ]
+      },
+      "properties": {
+        "id": "LÄ79885",
+        "name": "Sindi lasteaed",
+        "address": "Pärnu maakond, Tori vald, Sindi linn, Kooli tn 2a",
+        "county": "Pärnu maakond",
+        "municipality": "Tori vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.7125580224983,
+          59.37443856623907
+        ]
+      },
+      "properties": {
+        "id": "PÕ48908",
+        "name": "Sotsiaalmaja",
+        "address": "Harju maakond, Tallinn, Nõmme linnaosa, Pihlaka tn 12",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.712807791291127,
+          58.36611878296892
+        ]
+      },
+      "properties": {
+        "id": "LÕ51021",
+        "name": "Tamme staadioni spordihoone",
+        "address": "Tartu maakond, Tartu linn, Tartu linn, Tamme pst 1",
+        "county": "Tartu maakond",
+        "municipality": "Tartu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.436749631382316,
+          59.359892856491676
+        ]
+      },
+      "properties": {
+        "id": "ID98611",
+        "name": "Sõmeru Avatud Noortekeskus",
+        "address": "Lääne-Viru maakond, Rakvere vald, Sõmeru alevik, Tiigi tn 2",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Rakvere vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.549999254531937,
+          59.42900899210274
+        ]
+      },
+      "properties": {
+        "id": "PÕ74995",
+        "name": "Tabasalu kaubanduskeskus",
+        "address": "Harju maakond, Harku vald, Tabasalu alevik, Kallaste tn 7",
+        "county": "Harju maakond",
+        "municipality": "Harku vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.632308939169032,
+          59.32522354427484
+        ]
+      },
+      "properties": {
+        "id": "ID71882",
+        "name": "Endine Rägavere vallamaja",
+        "address": "Lääne-Viru maakond, Vinni vald, Ulvi küla, Mõisa tee 7",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Vinni vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.117761200277098,
+          59.16298805616424
+        ]
+      },
+      "properties": {
+        "id": "ID82671",
+        "name": "Tamsalu Kultuurimaja",
+        "address": "Lääne-Viru maakond, Tapa vald, Tamsalu linn, Sõpruse tn 3",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Tapa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.107737416148783,
+          59.16693316308204
+        ]
+      },
+      "properties": {
+        "id": "ID10665",
+        "name": "Tamsalu Lasteaed Krõll",
+        "address": "Lääne-Viru maakond, Tapa vald, Tamsalu linn, Metsa tn 1",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Tapa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.963255303347967,
+          59.25902938170564
+        ]
+      },
+      "properties": {
+        "id": "ID84338",
+        "name": "Tapa Gümnaasium",
+        "address": "Lääne-Viru maakond, Tapa vald, Tapa linn, Nooruse tn 2",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Tapa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.976912539560765,
+          59.3618819640636
+        ]
+      },
+      "properties": {
+        "id": "ID77996",
+        "name": "Kiviõli lasteaed Kannike",
+        "address": "Ida-Viru maakond, Lüganuse vald, Kiviõli linn, Võidu tn 12",
+        "county": "Ida-Viru maakond",
+        "municipality": "Lüganuse vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.6951206979303,
+          58.39132157667922
+        ]
+      },
+      "properties": {
+        "id": "LÖ45345",
+        "name": "Eesti Maaülikooli Metsamaja",
+        "address": "Tartu maakond, Tartu linn, Tartu linn, F. R. Kreutzwaldi tn 5",
+        "county": "Tartu maakond",
+        "municipality": "Tartu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.534857675941776,
+          58.948694270454595
+        ]
+      },
+      "properties": {
+        "id": "LÄ49630",
+        "name": "Administratiivhoone",
+        "address": "Lääne maakond, Haapsalu linn, Haapsalu linn, Ehte tn 9",
+        "county": "Lääne maakond",
+        "municipality": "Haapsalu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.193418628473218,
+          59.36327561591914
+        ]
+      },
+      "properties": {
+        "id": "ID67400",
+        "name": "Administratiivhoone",
+        "address": "Ida-Viru maakond, Narva linn, Haigla tn 6",
+        "county": "Ida-Viru maakond",
+        "municipality": "Narva linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.77275491757145,
+          58.83073499592111
+        ]
+      },
+      "properties": {
+        "id": "LÄ15248",
+        "name": "Elamuskeskus Tuuletorn",
+        "address": "Hiiu maakond, Hiiumaa vald, Käina alevik, Mäe tn 4",
+        "county": "Hiiu maakond",
+        "municipality": "Hiiumaa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.48549979894413,
+          58.25280526411375
+        ]
+      },
+      "properties": {
+        "id": "LÄ50777",
+        "name": "Raekoda",
+        "address": "Saare maakond, Saaremaa vald, Kuressaare linn, Tallinna tn 2",
+        "county": "Saare maakond",
+        "municipality": "Saaremaa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.01391189819591,
+          59.336230980000856
+        ]
+      },
+      "properties": {
+        "id": "ID34819",
+        "name": "Maidla kool",
+        "address": "Ida-Viru maakond, Lüganuse vald, Maidla küla, Mõisa/1",
+        "county": "Ida-Viru maakond",
+        "municipality": "Lüganuse vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.03528047976826,
+          59.36124763216008
+        ]
+      },
+      "properties": {
+        "id": "ID23774",
+        "name": "Püssi Marjakese lasteaed",
+        "address": "Ida-Viru maakond, Lüganuse vald, Püssi linn, Kooli tn 7",
+        "county": "Ida-Viru maakond",
+        "municipality": "Lüganuse vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.36369983765087,
+          59.34376328793156
+        ]
+      },
+      "properties": {
+        "id": "ID22369",
+        "name": "Ukuaru muusikamaja",
+        "address": "Lääne-Viru maakond, Rakvere linn, Vabaduse tn 4",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Rakvere linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.793278037825843,
+          59.421701691678024
+        ]
+      },
+      "properties": {
+        "id": "PÕ24722",
+        "name": "Ülemiste keskus",
+        "address": "Harju maakond, Tallinn, Lasnamäe linnaosa, Suur-Sõjamäe tn 4",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.645339694319016,
+          58.403212836002474
+        ]
+      },
+      "properties": {
+        "id": "LÄ40952",
+        "name": "Sindi Raekoda",
+        "address": "Pärnu maakond, Tori vald, Sindi linn, Pärnu mnt 12",
+        "county": "Pärnu maakond",
+        "municipality": "Tori vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.463734317389022,
+          58.09637929508059
+        ]
+      },
+      "properties": {
+        "id": "LÕ45401",
+        "name": "Räpina Ühisgümnaasium",
+        "address": "Põlva maakond, Räpina vald, Räpina linn, Kooli tn 5",
+        "county": "Põlva maakond",
+        "municipality": "Räpina vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.505116667118557,
+          58.38811190511354
+        ]
+      },
+      "properties": {
+        "id": "LÄ40953",
+        "name": "Pärnu Vabakonna Maja",
+        "address": "Pärnu maakond, Pärnu linn, Pärnu linn, Lai tn 14",
+        "county": "Pärnu maakond",
+        "municipality": "Pärnu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.02591075338355,
+          59.48664667939537
+        ]
+      },
+      "properties": {
+        "id": "PÕ97980",
+        "name": "Maardu Gümnaasium",
+        "address": "Harju maakond, Maardu linn, Ringi tn 64",
+        "county": "Harju maakond",
+        "municipality": "Maardu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.790650792025552,
+          59.00663276969765
+        ]
+      },
+      "properties": {
+        "id": "LÄ88040",
+        "name": "Rapla Gümnaasium",
+        "address": "Rapla maakond, Rapla vald, Rapla linn, Kooli tn 8",
+        "county": "Rapla maakond",
+        "municipality": "Rapla vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.794142626644632,
+          59.00455621702308
+        ]
+      },
+      "properties": {
+        "id": "LÄ90796",
+        "name": "Rapla Kultuurikeskus",
+        "address": "Rapla maakond, Rapla vald, Rapla linn, Tallinna mnt 17a",
+        "county": "Rapla maakond",
+        "municipality": "Rapla vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.350315571327563,
+          59.35036030062824
+        ]
+      },
+      "properties": {
+        "id": "ID58245",
+        "name": "Rakvere Kultuurikeskus",
+        "address": "Lääne-Viru maakond, Rakvere linn, F. R. Kreutzwaldi tn 2",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Rakvere linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.680118873216184,
+          58.35665789326739
+        ]
+      },
+      "properties": {
+        "id": "LÕ45301",
+        "name": "Endine arestimaja",
+        "address": "Tartu maakond, Tartu linn, Tartu linn, Riia tn 179a",
+        "county": "Tartu maakond",
+        "municipality": "Tartu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.369696358279302,
+          59.347536991773616
+        ]
+      },
+      "properties": {
+        "id": "ID52755",
+        "name": "Rakvere Reaalkool",
+        "address": "Lääne-Viru maakond, Rakvere linn, Võidu tn 67",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Rakvere linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.349801160848294,
+          59.35012268147206
+        ]
+      },
+      "properties": {
+        "id": "ID67681",
+        "name": "Rakvere Teater",
+        "address": "Lääne-Viru maakond, Rakvere linn, F. R. Kreutzwaldi tn 2a",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Rakvere linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.364490010401116,
+          59.34390696321663
+        ]
+      },
+      "properties": {
+        "id": "ID90056",
+        "name": "Rakvere Vabaduse Kool",
+        "address": "Lääne-Viru maakond, Rakvere linn, Vabaduse tn 1",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Rakvere linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.036993443937263,
+          57.77719283447093
+        ]
+      },
+      "properties": {
+        "id": "LÕ15601",
+        "name": "Rahvusarhiivi Valga uurimissaal",
+        "address": "Valga maakond, Valga vald, Valga linn, Vabaduse tn 6",
+        "county": "Valga maakond",
+        "municipality": "Valga vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.37802390603144,
+          59.33804267595034
+        ]
+      },
+      "properties": {
+        "id": "ID70421",
+        "name": "Rakvere Ametikool",
+        "address": "Lääne-Viru maakond, Rakvere linn, Piiri tn 8/1",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Rakvere linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.751508602715127,
+          59.43319972172547
+        ]
+      },
+      "properties": {
+        "id": "PÕ79788",
+        "name": "Solarise keskus",
+        "address": "Harju maakond, Tallinn, Kesklinna linnaosa, Estonia pst 9 // Rävala pst 12",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.685656966843066,
+          59.45641787291891
+        ]
+      },
+      "properties": {
+        "id": "PÕ33432",
+        "name": "Põhja Spordihoone",
+        "address": "Harju maakond, Tallinn, Põhja-Tallinna linnaosa, Kopli tn 98 // Uus-Maleva tn 10",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.326905357324616,
+          59.24622815935234
+        ]
+      },
+      "properties": {
+        "id": "PÕ59320",
+        "name": "Alavere Põhikool",
+        "address": "Harju maakond, Anija vald, Alavere küla, Kose mnt 6",
+        "county": "Harju maakond",
+        "municipality": "Anija vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.290033120847326,
+          59.243499350439556
+        ]
+      },
+      "properties": {
+        "id": "PÕ81166",
+        "name": "Ranna Tee 8",
+        "address": "Harju maakond, Lääne-Harju vald, Vasalemma alevik, Ranna tee 8",
+        "county": "Harju maakond",
+        "municipality": "Lääne-Harju vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.798909905531954,
+          59.41639591967553
+        ]
+      },
+      "properties": {
+        "id": "PÕ54198",
+        "name": "Tallinna Lennujaam",
+        "address": "Harju maakond, Tallinn, Lasnamäe linnaosa, Tartu mnt 101",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.999511899724627,
+          57.62643430644845
+        ]
+      },
+      "properties": {
+        "id": "LÕ45330",
+        "name": "Luutsniku kriisiõppekeskus",
+        "address": "Võru maakond, Rõuge vald, Luutsniku küla, Pääste",
+        "county": "Võru maakond",
+        "municipality": "Rõuge vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.573868056454074,
+          58.35603010060013
+        ]
+      },
+      "properties": {
+        "id": "LÄ48663",
+        "name": "Raeküla kool",
+        "address": "Pärnu maakond, Pärnu linn, Pärnu linn, Käo tn 4",
+        "county": "Pärnu maakond",
+        "municipality": "Pärnu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.728162588846903,
+          58.377971963071296
+        ]
+      },
+      "properties": {
+        "id": "LÕ45331",
+        "name": "Tartu Kaubamaja",
+        "address": "Tartu maakond, Tartu linn, Tartu linn, Riia tn 1",
+        "county": "Tartu maakond",
+        "municipality": "Tartu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.192849921580045,
+          59.354715100108876
+        ]
+      },
+      "properties": {
+        "id": "ID71684",
+        "name": "Kohtla-Nõmme kool",
+        "address": "Ida-Viru maakond, Jõhvi vald, Kohtla-Nõmme alev, Kooli tn 6",
+        "county": "Ida-Viru maakond",
+        "municipality": "Jõhvi vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.72824359493174,
+          58.377184868144006
+        ]
+      },
+      "properties": {
+        "id": "LÕ45300",
+        "name": "Kvartali keskus",
+        "address": "Tartu maakond, Tartu linn, Tartu linn, Riia tn 2",
+        "county": "Tartu maakond",
+        "municipality": "Tartu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.759180226578184,
+          59.432913964901054
+        ]
+      },
+      "properties": {
+        "id": "123456",
+        "name": "Coop maja",
+        "address": "Harju maakond, Tallinn, Kesklinna linnaosa, Maakri tn 30",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.55807839556461,
+          58.63038199383941
+        ]
+      },
+      "properties": {
+        "id": "LÕ74502",
+        "name": "Võhma Coop",
+        "address": "Viljandi maakond, Põhja-Sakala vald, Võhma linn, Tallinna tn 26",
+        "county": "Viljandi maakond",
+        "municipality": "Põhja-Sakala vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.46390855894084,
+          58.53644027488769
+        ]
+      },
+      "properties": {
+        "id": "LÕ45184",
+        "name": "Teenindushoone",
+        "address": "Viljandi maakond, Põhja-Sakala vald, Suure-Jaani linn, Pärnu tn 10",
+        "county": "Viljandi maakond",
+        "municipality": "Põhja-Sakala vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.4093330925878,
+          58.223452519613865
+        ]
+      },
+      "properties": {
+        "id": "LÕ46272",
+        "name": "Elva Gümnaasium algkooli õppehoone",
+        "address": "Tartu maakond, Elva vald, Elva linn, Tartu mnt 3/1",
+        "county": "Tartu maakond",
+        "municipality": "Elva vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.383750268736634,
+          58.13525581030162
+        ]
+      },
+      "properties": {
+        "id": "LÕ67390",
+        "name": "Hellenurme lasteaed",
+        "address": "Tartu maakond, Elva vald, Hellenurme küla, Hellenurme mõis",
+        "county": "Tartu maakond",
+        "municipality": "Elva vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.308727463582347,
+          58.26628221296118
+        ]
+      },
+      "properties": {
+        "id": "LÕ96328",
+        "name": "Konguta Kool",
+        "address": "Tartu maakond, Elva vald, Annikoru küla, Annikoru tee 7",
+        "county": "Tartu maakond",
+        "municipality": "Elva vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.21668373292908,
+          58.239315040513006
+        ]
+      },
+      "properties": {
+        "id": "LÕ20887",
+        "name": "Rannu Rahvamaja",
+        "address": "Tartu maakond, Elva vald, Rannu alevik, Elva tee 7",
+        "county": "Tartu maakond",
+        "municipality": "Elva vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.506438804460863,
+          58.38747870181207
+        ]
+      },
+      "properties": {
+        "id": "LÄ87277",
+        "name": "Büroo- ja kortermaja",
+        "address": "Pärnu maakond, Pärnu linn, Pärnu linn, Lai tn 15a",
+        "county": "Pärnu maakond",
+        "municipality": "Pärnu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.506639002214317,
+          58.38767974834527
+        ]
+      },
+      "properties": {
+        "id": "LÄ57204",
+        "name": "Grahv Zeppelini büroo- ja kortermaja",
+        "address": "Pärnu maakond, Pärnu linn, Pärnu linn, Lai tn 15",
+        "county": "Pärnu maakond",
+        "municipality": "Pärnu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.288343170735345,
+          59.404060467807746
+        ]
+      },
+      "properties": {
+        "id": "ID57914",
+        "name": "Lasteaed",
+        "address": "Ida-Viru maakond, Kohtla-Järve linn, Järve linnaosa, Pärna tn 36",
+        "county": "Ida-Viru maakond",
+        "municipality": "Kohtla-Järve linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.897297929197393,
+          59.35671257246035
+        ]
+      },
+      "properties": {
+        "id": "PÕ45251",
+        "name": "Tsiviilkaitsekelder",
+        "address": "Harju maakond, Rae vald, Jüri alevik, Veetorni tn 3",
+        "county": "Harju maakond",
+        "municipality": "Rae vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.489891628922347,
+          58.25420027191819
+        ]
+      },
+      "properties": {
+        "id": "LÄ44951",
+        "name": "Kuressaare Linnateater",
+        "address": "Saare maakond, Saaremaa vald, Kuressaare linn, Tallinna tn 20",
+        "county": "Saare maakond",
+        "municipality": "Saaremaa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.48638727941957,
+          58.2585300144089
+        ]
+      },
+      "properties": {
+        "id": "LÄ81744",
+        "name": "Kuressaare Spordihoone",
+        "address": "Saare maakond, Saaremaa vald, Kuressaare linn, Vallimaa tn 16a",
+        "county": "Saare maakond",
+        "municipality": "Saaremaa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.782217202121963,
+          58.25287876316328
+        ]
+      },
+      "properties": {
+        "id": "LÕ90673",
+        "name": "Kuuste Kool",
+        "address": "Tartu maakond, Kambja vald, Vana-Kuuste küla, Kooli tee 2",
+        "county": "Tartu maakond",
+        "municipality": "Kambja vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.558483759072047,
+          59.06753191108616
+        ]
+      },
+      "properties": {
+        "id": "ID40781",
+        "name": "Laekvere Rahvamaja",
+        "address": "Lääne-Viru maakond, Vinni vald, Laekvere alevik, Kesk tn 12",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Vinni vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.834562145730086,
+          58.687269499899614
+        ]
+      },
+      "properties": {
+        "id": "LÄ37545",
+        "name": "Lihula Muusika- ja Kunstikool",
+        "address": "Pärnu maakond, Lääneranna vald, Lihula linn, Tallinna mnt 25",
+        "county": "Pärnu maakond",
+        "municipality": "Lääneranna vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.195743922516648,
+          59.375550405586985
+        ]
+      },
+      "properties": {
+        "id": "ID31633",
+        "name": "Linnamajandusameti hoone",
+        "address": "Ida-Viru maakond, Narva linn, Peetri plats 3",
+        "county": "Ida-Viru maakond",
+        "municipality": "Narva linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.56154458047477,
+          58.886091976827885
+        ]
+      },
+      "properties": {
+        "id": "LÄ22342",
+        "name": "Paide Muusika- ja Teatrimaja",
+        "address": "Järva maakond, Paide linn, Paide linn, Pärnu tn 18",
+        "county": "Järva maakond",
+        "municipality": "Paide linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.483674309824817,
+          58.2529215541893
+        ]
+      },
+      "properties": {
+        "id": "LÄ18173",
+        "name": "Pastoraadihoone",
+        "address": "Saare maakond, Saaremaa vald, Kuressaare linn, Kauba tn 5",
+        "county": "Saare maakond",
+        "municipality": "Saaremaa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.83358243258838,
+          59.46586075228051
+        ]
+      },
+      "properties": {
+        "id": "PÕ82493",
+        "name": "Pirita lo valitsus",
+        "address": "Harju maakond, Tallinn, Pirita linnaosa, Kloostri tee 6",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.672877608356487,
+          59.407437974749044
+        ]
+      },
+      "properties": {
+        "id": "PÕ56860",
+        "name": "Eakate päevakeskus",
+        "address": "Harju maakond, Tallinn, Mustamäe linnaosa, Ehitajate tee 82",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.50218808321437,
+          58.387400221327475
+        ]
+      },
+      "properties": {
+        "id": "LÄ14017",
+        "name": "Port Arturi parkimismaja",
+        "address": "Pärnu maakond, Pärnu linn, Pärnu linn, Lai tn 7",
+        "county": "Pärnu maakond",
+        "municipality": "Pärnu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.072389408280415,
+          58.05952264620801
+        ]
+      },
+      "properties": {
+        "id": "LÕ49606",
+        "name": "Põlva Roosi kool",
+        "address": "Põlva maakond, Põlva vald, Põlva linn, Lina tn 13",
+        "county": "Põlva maakond",
+        "municipality": "Põlva vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.50119212583584,
+          58.38689369622651
+        ]
+      },
+      "properties": {
+        "id": "LÄ47106",
+        "name": "Pärnu Keskus",
+        "address": "Pärnu maakond, Pärnu linn, Pärnu linn, Aida tn 7",
+        "county": "Pärnu maakond",
+        "municipality": "Pärnu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.535007501501287,
+          58.94935036907552
+        ]
+      },
+      "properties": {
+        "id": "LÄ94874",
+        "name": "Haapsalu Noorte Huvikeskus",
+        "address": "Lääne maakond, Haapsalu linn, Haapsalu linn, F. J. Wiedemanni tn 4",
+        "county": "Lääne maakond",
+        "municipality": "Haapsalu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.945128835736178,
+          58.870215283860176
+        ]
+      },
+      "properties": {
+        "id": "LÄ44482",
+        "name": "Hiiuma Ametikool",
+        "address": "Hiiu maakond, Hiiumaa vald, Suuremõisa küla, Lossi tee 3",
+        "county": "Hiiu maakond",
+        "municipality": "Hiiumaa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.768277597104042,
+          58.73139162583926
+        ]
+      },
+      "properties": {
+        "id": "LÄ28422",
+        "name": "Imavere põhikool-rahvamaja",
+        "address": "Järva maakond, Järva vald, Imavere küla, Kiigevere tee 5",
+        "county": "Järva maakond",
+        "municipality": "Järva vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.39680558640868,
+          58.74593025309586
+        ]
+      },
+      "properties": {
+        "id": "LÕ44805",
+        "name": "Jõgeva Vallavalitsus",
+        "address": "Jõgeva maakond, Jõgeva vald, Jõgeva linn, Suur tn 5",
+        "county": "Jõgeva maakond",
+        "municipality": "Jõgeva vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.682877090246144,
+          59.24370094350495
+        ]
+      },
+      "properties": {
+        "id": "ID77195",
+        "name": "Jäneda loss",
+        "address": "Lääne-Viru maakond, Tapa vald, Jäneda küla, Jäneda loss",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Tapa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.49999474230797,
+          58.60972301111045
+        ]
+      },
+      "properties": {
+        "id": "LÄ50243",
+        "name": "Pärnu-Jaagupi põhikool",
+        "address": "Pärnu maakond, Põhja-Pärnumaa vald, Pärnu-Jaagupi alev, Kooli tn 3",
+        "county": "Pärnu maakond",
+        "municipality": "Põhja-Pärnumaa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.616467913517354,
+          59.342180275160224
+        ]
+      },
+      "properties": {
+        "id": "PÕ31681",
+        "name": "Jalakäijate tunnel",
+        "address": "Harju maakond, Saue vald, Laagri alevik, 4 Tallinn-Pärnu-Ikla tee L1",
+        "county": "Harju maakond",
+        "municipality": "Saue vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.607015637169766,
+          58.54799114293776
+        ]
+      },
+      "properties": {
+        "id": "LÕ74343",
+        "name": "Tabivere põhikool",
+        "address": "Tartu maakond, Tartu vald, Tabivere alevik, Hariduse tn 1",
+        "county": "Tartu maakond",
+        "municipality": "Tartu vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.738743223719325,
+          58.618304382913166
+        ]
+      },
+      "properties": {
+        "id": "LÕ41128",
+        "name": "J. V. Veski nim Maarja-Magdaleena Põhikool",
+        "address": "Tartu maakond, Tartu vald, Maarja-Magdaleena küla, Maarja põhikool/3",
+        "county": "Tartu maakond",
+        "municipality": "Tartu vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.38529520271918,
+          58.48819995614913
+        ]
+      },
+      "properties": {
+        "id": "LÕ93671",
+        "name": "Laeva lasteaed-külakeskus",
+        "address": "Tartu maakond, Tartu vald, Laeva küla, Väänikvere tee 6",
+        "county": "Tartu maakond",
+        "municipality": "Tartu vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.415247225009168,
+          57.61483145638083
+        ]
+      },
+      "properties": {
+        "id": "LÕ75244",
+        "name": "Hargla Kool",
+        "address": "Valga maakond, Valga vald, Hargla küla, Hargla kool",
+        "county": "Valga maakond",
+        "municipality": "Valga vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.191293883820048,
+          57.864366514442864
+        ]
+      },
+      "properties": {
+        "id": "LÕ89225",
+        "name": "Tsirguliina Kool",
+        "address": "Valga maakond, Valga vald, Tsirguliina alevik, Nooruse tn 1",
+        "county": "Valga maakond",
+        "municipality": "Valga vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.55800358333748,
+          58.102058251711625
+        ]
+      },
+      "properties": {
+        "id": "LÕ71827",
+        "name": "August Kitzbergi nimeline Gümnaasium",
+        "address": "Viljandi maakond, Mulgi vald, Karksi-Nuia linn, Kooli tn 1",
+        "county": "Viljandi maakond",
+        "municipality": "Mulgi vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.55145173946393,
+          58.10490576292911
+        ]
+      },
+      "properties": {
+        "id": "LÕ62528",
+        "name": "Apteegi hoone",
+        "address": "Viljandi maakond, Mulgi vald, Karksi-Nuia linn, Kalda tn 6b",
+        "county": "Viljandi maakond",
+        "municipality": "Mulgi vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.34907897662636,
+          58.127519980514535
+        ]
+      },
+      "properties": {
+        "id": "LÕ35603",
+        "name": "Abja lasteaed",
+        "address": "Viljandi maakond, Mulgi vald, Abja-Paluoja linn, Aia tn 24",
+        "county": "Viljandi maakond",
+        "municipality": "Mulgi vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.639199797565354,
+          58.35830337342303
+        ]
+      },
+      "properties": {
+        "id": "LÕ37208",
+        "name": "Viiratsi Kool",
+        "address": "Viljandi maakond, Viljandi vald, Viiratsi alevik, Sakala tn 4 // Tiigi tn 4",
+        "county": "Viljandi maakond",
+        "municipality": "Viljandi vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.539350150156185,
+          58.30725828836042
+        ]
+      },
+      "properties": {
+        "id": "LÕ72261",
+        "name": "Ramsi Vaba Aja Keskus",
+        "address": "Viljandi maakond, Viljandi vald, Ramsi alevik, Ramsi tee 5",
+        "county": "Viljandi maakond",
+        "municipality": "Viljandi vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.501379100574418,
+          58.32183144476383
+        ]
+      },
+      "properties": {
+        "id": "LÕ23098",
+        "name": "Heimtali Põhikooli spordihoone",
+        "address": "Viljandi maakond, Viljandi vald, Heimtali küla, Ridaelamu tee 1",
+        "county": "Viljandi maakond",
+        "municipality": "Viljandi vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.7990330716746,
+          59.426284878838906
+        ]
+      },
+      "properties": {
+        "id": "PÕ56747",
+        "name": "Lasnamäe spordikompleks",
+        "address": "Harju maakond, Tallinn, Lasnamäe linnaosa, Pae tn 1",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.74589018960526,
+          59.42768489361392
+        ]
+      },
+      "properties": {
+        "id": "PÕ15527",
+        "name": "Liivalaia jalakäiate tunnel",
+        "address": "Harju maakond, Tallinn, Kesklinna linnaosa, Liivalaia tänav T1",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.196455937973735,
+          59.37566066858034
+        ]
+      },
+      "properties": {
+        "id": "ID73911",
+        "name": "Linnavalitsuse hoone",
+        "address": "Ida-Viru maakond, Narva linn, Peetri plats 5",
+        "county": "Ida-Viru maakond",
+        "municipality": "Narva linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.132604209396543,
+          59.34287820332609
+        ]
+      },
+      "properties": {
+        "id": "ID18059",
+        "name": "Kadrina Huvikeskus",
+        "address": "Lääne-Viru maakond, Kadrina vald, Kadrina alevik, Rakvere tee 4",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Kadrina vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.73012561157319,
+          58.36073490359549
+        ]
+      },
+      "properties": {
+        "id": "LÕ46504",
+        "name": "Tartu Forseliuse Kool (Loovusmaja)",
+        "address": "Tartu maakond, Tartu linn, Tartu linn, Tähe tn 101",
+        "county": "Tartu maakond",
+        "municipality": "Tartu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.725495009506663,
+          58.391054997675276
+        ]
+      },
+      "properties": {
+        "id": "LÕ45902",
+        "name": "Tartu Pärli Kool",
+        "address": "Tartu maakond, Tartu linn, Tartu linn, Puiestee tn 62",
+        "county": "Tartu maakond",
+        "municipality": "Tartu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.71425635510475,
+          58.34955682394868
+        ]
+      },
+      "properties": {
+        "id": "LÕ37835",
+        "name": "Tartu Rakenduslik Kolledž",
+        "address": "Tartu maakond, Tartu linn, Tartu linn, Kopli tn 1",
+        "county": "Tartu maakond",
+        "municipality": "Tartu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.686691577144202,
+          58.37494582519571
+        ]
+      },
+      "properties": {
+        "id": "LÕ73062",
+        "name": "Tartu Veeriku Kool",
+        "address": "Tartu maakond, Tartu linn, Tartu linn, Veeriku tn 41",
+        "county": "Tartu maakond",
+        "municipality": "Tartu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.883822916684103,
+          59.04719430967967
+        ]
+      },
+      "properties": {
+        "id": "LÄ31406",
+        "name": "Järva-Jaani Gümnaasium",
+        "address": "Järva maakond, Järva vald, Järva-Jaani alev, Pikk tn 1",
+        "county": "Järva maakond",
+        "municipality": "Järva vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.75758446879446,
+          59.435577333688094
+        ]
+      },
+      "properties": {
+        "id": "PÕ30495",
+        "name": "Kaubamaja jalakäiate tunnel",
+        "address": "Harju maakond, Tallinn, Kesklinna linnaosa, Ants Laikmaa tänav",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.42478019017589,
+          59.30813327151938
+        ]
+      },
+      "properties": {
+        "id": "PÕ93758",
+        "name": "Keila linnavalitsuse hoone",
+        "address": "Harju maakond, Keila linn, Keskväljak 11",
+        "county": "Harju maakond",
+        "municipality": "Keila linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.756374443924056,
+          59.42907887241702
+        ]
+      },
+      "properties": {
+        "id": "PÕ39358",
+        "name": "Kesklinna sotsiaalkeskus",
+        "address": "Harju maakond, Tallinn, Kesklinna linnaosa, Juhkentali tn 2 // Liivalaia tn 32",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.96093190004066,
+          58.14898050741314
+        ]
+      },
+      "properties": {
+        "id": "LÄ67355",
+        "name": "Kilingi-Nõmme Tervise- ja Hoolduskeskus",
+        "address": "Pärnu maakond, Saarde vald, Kilingi-Nõmme linn, Pärnu tn 65/1",
+        "county": "Pärnu maakond",
+        "municipality": "Saarde vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.021111224471703,
+          58.96205074940212
+        ]
+      },
+      "properties": {
+        "id": "LÄ31890",
+        "name": "Koeru Tervisekeskus",
+        "address": "Järva maakond, Järva vald, Koeru alevik, Paide tee 16a",
+        "county": "Järva maakond",
+        "municipality": "Järva vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.433041731494,
+          58.81011938238863
+        ]
+      },
+      "properties": {
+        "id": "LÄ85266",
+        "name": "Konesko Türi Spordihoone",
+        "address": "Järva maakond, Türi vald, Türi linn, F. J. Wiedemanni tn 3a/1",
+        "county": "Järva maakond",
+        "municipality": "Türi vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.707694020672317,
+          59.4277462155067
+        ]
+      },
+      "properties": {
+        "id": "PÕ95771",
+        "name": "Kristiine lo valitsus",
+        "address": "Harju maakond, Tallinn, Kristiine linnaosa, Metalli tn 5",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.48694929511998,
+          58.25287980839305
+        ]
+      },
+      "properties": {
+        "id": "LÄ34732",
+        "name": "Kuressaare kultuurikeskus",
+        "address": "Saare maakond, Saaremaa vald, Kuressaare linn, Tallinna tn 6",
+        "county": "Saare maakond",
+        "municipality": "Saaremaa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.19462748467576,
+          59.37293131426703
+        ]
+      },
+      "properties": {
+        "id": "ID76985",
+        "name": "Sotsiaalabiameti hoone",
+        "address": "Ida-Viru maakond, Narva linn, Malmi tn 5a",
+        "county": "Ida-Viru maakond",
+        "municipality": "Narva linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.718886487890536,
+          58.37906130347813
+        ]
+      },
+      "properties": {
+        "id": "LÕ40516",
+        "name": "Püssirohukelder",
+        "address": "Tartu maakond, Tartu linn, Tartu linn, Lossi tn 28",
+        "county": "Tartu maakond",
+        "municipality": "Tartu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.618351723501867,
+          58.370889467059655
+        ]
+      },
+      "properties": {
+        "id": "LÄ10386",
+        "name": "Paikuse osavallakeskus",
+        "address": "Pärnu maakond, Pärnu linn, Paikuse alev, Pärnade pst 11",
+        "county": "Pärnu maakond",
+        "municipality": "Pärnu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.96665222740769,
+          59.26162456913865
+        ]
+      },
+      "properties": {
+        "id": "ID48933",
+        "name": "Tapa Lasteaed Pisipõnn",
+        "address": "Lääne-Viru maakond, Tapa vald, Tapa linn, Nooruse tn 11",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Tapa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.959604899783184,
+          59.26334474384479
+        ]
+      },
+      "properties": {
+        "id": "ID49093",
+        "name": "Tapa valla kultuurikeskus",
+        "address": "Lääne-Viru maakond, Tapa vald, Tapa linn, Kesk tn 4",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Tapa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.48800767199164,
+          58.26033905392954
+        ]
+      },
+      "properties": {
+        "id": "LÄ22656",
+        "name": "Endine saun",
+        "address": "Saare maakond, Saaremaa vald, Kuressaare linn, Rehe tn 5",
+        "county": "Saare maakond",
+        "municipality": "Saaremaa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.74533413768593,
+          58.37950139473128
+        ]
+      },
+      "properties": {
+        "id": "LÕ10988",
+        "name": "Tartu Aleksander Puškini kool",
+        "address": "Tartu maakond, Tartu linn, Tartu linn, Uus tn 54",
+        "county": "Tartu maakond",
+        "municipality": "Tartu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.757622878214836,
+          58.37558887021703
+        ]
+      },
+      "properties": {
+        "id": "LÕ84907",
+        "name": "Tartu Descartes´i Kool",
+        "address": "Tartu maakond, Tartu linn, Tartu linn, Anne tn 65",
+        "county": "Tartu maakond",
+        "municipality": "Tartu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.71967470974587,
+          58.375328071192435
+        ]
+      },
+      "properties": {
+        "id": "LÕ81984",
+        "name": "Tartu Jaan Poska Gümnaasium",
+        "address": "Tartu maakond, Tartu linn, Tartu linn, Vanemuise tn 35",
+        "county": "Tartu maakond",
+        "municipality": "Tartu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.72368946688234,
+          58.38139684019446
+        ]
+      },
+      "properties": {
+        "id": "LÕ78476",
+        "name": "Tartu Linnaraamatukogu",
+        "address": "Tartu maakond, Tartu linn, Tartu linn, Kompanii tn 3 // 5",
+        "county": "Tartu maakond",
+        "municipality": "Tartu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.71409540491378,
+          58.398805441860034
+        ]
+      },
+      "properties": {
+        "id": "LÕ94150",
+        "name": "Tartu Rakenduslik Kolledž",
+        "address": "Tartu maakond, Tartu linn, Tartu linn, Põllu tn 11a",
+        "county": "Tartu maakond",
+        "municipality": "Tartu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.997103284073173,
+          57.84791982232021
+        ]
+      },
+      "properties": {
+        "id": "LÕ20547",
+        "name": "endine Võru teenindusmaja",
+        "address": "Võru maakond, Võru linn, Lembitu tn 2",
+        "county": "Võru maakond",
+        "municipality": "Võru linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.848776923723243,
+          59.443195939892625
+        ]
+      },
+      "properties": {
+        "id": "PÕ65819",
+        "name": "Tondiraba jäähall",
+        "address": "Harju maakond, Tallinn, Lasnamäe linnaosa, Varraku tn 14",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.798634986356987,
+          58.47675037041146
+        ]
+      },
+      "properties": {
+        "id": "LÄ62833",
+        "name": "Tori põhikool",
+        "address": "Pärnu maakond, Tori vald, Tori alevik, Virula tn 11",
+        "county": "Pärnu maakond",
+        "municipality": "Tori vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.996220145868485,
+          58.34313618762138
+        ]
+      },
+      "properties": {
+        "id": "LÄ19272",
+        "name": "Tõstamaa mõis",
+        "address": "Pärnu maakond, Pärnu linn, Tõstamaa alevik, Kalli mnt 13",
+        "county": "Pärnu maakond",
+        "municipality": "Pärnu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.725066104907878,
+          58.385333172720706
+        ]
+      },
+      "properties": {
+        "id": "LÕ20855",
+        "name": "TÜ Delta keskus",
+        "address": "Tartu maakond, Tartu linn, Tartu linn, Narva mnt 18",
+        "county": "Tartu maakond",
+        "municipality": "Tartu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.690471681923377,
+          58.36627788329644
+        ]
+      },
+      "properties": {
+        "id": "LÕ94587",
+        "name": "TÜ füüsika instituudi õppehoone",
+        "address": "Tartu maakond, Tartu linn, Tartu linn, W. Ostwaldi tn 1",
+        "county": "Tartu maakond",
+        "municipality": "Tartu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.7197715319894,
+          58.38016558204761
+        ]
+      },
+      "properties": {
+        "id": "LÕ29544",
+        "name": "TÜ humanitaarteaduste õppehoone",
+        "address": "Tartu maakond, Tartu linn, Tartu linn, Lossi tn 3",
+        "county": "Tartu maakond",
+        "municipality": "Tartu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.4330699523152,
+          58.80778293562177
+        ]
+      },
+      "properties": {
+        "id": "LÄ17867",
+        "name": "Türi Vallavalitsuse hoone",
+        "address": "Järva maakond, Türi vald, Türi linn, Hariduse tn 3",
+        "county": "Järva maakond",
+        "municipality": "Türi vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.632052395522106,
+          59.32563214210004
+        ]
+      },
+      "properties": {
+        "id": "ID61072",
+        "name": "Ulvi mõis",
+        "address": "Lääne-Viru maakond, Vinni vald, Ulvi küla, Mõisa tee 5",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Vinni vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.578650694774208,
+          58.27846314195924
+        ]
+      },
+      "properties": {
+        "id": "LÄ92309",
+        "name": "Uulu Kultuuri- ja Spordi-keskus",
+        "address": "Pärnu maakond, Häädemeeste vald, Uulu küla, Pargi tee 1",
+        "county": "Pärnu maakond",
+        "municipality": "Häädemeeste vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.00731573582697,
+          59.109312049751104
+        ]
+      },
+      "properties": {
+        "id": "ID34319",
+        "name": "Vajangu Põhikool",
+        "address": "Lääne-Viru maakond, Tapa vald, Vajangu küla, Kooli tn 7",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Tapa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.040394090862744,
+          57.77822151488626
+        ]
+      },
+      "properties": {
+        "id": "LÕ36236",
+        "name": "Valga Gümnaasium",
+        "address": "Valga maakond, Valga vald, Valga linn, J. Kuperjanovi tn 10",
+        "county": "Valga maakond",
+        "municipality": "Valga vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.74158291514948,
+          59.428768851756445
+        ]
+      },
+      "properties": {
+        "id": "PÕ33986",
+        "name": "Vana rahvusarhiiv",
+        "address": "Harju maakond, Tallinn, Kesklinna linnaosa, Tõnismägi 16",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.611564017952148,
+          58.36533485131061
+        ]
+      },
+      "properties": {
+        "id": "LÕ84591",
+        "name": "Viljandi Kesklinna kool",
+        "address": "Viljandi maakond, Viljandi linn, C. R. Jakobsoni tn 42",
+        "county": "Viljandi maakond",
+        "municipality": "Viljandi linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.487524216575004,
+          58.254183286391495
+        ]
+      },
+      "properties": {
+        "id": "LÄ21459",
+        "name": "Grand Rose SPA",
+        "address": "Saare maakond, Saaremaa vald, Kuressaare linn, Tallinna tn 15",
+        "county": "Saare maakond",
+        "municipality": "Saaremaa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.99671671067927,
+          57.845526721618555
+        ]
+      },
+      "properties": {
+        "id": "LÕ75487",
+        "name": "Võru Kesklinna kool",
+        "address": "Võru maakond, Võru linn, Vabaduse tn 12",
+        "county": "Võru maakond",
+        "municipality": "Võru linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.01231757830658,
+          57.83810816582013
+        ]
+      },
+      "properties": {
+        "id": "LÕ57577",
+        "name": "Võru Lasteaed Sõleke",
+        "address": "Võru maakond, Võru linn, Olevi tn 29",
+        "county": "Võru maakond",
+        "municipality": "Võru linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.040295614502124,
+          58.64614613385516
+        ]
+      },
+      "properties": {
+        "id": "LÄ71296",
+        "name": "Vändra Gümnaasium",
+        "address": "Pärnu maakond, Põhja-Pärnumaa vald, Vändra alev, Kooli tn 13/2",
+        "county": "Pärnu maakond",
+        "municipality": "Põhja-Pärnumaa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.722810908789672,
+          58.32205991902996
+        ]
+      },
+      "properties": {
+        "id": "LÕ38736",
+        "name": "Ülenurme Spordihoone",
+        "address": "Tartu maakond, Kambja vald, Ülenurme alevik, Tartu mnt 5/2",
+        "county": "Tartu maakond",
+        "municipality": "Kambja vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.049941929370544,
+          58.14898049287226
+        ]
+      },
+      "properties": {
+        "id": "LÄ70512",
+        "name": "Tihemetsa Huvi- ja Spordikeskus",
+        "address": "Pärnu maakond, Saarde vald, Tihemetsa alevik, Valga mnt 21",
+        "county": "Pärnu maakond",
+        "municipality": "Saarde vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.784202623102843,
+          58.58408845487573
+        ]
+      },
+      "properties": {
+        "id": "LÄ31582",
+        "name": "Tootsi lasteaed/ halduskeskus",
+        "address": "Pärnu maakond, Põhja-Pärnumaa vald, Tootsi alev, Tuleviku tn 1",
+        "county": "Pärnu maakond",
+        "municipality": "Põhja-Pärnumaa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.706439082049908,
+          58.3212380339119
+        ]
+      },
+      "properties": {
+        "id": "LÕ35635",
+        "name": "Tõrvandi Lasteaed Rüblik",
+        "address": "Tartu maakond, Kambja vald, Tõrvandi alevik, Ringtee 1",
+        "county": "Tartu maakond",
+        "municipality": "Kambja vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.720600869904843,
+          58.3766421838421
+        ]
+      },
+      "properties": {
+        "id": "LÕ55150",
+        "name": "TÜ raamatukogu",
+        "address": "Tartu maakond, Tartu linn, Tartu linn, W. Struve tn 1",
+        "county": "Tartu maakond",
+        "municipality": "Tartu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.587857222205905,
+          58.36203279491175
+        ]
+      },
+      "properties": {
+        "id": "LÕ93585",
+        "name": "Ugala Teater",
+        "address": "Viljandi maakond, Viljandi linn, Vaksali tn 7",
+        "county": "Viljandi maakond",
+        "municipality": "Viljandi linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.580424770646882,
+          58.94334876067756
+        ]
+      },
+      "properties": {
+        "id": "LÄ69635",
+        "name": "Uuemõisa Lasteaed-algkool",
+        "address": "Lääne maakond, Haapsalu linn, Uuemõisa alevik, Lossi tn 4",
+        "county": "Lääne maakond",
+        "municipality": "Haapsalu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.74418630605495,
+          59.43341321731912
+        ]
+      },
+      "properties": {
+        "id": "PÕ59675",
+        "name": "Vabaduse väljaku maa-alune parkla",
+        "address": "Harju maakond, Tallinn, Kesklinna linnaosa, Vabaduse väljak 9",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.038444803831688,
+          57.775029920951674
+        ]
+      },
+      "properties": {
+        "id": "LÕ75304",
+        "name": "Valga Buratino lasteaed",
+        "address": "Valga maakond, Valga vald, Valga linn, Lai tn 6a",
+        "county": "Valga maakond",
+        "municipality": "Valga vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.195078197245532,
+          59.37545251043295
+        ]
+      },
+      "properties": {
+        "id": "ID37427",
+        "name": "Linnavolikogu hoone",
+        "address": "Ida-Viru maakond, Narva linn, Peetri plats 1",
+        "county": "Ida-Viru maakond",
+        "municipality": "Narva linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.493050876113717,
+          58.2556971011996
+        ]
+      },
+      "properties": {
+        "id": "LÄ67140",
+        "name": "Maapanga hoone",
+        "address": "Saare maakond, Saaremaa vald, Kuressaare linn, Tallinna tn 27",
+        "county": "Saare maakond",
+        "municipality": "Saaremaa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.74983588049065,
+          59.44281479175486
+        ]
+      },
+      "properties": {
+        "id": "PÕ37185",
+        "name": "Margareeta aed Bunker",
+        "address": "Harju maakond, Tallinn, Kesklinna linnaosa, Pikk tn 72",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.75043797532072,
+          59.44234053015649
+        ]
+      },
+      "properties": {
+        "id": "PÕ37530",
+        "name": "Margareeta aed Citysec",
+        "address": "Harju maakond, Tallinn, Kesklinna linnaosa, Pikk tn 72 // Margareeta aed",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.66627767967029,
+          59.40412214295148
+        ]
+      },
+      "properties": {
+        "id": "PÕ48530",
+        "name": "Mustame LOV",
+        "address": "Harju maakond, Tallinn, Mustamäe linnaosa, E. Vilde tee 118",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.691922851124662,
+          59.384179429909906
+        ]
+      },
+      "properties": {
+        "id": "PÕ54365",
+        "name": "Nõmme lo valitsus",
+        "address": "Harju maakond, Tallinn, Nõmme linnaosa, Valdeku tn 13",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.084366557468197,
+          58.56013192160927
+        ]
+      },
+      "properties": {
+        "id": "LÄ72449",
+        "name": "Orissaare Gümnaasiumi hostel-õpilaskodu",
+        "address": "Saare maakond, Saaremaa vald, Orissaare alevik, Sadama tn 5",
+        "county": "Saare maakond",
+        "municipality": "Saaremaa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.835218651828086,
+          58.94422083159003
+        ]
+      },
+      "properties": {
+        "id": "LÄ64335",
+        "name": "Peetri kool-rahvamaja",
+        "address": "Järva maakond, Järva vald, Peetri alevik, Kesktee 11",
+        "county": "Järva maakond",
+        "municipality": "Järva vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.84167702108714,
+          59.470172228303134
+        ]
+      },
+      "properties": {
+        "id": "PÕ22219",
+        "name": "Pirita Majandus-gümnaasium",
+        "address": "Harju maakond, Tallinn, Pirita linnaosa, Metsavahi tee 19",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.503167466846634,
+          58.386481171611116
+        ]
+      },
+      "properties": {
+        "id": "LÄ70075",
+        "name": "Port Artur 1",
+        "address": "Pärnu maakond, Pärnu linn, Pärnu linn, Hommiku tn 2",
+        "county": "Pärnu maakond",
+        "municipality": "Pärnu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.055080872877756,
+          58.04937734232677
+        ]
+      },
+      "properties": {
+        "id": "LÕ12619",
+        "name": "Põlva Lasketurismikeskus",
+        "address": "Põlva maakond, Põlva vald, Põlva linn, Metsa tn 7",
+        "county": "Põlva maakond",
+        "municipality": "Põlva vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.50675626732834,
+          58.38522981243364
+        ]
+      },
+      "properties": {
+        "id": "LÄ23016",
+        "name": "Pärnu Hotell",
+        "address": "Pärnu maakond, Pärnu linn, Pärnu linn, Rüütli tn 44",
+        "county": "Pärnu maakond",
+        "municipality": "Pärnu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.501189909996242,
+          58.38294075807824
+        ]
+      },
+      "properties": {
+        "id": "LÄ70044",
+        "name": "Pärnu Vanalinna Põhikooli võimla",
+        "address": "Pärnu maakond, Pärnu linn, Pärnu linn, Pühavaimu tn 19",
+        "county": "Pärnu maakond",
+        "municipality": "Pärnu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.23358441250866,
+          58.60530616037315
+        ]
+      },
+      "properties": {
+        "id": "LÄ15505",
+        "name": "Muhu maja",
+        "address": "Saare maakond, Muhu vald, Liiva küla, Keskuse",
+        "county": "Saare maakond",
+        "municipality": "Muhu vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.179265122848115,
+          59.37525148905321
+        ]
+      },
+      "properties": {
+        "id": "ID18539",
+        "name": "Administratiivhoone",
+        "address": "Ida-Viru maakond, Narva linn, P. Kerese tn 20",
+        "county": "Ida-Viru maakond",
+        "municipality": "Narva linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.542323659278626,
+          58.94039996460491
+        ]
+      },
+      "properties": {
+        "id": "LÄ16001",
+        "name": "Haapsalu Kaubamaja",
+        "address": "Lääne maakond, Haapsalu linn, Haapsalu linn, Tallinna mnt 1",
+        "county": "Lääne maakond",
+        "municipality": "Haapsalu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.539507792098185,
+          58.94501557090592
+        ]
+      },
+      "properties": {
+        "id": "LÄ14661",
+        "name": "Haapsalu Kultuurikeskus",
+        "address": "Lääne maakond, Haapsalu linn, Haapsalu linn, Posti tn 3",
+        "county": "Lääne maakond",
+        "municipality": "Haapsalu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.72000214239654,
+          58.37580030586405
+        ]
+      },
+      "properties": {
+        "id": "LÕ20695",
+        "name": "Herbert Masingu Kool",
+        "address": "Tartu maakond, Tartu linn, Tartu linn, Vanemuise tn 33",
+        "county": "Tartu maakond",
+        "municipality": "Tartu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.72048318963613,
+          58.382280051289904
+        ]
+      },
+      "properties": {
+        "id": "LÕ28799",
+        "name": "Hugo Treffneri Gümnaasium",
+        "address": "Tartu maakond, Tartu linn, Tartu linn, Munga tn 12",
+        "county": "Tartu maakond",
+        "municipality": "Tartu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.395947743149293,
+          58.746653658723325
+        ]
+      },
+      "properties": {
+        "id": "LÕ76553",
+        "name": "Jõgeva kaubahall",
+        "address": "Jõgeva maakond, Jõgeva vald, Jõgeva linn, Aia tn 3",
+        "county": "Jõgeva maakond",
+        "municipality": "Jõgeva vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.73909964467795,
+          59.44004160272319
+        ]
+      },
+      "properties": {
+        "id": "PÕ41281",
+        "name": "Balti jaama jalakäiate tunnel",
+        "address": "Harju maakond, Tallinn, Kesklinna linnaosa, Toompuiestee T2",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.69901317718542,
+          58.23482908705734
+        ]
+      },
+      "properties": {
+        "id": "LÕ38436",
+        "name": "Kambja Lasteaed Mesimumm",
+        "address": "Tartu maakond, Kambja vald, Kambja alevik, Kesk tn 4",
+        "county": "Tartu maakond",
+        "municipality": "Kambja vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.139773473993788,
+          59.34583209709594
+        ]
+      },
+      "properties": {
+        "id": "ID89568",
+        "name": "Kadrina Spordikeskus",
+        "address": "Lääne-Viru maakond, Kadrina vald, Kadrina alevik, Rakvere tee 14",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Kadrina vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.41171413250063,
+          59.31474839156625
+        ]
+      },
+      "properties": {
+        "id": "PÕ25824",
+        "name": "Keila Tervisekeskus",
+        "address": "Harju maakond, Keila linn, Paldiski mnt 17",
+        "county": "Harju maakond",
+        "municipality": "Keila linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.029067122931945,
+          58.36204238659378
+        ]
+      },
+      "properties": {
+        "id": "LÄ46746",
+        "name": "Kihelkonna kool-lasteaed",
+        "address": "Saare maakond, Saaremaa vald, Kihelkonna alevik, Kooli tn 1",
+        "county": "Saare maakond",
+        "municipality": "Saaremaa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.025525830980474,
+          58.962556415129065
+        ]
+      },
+      "properties": {
+        "id": "LÄ44500",
+        "name": "Koeru kultuurimaja",
+        "address": "Järva maakond, Järva vald, Koeru alevik, Paide tee 3",
+        "county": "Järva maakond",
+        "municipality": "Järva vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.75281989816092,
+          58.83622079990213
+        ]
+      },
+      "properties": {
+        "id": "LÄ91750",
+        "name": "Koigi haldushoone",
+        "address": "Järva maakond, Järva vald, Koigi küla, Mõisavahe tee 1",
+        "county": "Järva maakond",
+        "municipality": "Järva vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.201845094533073,
+          59.38264748129008
+        ]
+      },
+      "properties": {
+        "id": "ID35606",
+        "name": "Bastioni käigud",
+        "address": "Ida-Viru maakond, Narva linn, Pimeaia tn 1",
+        "county": "Ida-Viru maakond",
+        "municipality": "Narva linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.771987009909537,
+          58.37616702290001
+        ]
+      },
+      "properties": {
+        "id": "LÕ77563",
+        "name": "Kristjan Jaak Petersoni Gümnaasium",
+        "address": "Tartu maakond, Tartu linn, Tartu linn, Kaunase pst 70",
+        "county": "Tartu maakond",
+        "municipality": "Tartu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.564899346244683,
+          58.88632997279269
+        ]
+      },
+      "properties": {
+        "id": "LÄ53088",
+        "name": "E-Piim Spordihall",
+        "address": "Järva maakond, Paide linn, Paide linn, Aiavilja tn 1",
+        "county": "Järva maakond",
+        "municipality": "Paide linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.039347213963474,
+          57.776590695180325
+        ]
+      },
+      "properties": {
+        "id": "LÕ31426",
+        "name": "Valga Piirimetsa Kool",
+        "address": "Valga maakond, Valga vald, Valga linn, Vabaduse tn 13",
+        "county": "Valga maakond",
+        "municipality": "Valga vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.581665250096847,
+          58.34666518520345
+        ]
+      },
+      "properties": {
+        "id": "LÕ51909",
+        "name": "Viljandi Jakobsoni kool",
+        "address": "Viljandi maakond, Viljandi linn, Riia mnt 91",
+        "county": "Viljandi maakond",
+        "municipality": "Viljandi linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.582098847132617,
+          58.35448597210371
+        ]
+      },
+      "properties": {
+        "id": "LÕ69530",
+        "name": "Viljandi Lasteaed \"Krõllipesa\"",
+        "address": "Viljandi maakond, Viljandi linn, Riia mnt 30",
+        "county": "Viljandi maakond",
+        "municipality": "Viljandi linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.42121212389964,
+          59.287528301663016
+        ]
+      },
+      "properties": {
+        "id": "ID48816",
+        "name": "Vinni-Pajusti Gümnaasium",
+        "address": "Lääne-Viru maakond, Vinni vald, Vinni alevik, Tammiku tn 9",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Vinni vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.008692529316892,
+          57.847125332493874
+        ]
+      },
+      "properties": {
+        "id": "LÕ66602",
+        "name": "Võru Kreutzwaldi Kool",
+        "address": "Võru maakond, Võru linn, Kooli tn 7",
+        "county": "Võru maakond",
+        "municipality": "Võru linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.996300320867515,
+          57.84763698725647
+        ]
+      },
+      "properties": {
+        "id": "LÕ79800",
+        "name": "Võru Linnavalitsus",
+        "address": "Võru maakond, Võru linn, Tartu tn 25",
+        "county": "Võru maakond",
+        "municipality": "Võru linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.48606770835292,
+          58.2536863904437
+        ]
+      },
+      "properties": {
+        "id": "LÄ96786",
+        "name": "ööklubi Lokaal",
+        "address": "Saare maakond, Saaremaa vald, Kuressaare linn, Tallinna tn 11",
+        "county": "Saare maakond",
+        "municipality": "Saaremaa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.65645761014802,
+          59.41361991958623
+        ]
+      },
+      "properties": {
+        "id": "PÕ44698",
+        "name": "Haabersti LOV",
+        "address": "Harju maakond, Tallinn, Haabersti linnaosa, Ehitajate tee 109a/1",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.45335541283058,
+          59.466750891649156
+        ]
+      },
+      "properties": {
+        "id": "PÕ23710",
+        "name": "Meriküla õppekeskus",
+        "address": "Harju maakond, Harku vald, Meriküla, Tilgu tee 53",
+        "county": "Harju maakond",
+        "municipality": "Harku vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.42822118654392,
+          58.90424995167002
+        ]
+      },
+      "properties": {
+        "id": "LÄ88535",
+        "name": "Märjamaa rahvamaja",
+        "address": "Rapla maakond, Märjamaa vald, Märjamaa alev, Sauna tn 2",
+        "county": "Rapla maakond",
+        "municipality": "Märjamaa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.081925652142598,
+          58.559780463343124
+        ]
+      },
+      "properties": {
+        "id": "LÄ14325",
+        "name": "Orissaare Gümnaasium",
+        "address": "Saare maakond, Saaremaa vald, Orissaare alevik, Kuivastu mnt 29/1",
+        "county": "Saare maakond",
+        "municipality": "Saaremaa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.626290372876948,
+          59.428269242343326
+        ]
+      },
+      "properties": {
+        "id": "PÕ32789",
+        "name": "Kakumäe Selver",
+        "address": "Harju maakond, Tallinn, Haabersti linnaosa, Rannamõisa tee 6",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.40548310975868,
+          59.35965296983847
+        ]
+      },
+      "properties": {
+        "id": "ID51933",
+        "name": "Büroohoone",
+        "address": "Ida-Viru maakond, Jõhvi vald, Jõhvi linn, Jaama tn 14",
+        "county": "Ida-Viru maakond",
+        "municipality": "Jõhvi vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.82653460823049,
+          59.50381261571564
+        ]
+      },
+      "properties": {
+        "id": "PÕ81177",
+        "name": "Paadi ärikeskus",
+        "address": "Harju maakond, Viimsi vald, Haabneeme alevik, Paadi tee 3",
+        "county": "Harju maakond",
+        "municipality": "Viimsi vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.836522775791536,
+          59.51299187960102
+        ]
+      },
+      "properties": {
+        "id": "PÕ12654",
+        "name": "Haabneeme kool",
+        "address": "Harju maakond, Viimsi vald, Haabneeme alevik, Randvere tee 18/3",
+        "county": "Harju maakond",
+        "municipality": "Viimsi vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.355197119316855,
+          59.346103524350525
+        ]
+      },
+      "properties": {
+        "id": "ID87513",
+        "name": "Tallinna Ülikooli Rakvere õppehoone (kasutuseta)",
+        "address": "Lääne-Viru maakond, Rakvere linn, Pikk tn 40",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Rakvere linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.68433582539964,
+          59.41077668481632
+        ]
+      },
+      "properties": {
+        "id": "PÕ54193",
+        "name": "Mustika keskus",
+        "address": "Harju maakond, Tallinn, Mustamäe linnaosa, Karjavälja tn 4",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.300708517214897,
+          59.381648399070215
+        ]
+      },
+      "properties": {
+        "id": "PÕ63255",
+        "name": "Anija Mõis",
+        "address": "Harju maakond, Anija vald, Anija küla, Kehra tee 8",
+        "county": "Harju maakond",
+        "municipality": "Anija vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.340253934544005,
+          59.328209801556014
+        ]
+      },
+      "properties": {
+        "id": "PÕ22158",
+        "name": "Sotsiaalmaja",
+        "address": "Harju maakond, Anija vald, Kehra linn, Kose mnt 22",
+        "county": "Harju maakond",
+        "municipality": "Anija vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.759285189713797,
+          59.41379192192643
+        ]
+      },
+      "properties": {
+        "id": "PÕ21312",
+        "name": "Renniotsa jalakäijate tunnel",
+        "address": "Harju maakond, Tallinn, Kesklinna linnaosa, Järvevana tee T4",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.874300821728422,
+          59.442998542573
+        ]
+      },
+      "properties": {
+        "id": "PÕ22421",
+        "name": "Mustakivi jalakäijate tunnel",
+        "address": "Harju maakond, Tallinn, Lasnamäe linnaosa, Mahtra tn 31 // Laagna tee T8",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.859244219558697,
+          59.441162381441764
+        ]
+      },
+      "properties": {
+        "id": "PÕ68331",
+        "name": "Tondiraba jalakäijate tunnel",
+        "address": "Harju maakond, Tallinn, Lasnamäe linnaosa, Laagna tee T7",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.772149894790267,
+          59.421026147630336
+        ]
+      },
+      "properties": {
+        "id": "PÕ67096",
+        "name": "Filtri tee jalakäijate tunnel",
+        "address": "Harju maakond, Tallinn, Kesklinna linnaosa, Järvevana tee T2",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.627997549019963,
+          59.35076693427156
+        ]
+      },
+      "properties": {
+        "id": "PÕ45249",
+        "name": "Veskitammi jalgteetunnel",
+        "address": "Harju maakond, Saue vald, Laagri alevik, 4 Tallinn-Pärnu-Ikla tee L1",
+        "county": "Harju maakond",
+        "municipality": "Saue vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.569509161974434,
+          59.309550388546995
+        ]
+      },
+      "properties": {
+        "id": "PÕ97986",
+        "name": "Tallinn-Pärnu-Ikla mnt km 18,84",
+        "address": "Harju maakond, Saue vald, Jõgisoo küla, 4 Tallinn-Pärnu-Ikla tee L11",
+        "county": "Harju maakond",
+        "municipality": "Saue vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.835253646299332,
+          59.307731635063185
+        ]
+      },
+      "properties": {
+        "id": "PÕ13032",
+        "name": "Kiili vallamaja",
+        "address": "Harju maakond, Kiili vald, Kiili alev, Nabala tee 2a",
+        "county": "Harju maakond",
+        "municipality": "Kiili vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.7342351719416,
+          59.40920632085902
+        ]
+      },
+      "properties": {
+        "id": "PÕ54192",
+        "name": "Lotomaja",
+        "address": "Harju maakond, Tallinn, Kesklinna linnaosa, Hallivanamehe tn 4",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.160785817086474,
+          59.184019621650805
+        ]
+      },
+      "properties": {
+        "id": "PÕ73151",
+        "name": "Kose Kultuurikeskus",
+        "address": "Harju maakond, Kose vald, Kose alevik, Hariduse tn 2",
+        "county": "Harju maakond",
+        "municipality": "Kose vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.335781370608206,
+          59.33385808509307
+        ]
+      },
+      "properties": {
+        "id": "PÕ64433",
+        "name": "Kehra Tervisekeskus",
+        "address": "Harju maakond, Anija vald, Kehra linn, F. R. Kreutzwaldi tn 7",
+        "county": "Harju maakond",
+        "municipality": "Anija vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.729636025399227,
+          59.44489505288173
+        ]
+      },
+      "properties": {
+        "id": "PÕ59078",
+        "name": "Salme kultuurikeskus",
+        "address": "Harju maakond, Tallinn, Põhja-Tallinna linnaosa, Salme tn 12",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.798446900352577,
+          59.392659041940014
+        ]
+      },
+      "properties": {
+        "id": "ID75269",
+        "name": "Sillamäe Kannuka Kool",
+        "address": "Ida-Viru maakond, Sillamäe linn, Geoloogia tn 13",
+        "county": "Ida-Viru maakond",
+        "municipality": "Sillamäe linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.7634853209649,
+          59.396033063249945
+        ]
+      },
+      "properties": {
+        "id": "ID64679",
+        "name": "Sillamäe Kultuurikeskus",
+        "address": "Ida-Viru maakond, Sillamäe linn, Kesk tn 24",
+        "county": "Ida-Viru maakond",
+        "municipality": "Sillamäe linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.533517787069975,
+          59.427907348917536
+        ]
+      },
+      "properties": {
+        "id": "PÕ85315",
+        "name": "Tabasalu spordikompleks",
+        "address": "Harju maakond, Harku vald, Tabasalu alevik, Kooli tn 11",
+        "county": "Harju maakond",
+        "municipality": "Harku vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.110601871082963,
+          59.16055617248552
+        ]
+      },
+      "properties": {
+        "id": "ID93868",
+        "name": "Tamsalu jalakäijate tunnel",
+        "address": "Lääne-Viru maakond, Tapa vald, Tamsalu linn, Paide mnt 3 // Tamsalu raudteejaam",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Tapa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.104430507499583,
+          59.16662238131581
+        ]
+      },
+      "properties": {
+        "id": "ID81686",
+        "name": "Tamsalu Spordikompleks",
+        "address": "Lääne-Viru maakond, Tapa vald, Tamsalu linn, Tehnika tn 2a",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Tapa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.404801499525114,
+          59.35871764418657
+        ]
+      },
+      "properties": {
+        "id": "ID26894",
+        "name": "büroohoone",
+        "address": "Ida-Viru maakond, Jõhvi vald, Jõhvi linn, Jaama tn 10",
+        "county": "Ida-Viru maakond",
+        "municipality": "Jõhvi vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.7197009207636,
+          59.38878224479433
+        ]
+      },
+      "properties": {
+        "id": "PÕ13450",
+        "name": "Mahla tn jalakäijate tunnel",
+        "address": "Harju maakond, Tallinn, Nõmme linnaosa, Männiku tee T1",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.360296392471312,
+          59.34782767441945
+        ]
+      },
+      "properties": {
+        "id": "ID43576",
+        "name": "Rakvere Linnavalitsus",
+        "address": "Lääne-Viru maakond, Rakvere linn, Lai tn 20",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Rakvere linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.41836506005329,
+          59.35703164686574
+        ]
+      },
+      "properties": {
+        "id": "ID57437",
+        "name": "Jewe Keskus",
+        "address": "Ida-Viru maakond, Jõhvi vald, Jõhvi linn, Narva mnt 4b // 8",
+        "county": "Ida-Viru maakond",
+        "municipality": "Jõhvi vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.974595595411007,
+          59.35796825436063
+        ]
+      },
+      "properties": {
+        "id": "ID54370",
+        "name": "Kiviõli Riigikool Viru õppekoht",
+        "address": "Ida-Viru maakond, Lüganuse vald, Kiviõli linn, Viru tn 14",
+        "county": "Ida-Viru maakond",
+        "municipality": "Lüganuse vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.750896667685474,
+          59.44468480523892
+        ]
+      },
+      "properties": {
+        "id": "PÕ70216",
+        "name": "Kultuurikatel",
+        "address": "Harju maakond, Tallinn, Põhja-Tallinna linnaosa, Kursi tn 3",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.759954559874874,
+          59.43384353695138
+        ]
+      },
+      "properties": {
+        "id": "PÕ47921",
+        "name": "Tornimäe maa-alune parkla",
+        "address": "Harju maakond, Tallinn, Kesklinna linnaosa, Väike-Pääsukese tn 5",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.42637167304127,
+          59.32718977140289
+        ]
+      },
+      "properties": {
+        "id": "ID57742",
+        "name": "Kohtla-Järve Maleva põhikool",
+        "address": "Ida-Viru maakond, Kohtla-Järve linn, Ahtme linnaosa, Maleva tn 4",
+        "county": "Ida-Viru maakond",
+        "municipality": "Kohtla-Järve linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.291891805538217,
+          58.57217008311137
+        ]
+      },
+      "properties": {
+        "id": "LÕ45322",
+        "name": "Puurmani rahvamaja",
+        "address": "Jõgeva maakond, Põltsamaa vald, Puurmani alevik, Ülejõe tn 4",
+        "county": "Jõgeva maakond",
+        "municipality": "Põltsamaa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.4307172080539,
+          58.80318288747636
+        ]
+      },
+      "properties": {
+        "id": "LÄ00002",
+        "name": "Türi kolledzi kohvik",
+        "address": "Järva maakond, Türi vald, Türi linn, Viljandi tn 13b",
+        "county": "Järva maakond",
+        "municipality": "Türi vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.786028080986785,
+          59.39307857018584
+        ]
+      },
+      "properties": {
+        "id": "ID38529",
+        "name": "Lasteaed Päikseke",
+        "address": "Ida-Viru maakond, Sillamäe linn, J. Gagarini tn 25",
+        "county": "Ida-Viru maakond",
+        "municipality": "Sillamäe linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.76395703748703,
+          59.37398878742163
+        ]
+      },
+      "properties": {
+        "id": "ID47856",
+        "name": "Vaivara raamatukogu",
+        "address": "Ida-Viru maakond, Narva-Jõesuu linn, Vaivara küla, Poe tn 3",
+        "county": "Ida-Viru maakond",
+        "municipality": "Narva-Jõesuu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.451813616922237,
+          58.88832014720228
+        ]
+      },
+      "properties": {
+        "id": "LÄ00001",
+        "name": "Väätsa Põhikool",
+        "address": "Järva maakond, Türi vald, Väätsa alevik, Kooli tn 1",
+        "county": "Järva maakond",
+        "municipality": "Türi vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.25586316776032,
+          58.78118160068729
+        ]
+      },
+      "properties": {
+        "id": "LÄ91213",
+        "name": "Õpilaskodu 3",
+        "address": "Rapla maakond, Märjamaa vald, Vana-Vigala küla, Pikk tn 8",
+        "county": "Rapla maakond",
+        "municipality": "Märjamaa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.859145839511772,
+          59.44904445513122
+        ]
+      },
+      "properties": {
+        "id": "ID21896",
+        "name": "Aseri kool",
+        "address": "Lääne-Viru maakond, Viru-Nigula vald, Aseri alevik, Kooli tn 2",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Viru-Nigula vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.25465116064472,
+          58.78107087259224
+        ]
+      },
+      "properties": {
+        "id": "LÄ51929",
+        "name": "Õpilaskodu 4",
+        "address": "Rapla maakond, Märjamaa vald, Vana-Vigala küla, Kodu tn 5",
+        "county": "Rapla maakond",
+        "municipality": "Märjamaa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.42799934460523,
+          58.90528439962096
+        ]
+      },
+      "properties": {
+        "id": "LÄ26783",
+        "name": "Märjamaa raamatukogu",
+        "address": "Rapla maakond, Märjamaa vald, Märjamaa alev, Pärnu mnt 56",
+        "county": "Rapla maakond",
+        "municipality": "Märjamaa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.86787170706155,
+          58.92503786150149
+        ]
+      },
+      "properties": {
+        "id": "LÄ22721",
+        "name": "Kehtna Kutsehariduskeskus",
+        "address": "Rapla maakond, Kehtna vald, Kehtna alevik, Kooli tn 1",
+        "county": "Rapla maakond",
+        "municipality": "Kehtna vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.86933217116265,
+          58.929084174996284
+        ]
+      },
+      "properties": {
+        "id": "LÄ96118",
+        "name": "Kehtna Põhikool",
+        "address": "Rapla maakond, Kehtna vald, Kehtna alevik, Staadioni tn 16",
+        "county": "Rapla maakond",
+        "municipality": "Kehtna vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.872965362020206,
+          58.92566826542844
+        ]
+      },
+      "properties": {
+        "id": "LÄ66406",
+        "name": "Kehtna Lasteaed",
+        "address": "Rapla maakond, Kehtna vald, Kehtna alevik, Lasteaia tn 5",
+        "county": "Rapla maakond",
+        "municipality": "Kehtna vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.81506160616303,
+          58.775264579828296
+        ]
+      },
+      "properties": {
+        "id": "LÄ19527",
+        "name": "Järvakandi lasteaed",
+        "address": "Rapla maakond, Kehtna vald, Järvakandi alev, Pargi tn 3",
+        "county": "Rapla maakond",
+        "municipality": "Kehtna vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.80501410863522,
+          58.77532382560669
+        ]
+      },
+      "properties": {
+        "id": "LÄ77564",
+        "name": "Järvakandi kool",
+        "address": "Rapla maakond, Kehtna vald, Järvakandi alev, Nõlva tn 16",
+        "county": "Rapla maakond",
+        "municipality": "Kehtna vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.273349782405678,
+          59.399372444073805
+        ]
+      },
+      "properties": {
+        "id": "ID30538",
+        "name": "Kohtla-Järve Kultuurikeskus",
+        "address": "Ida-Viru maakond, Kohtla-Järve linn, Järve linnaosa, Keskallee 36",
+        "county": "Ida-Viru maakond",
+        "municipality": "Kohtla-Järve linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.567506303621634,
+          59.3963551010832
+        ]
+      },
+      "properties": {
+        "id": "ID12702",
+        "name": "Uhtna Põhikool",
+        "address": "Lääne-Viru maakond, Rakvere vald, Uhtna alevik, Nooruse tn 18",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Rakvere vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.041586188528694,
+          59.45988115179307
+        ]
+      },
+      "properties": {
+        "id": "ID47156",
+        "name": "Narva-Jõesuu Noortekeskus",
+        "address": "Ida-Viru maakond, Narva-Jõesuu linn, Narva-Jõesuu linn, Kesk tn 3",
+        "county": "Ida-Viru maakond",
+        "municipality": "Narva-Jõesuu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.68935602004814,
+          59.44711266240066
+        ]
+      },
+      "properties": {
+        "id": "ID54856",
+        "name": "Viru-Nigula saun, raamatukogu",
+        "address": "Lääne-Viru maakond, Viru-Nigula vald, Viru-Nigula alevik, Kirikaia tn 2",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Viru-Nigula vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.51291718495672,
+          59.499685807830126
+        ]
+      },
+      "properties": {
+        "id": "ID85269",
+        "name": "Kunda spordikeskus",
+        "address": "Lääne-Viru maakond, Viru-Nigula vald, Kunda linn, Kasemäe tn 19",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Viru-Nigula vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.540691600262,
+          59.50196062326206
+        ]
+      },
+      "properties": {
+        "id": "ID87512",
+        "name": "Kunda klubi",
+        "address": "Lääne-Viru maakond, Viru-Nigula vald, Kunda linn, Lasteaia tn 4",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Viru-Nigula vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.05636881857909,
+          59.35262295251172
+        ]
+      },
+      "properties": {
+        "id": "PÕ81155",
+        "name": "Pakri Plaza kelder",
+        "address": "Harju maakond, Lääne-Harju vald, Paldiski linn, Rae tn 38",
+        "county": "Harju maakond",
+        "municipality": "Lääne-Harju vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.80447299929618,
+          59.41958789784994
+        ]
+      },
+      "properties": {
+        "id": "PÕ54195",
+        "name": "Öpiku majad",
+        "address": "Harju maakond, Tallinn, Lasnamäe linnaosa, Valukoja tn 8/2",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.73184079179093,
+          59.585353940097185
+        ]
+      },
+      "properties": {
+        "id": "PÕ81133",
+        "name": "Loksa Varjend",
+        "address": "Harju maakond, Loksa linn, Posti tn 44",
+        "county": "Harju maakond",
+        "municipality": "Loksa linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.831599133472782,
+          59.440814789117276
+        ]
+      },
+      "properties": {
+        "id": "PÕ81111",
+        "name": "Lindakivi kultuurikeskus",
+        "address": "Harju maakond, Tallinn, Lasnamäe linnaosa, J. Koorti tn 22",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.749031029567004,
+          59.435594579348674
+        ]
+      },
+      "properties": {
+        "id": "PÕ81100",
+        "name": "Kunstigalerii kelder",
+        "address": "Harju maakond, Tallinn, Kesklinna linnaosa, Müürivahe tn 28 // Pärnu mnt 6",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.700711801905296,
+          59.42375658605141
+        ]
+      },
+      "properties": {
+        "id": "PÕ54183",
+        "name": "Keskkonnaagentuuri kelder",
+        "address": "Harju maakond, Tallinn, Kristiine linnaosa, Kirsi tn 1 // Mustamäe tee 33",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.009316087280116,
+          59.44035893402414
+        ]
+      },
+      "properties": {
+        "id": "ID86543",
+        "name": "Liivarand Spa",
+        "address": "Ida-Viru maakond, Narva-Jõesuu linn, Narva-Jõesuu linn, L. Koidula tn 21",
+        "county": "Ida-Viru maakond",
+        "municipality": "Narva-Jõesuu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.71506450812414,
+          58.39968135135416
+        ]
+      },
+      "properties": {
+        "id": "LÕ43857",
+        "name": "Tartu Rakenduslik Kolledž (ühiselamu)",
+        "address": "Tartu maakond, Tartu linn, Tartu linn, Põllu tn 11c",
+        "county": "Tartu maakond",
+        "municipality": "Tartu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.751435096883508,
+          59.440674587743885
+        ]
+      },
+      "properties": {
+        "id": "PÕ45250",
+        "name": "Reval Sport",
+        "address": "Harju maakond, Tallinn, Kesklinna linnaosa, Aia tn 20",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.73509588679485,
+          59.441175335927916
+        ]
+      },
+      "properties": {
+        "id": "PÕ30306",
+        "name": "Balti Jaama Turg",
+        "address": "Harju maakond, Tallinn, Põhja-Tallinna linnaosa, Kopli tn 1",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.171829957108127,
+          59.37641632581225
+        ]
+      },
+      "properties": {
+        "id": "ID64760",
+        "name": "Endine lasteaed",
+        "address": "Ida-Viru maakond, Narva linn, Mõisa tn 6",
+        "county": "Ida-Viru maakond",
+        "municipality": "Narva linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.65198773870775,
+          58.08714374578674
+        ]
+      },
+      "properties": {
+        "id": "LÕ45326",
+        "name": "Valgjärve külamaja",
+        "address": "Põlva maakond, Kanepi vald, Valgjärve küla, Järve tee 4",
+        "county": "Põlva maakond",
+        "municipality": "Kanepi vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.759946217245393,
+          57.98678422198591
+        ]
+      },
+      "properties": {
+        "id": "LÕ45327",
+        "name": "Kanepi Gümnaasium",
+        "address": "Põlva maakond, Kanepi vald, Kanepi alevik, Kooli tn 1",
+        "county": "Põlva maakond",
+        "municipality": "Kanepi vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.84205145189149,
+          58.07252741738623
+        ]
+      },
+      "properties": {
+        "id": "LÕ45328",
+        "name": "Krootuse kool",
+        "address": "Põlva maakond, Kanepi vald, Krootuse küla, Kooli tn 1",
+        "county": "Põlva maakond",
+        "municipality": "Kanepi vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.737616626385375,
+          58.071083207639965
+        ]
+      },
+      "properties": {
+        "id": "LÕ45329",
+        "name": "Saverna lasteaed-külakeskus",
+        "address": "Põlva maakond, Kanepi vald, Saverna küla, Kooli tee 7",
+        "county": "Põlva maakond",
+        "municipality": "Kanepi vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.195263632447013,
+          59.380595575689945
+        ]
+      },
+      "properties": {
+        "id": "ID57831",
+        "name": "polikliinik",
+        "address": "Ida-Viru maakond, Narva linn, Vestervalli tn 15",
+        "county": "Ida-Viru maakond",
+        "municipality": "Narva linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.174562961884654,
+          59.38531313031801
+        ]
+      },
+      "properties": {
+        "id": "ID45213",
+        "name": "endine lasteaed",
+        "address": "Ida-Viru maakond, Narva linn, Kangelaste prospekt 16a",
+        "county": "Ida-Viru maakond",
+        "municipality": "Narva linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.198883308020054,
+          59.37937314798902
+        ]
+      },
+      "properties": {
+        "id": "ID48709",
+        "name": "raekoda",
+        "address": "Ida-Viru maakond, Narva linn, Raekoja plats 1",
+        "county": "Ida-Viru maakond",
+        "municipality": "Narva linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.50565427547298,
+          58.38339894001114
+        ]
+      },
+      "properties": {
+        "id": "LÄ79877",
+        "name": "Kuninga tn Põhikool",
+        "address": "Pärnu maakond, Pärnu linn, Pärnu linn, Kuninga tn 29",
+        "county": "Pärnu maakond",
+        "municipality": "Pärnu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.729842685382334,
+          58.35977560654298
+        ]
+      },
+      "properties": {
+        "id": "LÕ45325",
+        "name": "Tartu Forseliuse Kool",
+        "address": "Tartu maakond, Tartu linn, Tartu linn, Tähe tn 103",
+        "county": "Tartu maakond",
+        "municipality": "Tartu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.561389035428906,
+          58.89247310282014
+        ]
+      },
+      "properties": {
+        "id": "LÄ90140",
+        "name": "Paide Sookure Lasteaed",
+        "address": "Järva maakond, Paide linn, Paide linn, Soo tn 16",
+        "county": "Järva maakond",
+        "municipality": "Paide linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.83723465430406,
+          59.499675831080935
+        ]
+      },
+      "properties": {
+        "id": "PÕ07654",
+        "name": "Viimsi vallamaja kelder",
+        "address": "Harju maakond, Viimsi vald, Viimsi alevik, Nelgi tee 1",
+        "county": "Harju maakond",
+        "municipality": "Viimsi vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.83766734240913,
+          59.51335903665761
+        ]
+      },
+      "properties": {
+        "id": "PÕ23487",
+        "name": "Viimsi Artium",
+        "address": "Harju maakond, Viimsi vald, Lubja küla, Randvere tee 20",
+        "county": "Harju maakond",
+        "municipality": "Viimsi vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.72868694116604,
+          58.378497837748085
+        ]
+      },
+      "properties": {
+        "id": "LÕ45334",
+        "name": "Tartu turuhoone",
+        "address": "Tartu maakond, Tartu linn, Tartu linn, Vabaduse pst 1",
+        "county": "Tartu maakond",
+        "municipality": "Tartu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.642536745837962,
+          59.36903663113179
+        ]
+      },
+      "properties": {
+        "id": "PÕ97982",
+        "name": "Pääsküla Noortekeskus",
+        "address": "Harju maakond, Tallinn, Nõmme linnaosa, Rännaku pst 1",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.78641151085794,
+          59.43654784580043
+        ]
+      },
+      "properties": {
+        "id": "PÕ45248",
+        "name": "Kadrioru pargi Oranzerii",
+        "address": "Harju maakond, Tallinn, Kesklinna linnaosa, L. Koidula tn 34a",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.4993189803578,
+          58.38336200296774
+        ]
+      },
+      "properties": {
+        "id": "LÄ53089",
+        "name": "Ingerisoome kultuuriselts",
+        "address": "Pärnu maakond, Pärnu linn, Pärnu linn, Lõuna tn 18",
+        "county": "Pärnu maakond",
+        "municipality": "Pärnu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.754996905503525,
+          59.14306904253946
+        ]
+      },
+      "properties": {
+        "id": "LÄ40950",
+        "name": "Põhja-Järva kool",
+        "address": "Järva maakond, Järva vald, Aravete alevik, Piibe mnt 21/1",
+        "county": "Järva maakond",
+        "municipality": "Järva vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.927795497695083,
+          58.007715155808775
+        ]
+      },
+      "properties": {
+        "id": "LÕ45335",
+        "name": "Tõrva gümnaasiumi A-korpus",
+        "address": "Valga maakond, Tõrva vald, Tõrva linn, Puiestee tn 1",
+        "county": "Valga maakond",
+        "municipality": "Tõrva vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.927747927174565,
+          58.00715548386604
+        ]
+      },
+      "properties": {
+        "id": "LÕ45336",
+        "name": "Tõrva gümnaasiumi B-korpus",
+        "address": "Valga maakond, Tõrva vald, Tõrva linn, Puiestee tn 1",
+        "county": "Valga maakond",
+        "municipality": "Tõrva vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.929777192333262,
+          57.99990246979462
+        ]
+      },
+      "properties": {
+        "id": "LÕ45337",
+        "name": "Tõrva Kirik-Kammersaal",
+        "address": "Valga maakond, Tõrva vald, Tõrva linn, Valga tn 42a",
+        "county": "Valga maakond",
+        "municipality": "Tõrva vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.84617208343831,
+          58.03329671851788
+        ]
+      },
+      "properties": {
+        "id": "LÕ45338",
+        "name": "Ritsu spordihoone",
+        "address": "Valga maakond, Tõrva vald, Linna küla, Kesk tn 8",
+        "county": "Valga maakond",
+        "municipality": "Tõrva vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.05941777852199,
+          57.90686952769072
+        ]
+      },
+      "properties": {
+        "id": "LÕ45339",
+        "name": "Hummuli mõis",
+        "address": "Valga maakond, Tõrva vald, Hummuli alevik, Pargi tn 2",
+        "county": "Valga maakond",
+        "municipality": "Tõrva vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.923350690606597,
+          58.003155745450584
+        ]
+      },
+      "properties": {
+        "id": "LÕ45400",
+        "name": "Kaubandushoone",
+        "address": "Valga maakond, Tõrva vald, Tõrva linn, Tartu tn 6",
+        "county": "Valga maakond",
+        "municipality": "Tõrva vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.422938908524586,
+          59.35962033009914
+        ]
+      },
+      "properties": {
+        "id": "ID49317",
+        "name": "Jõhvi lasteaed Sipsik",
+        "address": "Ida-Viru maakond, Jõhvi vald, Jõhvi linn, Narva mnt 21",
+        "county": "Ida-Viru maakond",
+        "municipality": "Jõhvi vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.541628849046127,
+          58.93548671429499
+        ]
+      },
+      "properties": {
+        "id": "LÄ40951",
+        "name": "Haapsalu Kolledz",
+        "address": "Lääne maakond, Haapsalu linn, Haapsalu linn, Lihula mnt 12/1",
+        "county": "Lääne maakond",
+        "municipality": "Haapsalu linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.601668695087017,
+          58.36858767416679
+        ]
+      },
+      "properties": {
+        "id": "LÕ45340",
+        "name": "Viljandi Baptistikoguduse kirik",
+        "address": "Viljandi maakond, Viljandi linn, A. Maramaa pst 1a",
+        "county": "Viljandi maakond",
+        "municipality": "Viljandi linn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.436205539100644,
+          58.15547009895044
+        ]
+      },
+      "properties": {
+        "id": "LÕ45405",
+        "name": "Halliste kirik",
+        "address": "Viljandi maakond, Mulgi vald, Pornuse küla, Halliste kirik",
+        "county": "Viljandi maakond",
+        "municipality": "Mulgi vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.143657429809924,
+          59.22629998310127
+        ]
+      },
+      "properties": {
+        "id": "PÕ6578",
+        "name": "Padise kauplus",
+        "address": "Harju maakond, Lääne-Harju vald, Padise küla, Kloostri-Kõrtsi",
+        "county": "Harju maakond",
+        "municipality": "Lääne-Harju vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.408426074253885,
+          59.359510796915565
+        ]
+      },
+      "properties": {
+        "id": "ID91348",
+        "name": "Büroohoone",
+        "address": "Ida-Viru maakond, Jõhvi vald, Jõhvi linn, Rakvere tn 8",
+        "county": "Ida-Viru maakond",
+        "municipality": "Jõhvi vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.224286168216643,
+          59.35376070063881
+        ]
+      },
+      "properties": {
+        "id": "ID02698",
+        "name": "Kadrina lasteaed",
+        "address": "Lääne-Viru maakond, Kadrina vald, Hulja alevik, Tõnismäe tee 18",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Kadrina vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.756222424451806,
+          59.43917642573998
+        ]
+      },
+      "properties": {
+        "id": "PÕ45241",
+        "name": "Rotermanni maa-alune parkls",
+        "address": "Harju maakond, Tallinn, Kesklinna linnaosa, Rotermanni tn 5",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.49391708479282,
+          58.25487295725641
+        ]
+      },
+      "properties": {
+        "id": "LÄ40954",
+        "name": "Kuressaare Bussijaam",
+        "address": "Saare maakond, Saaremaa vald, Kuressaare linn, Pihtla tee 3",
+        "county": "Saare maakond",
+        "municipality": "Saaremaa vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.738845544968648,
+          59.422025590699256
+        ]
+      },
+      "properties": {
+        "id": "PÕ46850",
+        "name": "Tallinna Humanitaargümnaasium",
+        "address": "Harju maakond, Tallinn, Kesklinna linnaosa, Koidu tn 97 // Virmalise tn 27",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.87977551944225,
+          59.44596856785153
+        ]
+      },
+      "properties": {
+        "id": "PÕ98512",
+        "name": "Tallinna Kuristiku Gümnaasium",
+        "address": "Harju maakond, Tallinn, Lasnamäe linnaosa, K. Kärberi tn 9",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.645393007316482,
+          59.4135647762261
+        ]
+      },
+      "properties": {
+        "id": "PÕ1289",
+        "name": "Tallinna Õismäe Gümnaasium",
+        "address": "Harju maakond, Tallinn, Haabersti linnaosa, Õismäe tee 50",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.640040116058607,
+          59.409846005530994
+        ]
+      },
+      "properties": {
+        "id": "PÕ22226",
+        "name": "Tallinna Järveotsa Gümnaasium",
+        "address": "Harju maakond, Tallinn, Haabersti linnaosa, Järveotsa tee 31",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.868130062765704,
+          59.45405498030517
+        ]
+      },
+      "properties": {
+        "id": "PÕ45011",
+        "name": "Tallinna Läänemere Gümnaasium",
+        "address": "Harju maakond, Tallinn, Lasnamäe linnaosa, Vormsi tn 3",
+        "county": "Harju maakond",
+        "municipality": "Tallinn",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.787498494047806,
+          59.00442829003284
+        ]
+      },
+      "properties": {
+        "id": "LÄ40955",
+        "name": "Rapla Kesklinna Kool",
+        "address": "Rapla maakond, Rapla vald, Rapla linn, Keskkooli tn 2",
+        "county": "Rapla maakond",
+        "municipality": "Rapla vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.254548888328948,
+          59.12602767580885
+        ]
+      },
+      "properties": {
+        "id": "ID49128",
+        "name": "Väike-Maarja lasteaed",
+        "address": "Lääne-Viru maakond, Väike-Maarja vald, Väike-Maarja alevik, Lõuna tn 10",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Väike-Maarja vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.25092017509913,
+          59.12637975491836
+        ]
+      },
+      "properties": {
+        "id": "ID74563",
+        "name": "Väike-Maarja seltsimaja",
+        "address": "Lääne-Viru maakond, Väike-Maarja vald, Väike-Maarja alevik, Pikk tn 2",
+        "county": "Lääne-Viru maakond",
+        "municipality": "Väike-Maarja vald",
+        "updated": "16.01.2026",
+        "source": "SMIT.Päästeameti avaandmed"
+      }
+    }
+  ]
+}
