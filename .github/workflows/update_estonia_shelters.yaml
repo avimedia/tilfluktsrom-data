@@ -1,48 +1,42 @@
-name: Update Estonian Shelter Data
+name: Update Estonia Shelters Data
 
 on:
   schedule:
-    # Run weekly on Monday at 3 AM UTC
-    - cron: '0 3 * * 1'
-  workflow_dispatch:  # Allow manual triggering
+    - cron: '0 3 * * 1'  # Every Monday at 03:00 UTC
+  workflow_dispatch:      # Allows manual run
 
 jobs:
-  scrape-estonia:
+  fetch_and_publish:
     runs-on: ubuntu-latest
-    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      
-      - name: Set up Python
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python 3.10
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
-      
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install requests pyproj
-      
-      - name: Run Estonian shelter scraper
+
+      - name: Run Estonia shelter fetcher script
         run: |
-          cd Tilfluktsrom/Tilfluktsrom/DSB-JSON
           python fetch_estonia_shelters.py
-      
-      - name: Check if data was generated
+
+      - name: Move estonia_shelters.json to docs (for GitHub Pages)
         run: |
-          if [ -f "Tilfluktsrom/Tilfluktsrom/DSB-JSON/estonia_shelters.json" ]; then
-            echo "✓ Estonia shelter data generated successfully"
-            wc -l Tilfluktsrom/Tilfluktsrom/DSB-JSON/estonia_shelters.json
-          else
-            echo "✗ Failed to generate Estonia shelter data"
-            exit 1
-          fi
-      
-      - name: Commit and push if changed
+          mkdir -p docs
+          mv estonia_shelters.json docs/estonia_shelters.json
+
+      - name: Commit and push changes
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add Tilfluktsrom/Tilfluktsrom/DSB-JSON/estonia_shelters.json
-          git diff --staged --quiet || git commit -m "Update Estonian shelter data (automated)"
+          git config user.name "Shelter Bot"
+          git config user.email "actions@github.com"
+          git add docs/estonia_shelters.json
+          git commit -m "Auto-update Estonia shelter data [skip ci]" || echo "No changes to commit"
           git push
