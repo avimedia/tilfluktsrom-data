@@ -2,7 +2,7 @@ name: Update Denmark Shelters Data
 
 on:
   schedule:
-    - cron:  '10 2 * * 2'   # Every Tuesday at 02:10 UTC (change as desired)
+    - cron:  '10 2 * * 2'   # Every day at 02:10 UTC (change as desired)
   workflow_dispatch:        # Allows you to run manually as well
 
 jobs:
@@ -42,4 +42,5 @@ jobs:
           git config user.email "actions@github.com"
           git add docs/denmark_shelters.json
           git commit -m "Auto-update Denmark shelter data [skip ci]" || echo "No changes to commit"
+          git pull --rebase origin main
           git push
