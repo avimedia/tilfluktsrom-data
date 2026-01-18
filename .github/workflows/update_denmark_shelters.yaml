@@ -40,7 +40,7 @@ jobs:
         run: |
           git config user.name "Shelter Bot"
           git config user.email "actions@github.com"
-          git add docs/denmark_shelters.json
-          git commit -m "Auto-update Denmark shelter data [skip ci]" || echo "No changes to commit"
-          git pull --rebase origin main
+          git add -A
+          git diff --staged --quiet || git commit -m "Auto-update Denmark shelter data [skip ci]"
+          git pull --rebase origin main || true
           git push
