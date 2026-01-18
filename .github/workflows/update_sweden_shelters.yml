@@ -1,5 +1,5 @@
 name: Auto-update Swedish shelter data
-
+# Old version not in use!
 on:
   schedule:
     - cron: '0 0 31 2 *'  # Feb 31st doesn't exist - effectively disabled
