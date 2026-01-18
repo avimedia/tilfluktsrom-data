@@ -1,0 +1,55 @@
+name: Update Estonian Shelter Data
+
+on:
+  schedule:
+    # Run weekly on Monday at 3 AM UTC
+    - cron: '0 3 * * 1'
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  scrape-estonia:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r DSB-JSON/requirements_estonia.txt
+      
+      - name: Install Chrome and chromedriver
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y chromium-browser chromium-chromedriver
+          # Link chromedriver to PATH
+          sudo ln -s /usr/lib/chromium-browser/chromedriver /usr/local/bin/chromedriver
+      
+      - name: Run Estonian shelter scraper
+        run: |
+          cd DSB-JSON
+          python fetch_estonia_shelters.py
+      
+      - name: Check if data was generated
+        run: |
+          if [ -f "DSB-JSON/estonia_shelters.json" ]; then
+            echo "✓ Estonia shelter data generated successfully"
+            wc -l DSB-JSON/estonia_shelters.json
+          else
+            echo "✗ Failed to generate Estonia shelter data"
+            exit 1
+          fi
+      
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add DSB-JSON/estonia_shelters.json
+          git diff --staged --quiet || git commit -m "Update Estonian shelter data (automated)"
+          git push
