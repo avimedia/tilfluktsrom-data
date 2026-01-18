@@ -22,14 +22,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r DSB-JSON/requirements_estonia.txt
-      
-      - name: Install Chrome and chromedriver
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y chromium-browser chromium-chromedriver
-          # Link chromedriver to PATH
-          sudo ln -s /usr/lib/chromium-browser/chromedriver /usr/local/bin/chromedriver
+          pip install requests pyproj
       
       - name: Run Estonian shelter scraper
         run: |
