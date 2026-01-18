@@ -1,0 +1,72 @@
+name: Update Polish Shelter Data
+
+on:
+  schedule:
+    # Run weekly on Wednesday at 3 AM UTC
+    - cron: '0 3 * * 3'
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  scrape-poland:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout tilfluktsrom-data repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      - name: Checkout main Tilfluktsrom repository (for scripts)
+        uses: actions/checkout@v3
+        with:
+          repository: avimedia/tilfluktsrom
+          path: tilfluktsrom-main
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests OWSLib pyproj
+      
+      - name: Run Polish shelter scraper
+        run: |
+          cd tilfluktsrom-main/Tilfluktsrom/Tilfluktsrom/DSB-JSON
+          python fetch_poland_shelters.py
+          
+          # Move the generated file to docs folder
+          if [ -f "poland_shelters.json" ]; then
+            mv poland_shelters.json ../../../../docs/poland_shelters.json
+            echo "✓ Poland shelter data generated successfully"
+          else
+            echo "✗ Failed to generate Poland shelter data"
+            exit 1
+          fi
+      
+      - name: Check generated data
+        run: |
+          if [ -f "docs/poland_shelters.json" ]; then
+            echo "✓ Poland shelter data in docs folder"
+            wc -l docs/poland_shelters.json
+            head -n 50 docs/poland_shelters.json
+          else
+            echo "✗ Missing Poland shelter data in docs"
+            exit 1
+          fi
+      
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add docs/poland_shelters.json || true
+          
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update Polish shelter data (automated) [skip ci]"
+            git pull --rebase origin main || true
+            git push
+          fi
