@@ -1,37 +1,42 @@
 name: Update Denmark Shelters Data
 
+# Shelters come from Datafordeler: BBR v2 (buildings with shelter capacity) and
+# DAR v2 (each building's official address). Needs the BBR_API_KEY secret, a
+# Datafordeler API key with access to BBR and DAR. The fetcher refuses to write
+# a file if any municipality fails or far fewer shelters than usual come back,
+# so a broken run never replaces good data.
+
 on:
   schedule:
-    - cron:  '10 2 * * 2'   # Every day at 02:10 UTC (change as desired)
-  workflow_dispatch:        # Allows you to run manually as well
+    - cron: '10 2 * * 2'   # Tuesdays at 02:10 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   fetch_and_publish:
     runs-on: ubuntu-latest
+    timeout-minutes: 120
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0  # Always good for pushing, especially on gh-pages
+        uses: actions/checkout@v4
 
-      - name: Set up Python 3.10
-        uses: actions/setup-python@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: '3.11'
+          cache: pip
 
       - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+        run: pip install -r requirements.txt
 
-      - name: Run shelter fetcher script
+      - name: Fetch Danish shelters
         env:
           BBR_API_KEY: ${{ secrets.BBR_API_KEY }}
-          DATAFORSYNINGEN_TOKEN: ${{ secrets.DATAFORSYNINGEN_TOKEN }}
-        run: |
-          python fetch_denmark_shelters_graphql.py
+        run: python fetch_denmark_shelters_graphql.py
 
-      - name: Move denmark_shelters.json to docs (for Github Pages)
+      - name: Publish to docs/
         run: |
           mkdir -p docs
           mv denmark_shelters.json docs/denmark_shelters.json
@@ -40,7 +45,11 @@ jobs:
         run: |
           git config user.name "Shelter Bot"
           git config user.email "actions@github.com"
-          git add -A
-          git diff --staged --quiet || git commit -m "Auto-update Denmark shelter data [skip ci]"
-          git pull --rebase origin main || true
+          git add docs/denmark_shelters.json
+          if git diff --staged --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "Auto-update Denmark shelter data [skip ci]"
+          git pull --rebase origin main
           git push

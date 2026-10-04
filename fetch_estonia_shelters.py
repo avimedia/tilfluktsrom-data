@@ -7,6 +7,7 @@ Extracts public shelter data from Maa-amet's WFS service
 import json
 import re
 from datetime import datetime
+from place_names import estonia_place
 from typing import List, Dict, Any
 import requests
 
@@ -149,6 +150,7 @@ class EstoniaShelterScraper:
                                     "romnr": romnr,
                                     "plasser": capacity,
                                     "adresse": shelter_data.get('aadress', ''),
+                                    "sted": estonia_place(shelter_data.get('aadress', '')),
                                     "adresse_avstand": None,
                                     "datauttaksdato": date_str
                                 }

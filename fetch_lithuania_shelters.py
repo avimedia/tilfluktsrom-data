@@ -7,6 +7,7 @@ Extracts public shelter data from Geoportal.lt WFS service
 import json
 import re
 from datetime import datetime
+from place_names import lithuania_place
 from typing import List, Dict, Any
 import requests
 
@@ -137,6 +138,7 @@ class LithuaniaShelterScraper:
                             "romnr": romnr,
                             "plasser": capacity,
                             "adresse": address,
+                            "sted": lithuania_place(address),
                             "adresse_avstand": None,
                             "datauttaksdato": date_str
                         }
