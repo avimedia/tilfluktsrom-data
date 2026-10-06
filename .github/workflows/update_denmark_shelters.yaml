@@ -21,6 +21,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history, so the rebase before pushing can find a common ancestor
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -51,5 +53,6 @@ jobs:
             exit 0
           fi
           git commit -m "Auto-update Denmark shelter data [skip ci]"
-          git pull --rebase origin main
-          git push
+          # Rebase onto and push to the branch this run is on (main for scheduled runs).
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"
