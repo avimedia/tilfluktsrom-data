@@ -118,7 +118,7 @@ All shelter data follows the GeoJSON format:
 ## Data Sources
 
 - **Norway**: DSB (Direktoratet for samfunnssikkerhet og beredskap) via GeoNorge
-- **Denmark**: BBR (Bygnings- og Boligregistret) for buildings with shelter capacity, and DAR (Danmarks Adresseregister) for each building's official address, both via Datafordeler.dk GraphQL v2. (The v1 endpoint and the DAWA address API used until 2026 have been shut down.)
+- **Denmark**: BBR (Bygnings- og Boligregistret) for all buildings with shelter capacity (mostly *sikringsrum*, meant for the building's occupants; BBR can't distinguish public *offentlige beskyttelsesrum*), and DAR (Danmarks Adresseregister) for each building's official address, both via Datafordeler.dk GraphQL v2. (The v1 endpoint and the DAWA address API used until 2026 have been shut down.)
 - **Sweden**: MSB (Myndigheten för samhällsskydd och beredskap) via ArcGIS Feature Service
 
 ## Manual Workflow Triggers

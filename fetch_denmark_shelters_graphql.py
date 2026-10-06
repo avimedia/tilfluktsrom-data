@@ -30,8 +30,9 @@ BBR_URL = "https://graphql.datafordeler.dk/BBR/v2"
 DAR_URL = "https://graphql.datafordeler.dk/DAR/v2"
 PAGE_SIZE = 500
 DAR_BATCH = 100
-# Smaller shelters are mostly private (e.g. in houses); the app has always shown 30+ places.
-MIN_CAPACITY = 30
+# Every building BBR lists with shelter places. Most are sikringsrum (for the people who
+# live or work in the building); the app says so on every Danish shelter.
+MIN_CAPACITY = 1
 # Refuse to publish if far fewer shelters than usual come back (an API change, not reality).
 MIN_EXPECTED_SHELTERS = 5000
 PARTIAL_PATH = "partial_denmark_shelters.json"
