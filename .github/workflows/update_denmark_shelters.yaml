@@ -17,7 +17,9 @@ permissions:
 jobs:
   fetch_and_publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 180   # a full run takes about 90 minutes
+    # A full run normally takes 1-2 hours, but Datafordeler is sometimes slow. Progress is
+    # cached (below), so a run that hits this limit is resumed by the next one.
+    timeout-minutes: 350
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -33,10 +35,26 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Restore progress from an unfinished run
+        uses: actions/cache/restore@v4
+        with:
+          path: partial_denmark_shelters.json
+          key: denmark-partial-${{ github.run_id }}
+          restore-keys: denmark-partial-
+
       - name: Fetch Danish shelters
         env:
           BBR_API_KEY: ${{ secrets.BBR_API_KEY }}
+          PYTHONUNBUFFERED: '1'   # show progress live, and keep it if the run is cancelled
+          FETCH_DEADLINE_MINUTES: '320'   # stop cleanly before timeout-minutes (350)
         run: python fetch_denmark_shelters_graphql.py
+
+      - name: Save progress for the next run
+        if: always() && hashFiles('partial_denmark_shelters.json') != ''
+        uses: actions/cache/save@v4
+        with:
+          path: partial_denmark_shelters.json
+          key: denmark-partial-${{ github.run_id }}
 
       - name: Publish to docs/
         run: |

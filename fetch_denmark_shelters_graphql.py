@@ -28,8 +28,15 @@ from place_names import DENMARK_MUNICIPALITIES, denmark_place
 
 BBR_URL = "https://graphql.datafordeler.dk/BBR/v2"
 DAR_URL = "https://graphql.datafordeler.dk/DAR/v2"
-PAGE_SIZE = 500
+# Buildings per page when scanning a municipality. Datafordeler aborts queries after 60 s,
+# so a page that times out is retried at half the size (down to MIN_PAGE_SIZE).
+PAGE_SIZE = 1000
+MIN_PAGE_SIZE = 100
+# Ids per request when fetching details (BBR) and addresses (DAR).
+DETAIL_BATCH = 100
 DAR_BATCH = 100
+# Progress older than this is discarded rather than resumed (data would be inconsistent).
+PARTIAL_MAX_AGE_SECONDS = 7 * 24 * 3600
 # Every building BBR lists with shelter places. Most are sikringsrum (for the people who
 # live or work in the building); the app says so on every Danish shelter.
 MIN_CAPACITY = 1
@@ -39,29 +46,45 @@ PARTIAL_PATH = "partial_denmark_shelters.json"
 OUTPUT_PATH = "denmark_shelters.json"
 
 
+class QueryTimeout(RuntimeError):
+    """Datafordeler aborted the query after its 60-second limit (HC0045)."""
+
+
 class DatafordelerClient:
     def __init__(self, api_key: str):
         self.api_key = api_key
         self.session = requests.Session()
         self.session.headers["Content-Type"] = "application/json"
 
-    def query(self, url: str, query: str, attempts: int = 4) -> Dict[str, Any]:
+    def _clean(self, text: str) -> str:
+        """Never let the API key reach logs (it is part of the URL)."""
+        return text.replace(self.api_key, "<api-key>")
+
+    def query(self, url: str, query: str, attempts: int = 5) -> Dict[str, Any]:
+        service = url.rstrip("/").rsplit("/", 2)[-2]
         for attempt in range(1, attempts + 1):
             try:
-                response = self.session.post(f"{url}?apiKey={self.api_key}", json={"query": query}, timeout=90)
-                if response.status_code in (429, 500, 502, 503, 504) and attempt < attempts:
-                    time.sleep(2 ** attempt)
-                    continue
+                response = self.session.post(f"{url}?apiKey={self.api_key}", json={"query": query}, timeout=(20, 120))
+                data = response.json() if response.headers.get("content-type", "").startswith("application") else {}
+                errors = data.get("errors") or []
+                if any(e.get("extensions", {}).get("code") == "HC0045" for e in errors):
+                    raise QueryTimeout(f"{service} query timed out")
+                if response.status_code in (429, 500, 502, 503, 504):
+                    raise RuntimeError(f"{service} HTTP {response.status_code}")
                 if response.status_code != 200:
-                    raise RuntimeError(f"{url.rsplit('/', 2)[-2]} HTTP {response.status_code}")
-                data = response.json()
-                if data.get("errors"):
-                    raise RuntimeError(data["errors"][0].get("message", "GraphQL error"))
+                    raise RuntimeError(f"{service} HTTP {response.status_code} (not retried)")
+                if errors:
+                    raise RuntimeError(f"{service}: {errors[0].get('message', 'GraphQL error')}")
                 return data["data"]
-            except requests.RequestException:
-                if attempt == attempts:
-                    raise
-                time.sleep(2 ** attempt)
+            except QueryTimeout:
+                raise  # the caller can retry with a smaller query
+            except (requests.RequestException, RuntimeError, ValueError) as error:
+                message = self._clean(str(error))
+                if "not retried" in message or attempt == attempts:
+                    raise RuntimeError(message) from None
+                wait = min(60, 5 * 2 ** (attempt - 1))
+                print(f"   ↻ {message[:120]}; retrying in {wait}s", flush=True)
+                time.sleep(wait)
         raise RuntimeError("unreachable")
 
 
@@ -81,20 +104,27 @@ class DenmarkShelterFetcher:
         failures = []
         start = time.time()
 
+        # Stop starting new municipalities before the workflow's time limit, so progress is
+        # saved and cached for the next run instead of being lost when the job is killed.
+        deadline = start + float(os.environ.get("FETCH_DEADLINE_MINUTES", "0")) * 60
         for index, code in enumerate(codes, 1):
             if code in done:
                 continue
+            if deadline > start and time.time() > deadline:
+                failures.append("deadline")
+                print(f"⏱ Time limit reached after {len(done)} municipalities; progress saved for the next run", flush=True)
+                break
             name = DENMARK_MUNICIPALITIES[code]
             try:
                 found = self.fetch_municipality(code)
             except Exception as error:  # keep going; failures are reported and fail the run
                 failures.append(code)
-                print(f"✗ {code} {name}: {error}")
+                print(f"✗ {code} {name}: {error}", flush=True)
                 continue
             shelters.extend(found)
             done.add(code)
             self._save_partial(shelters, done)
-            print(f"✓ {index}/{len(codes)} {code} {name}: {len(found)} shelters ({len(shelters)} total, {(time.time() - start) / 60:.1f} min)")
+            print(f"✓ {index}/{len(codes)} {code} {name}: {len(found)} shelters ({len(shelters)} total, {(time.time() - start) / 60:.1f} min)", flush=True)
 
         if failures:
             print(f"\n⚠ Municipalities that failed: {', '.join(failures)} (re-run to resume)")
@@ -102,23 +132,8 @@ class DenmarkShelterFetcher:
         return shelters
 
     def fetch_municipality(self, code: str) -> List[Dict[str, Any]]:
-        buildings = []
-        after = None
-        while True:
-            cursor = f', after: "{after}"' if after else ""
-            data = self.client.query(BBR_URL, f"""
-            {{
-              BBR_Bygning(first: {PAGE_SIZE}{cursor}, registreringstid: "{self.now}", virkningstid: "{self.now}",
-                          where: {{ kommunekode: {{ eq: "{code}" }}, status: {{ eq: "6" }} }}) {{
-                pageInfo {{ hasNextPage endCursor }}
-                nodes {{ id_lokalId husnummer byg069Sikringsrumpladser byg404Koordinat {{ wkt }} }}
-              }}
-            }}""")["BBR_Bygning"]
-            buildings += [b for b in data["nodes"] if (b.get("byg069Sikringsrumpladser") or 0) >= MIN_CAPACITY]
-            if not data["pageInfo"]["hasNextPage"] or not data["nodes"]:
-                break
-            after = data["pageInfo"]["endCursor"]
-
+        shelter_ids = self.scan_for_shelters(code)
+        buildings = self.lookup_buildings(shelter_ids)
         addresses = self.lookup_addresses([b["husnummer"] for b in buildings if b.get("husnummer")])
         features = []
         for building in buildings:
@@ -126,6 +141,53 @@ class DenmarkShelterFetcher:
             if feature:
                 features.append(feature)
         return features
+
+    def scan_for_shelters(self, code: str) -> List[str]:
+        """Ids of the municipality's buildings with shelter places.
+
+        Only id and capacity are fetched while paging through every building (under 1% have
+        shelters), which keeps each page small for Datafordeler's 60-second query limit.
+        """
+        ids: List[str] = []
+        after = None
+        page_size = PAGE_SIZE
+        while True:
+            cursor = f', after: "{after}"' if after else ""
+            try:
+                data = self.client.query(BBR_URL, f"""
+                {{
+                  BBR_Bygning(first: {page_size}{cursor}, registreringstid: "{self.now}", virkningstid: "{self.now}",
+                              where: {{ kommunekode: {{ eq: "{code}" }}, status: {{ eq: "6" }} }}) {{
+                    pageInfo {{ hasNextPage endCursor }}
+                    nodes {{ id_lokalId byg069Sikringsrumpladser }}
+                  }}
+                }}""")["BBR_Bygning"]
+            except QueryTimeout:
+                if page_size <= MIN_PAGE_SIZE:
+                    raise RuntimeError(f"BBR timed out even at {page_size} buildings per page")
+                page_size = max(MIN_PAGE_SIZE, page_size // 2)
+                print(f"   ↻ BBR page timed out; retrying with {page_size} per page", flush=True)
+                continue
+            ids += [b["id_lokalId"] for b in data["nodes"] if (b.get("byg069Sikringsrumpladser") or 0) >= MIN_CAPACITY]
+            if not data["pageInfo"]["hasNextPage"] or not data["nodes"]:
+                return ids
+            after = data["pageInfo"]["endCursor"]
+            page_size = min(PAGE_SIZE, page_size * 2) if page_size < PAGE_SIZE else page_size
+
+    def lookup_buildings(self, ids: List[str]) -> List[Dict[str, Any]]:
+        """Capacity, position and DAR address id for the given buildings, in batches."""
+        buildings: List[Dict[str, Any]] = []
+        for start in range(0, len(ids), DETAIL_BATCH):
+            batch = ids[start:start + DETAIL_BATCH]
+            id_list = ", ".join(json.dumps(i) for i in batch)
+            buildings += self.client.query(BBR_URL, f"""
+            {{
+              BBR_Bygning(first: {len(batch)}, registreringstid: "{self.now}", virkningstid: "{self.now}",
+                          where: {{ id_lokalId: {{ in: [{id_list}] }} }}) {{
+                nodes {{ id_lokalId husnummer byg069Sikringsrumpladser byg404Koordinat {{ wkt }} }}
+              }}
+            }}""")["BBR_Bygning"]["nodes"]
+        return buildings
 
     def lookup_addresses(self, husnummer_ids: List[str]) -> Dict[str, str]:
         """DAR husnummer id -> "Vej 1, 1234 By"."""
@@ -183,6 +245,10 @@ class DenmarkShelterFetcher:
         if os.path.exists(PARTIAL_PATH):
             with open(PARTIAL_PATH, encoding="utf-8") as f:
                 data = json.load(f)
+            age = time.time() - data.get("saved_at", 0)
+            if age > PARTIAL_MAX_AGE_SECONDS:
+                print(f"Ignoring progress from {age / 86400:.0f} days ago; starting over")
+                return [], set()
             print(f"Resuming: {len(data.get('shelters', []))} shelters from {len(data.get('processed_kommuner', []))} municipalities")
             return data.get("shelters", []), set(data.get("processed_kommuner", []))
         return [], set()
@@ -190,7 +256,7 @@ class DenmarkShelterFetcher:
     @staticmethod
     def _save_partial(shelters, done):
         with open(PARTIAL_PATH, "w", encoding="utf-8") as f:
-            json.dump({"shelters": shelters, "processed_kommuner": sorted(done)}, f, ensure_ascii=False)
+            json.dump({"saved_at": time.time(), "shelters": shelters, "processed_kommuner": sorted(done)}, f, ensure_ascii=False)
 
 
 def main() -> int:
