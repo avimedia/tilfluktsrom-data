@@ -1,34 +1,38 @@
 name: Update Estonia Shelters Data
 
+# Source: the Rescue Board's open data via the open GeoServer WFS at
+# gsavalik.envir.ee (layer huvipunkt:varjumiskoht). No secrets needed.
+
 on:
   schedule:
-    - cron: '0 3 * * 1'  # Every Monday at 03:00 UTC
-  workflow_dispatch:      # Allows manual run
+    - cron: '0 3 * * 1'  # Mondays at 03:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   fetch_and_publish:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0   # full history, so the rebase before pushing can find a common ancestor
 
-      - name: Set up Python 3.10
-        uses: actions/setup-python@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: '3.11'
 
       - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install requests pyproj
+        run: pip install requests
 
-      - name: Run Estonia shelter fetcher script
-        run: |
-          python fetch_estonia_shelters.py
+      - name: Fetch Estonian shelters
+        run: python fetch_estonia_shelters.py
 
-      - name: Move estonia_shelters.json to docs (for GitHub Pages)
+      - name: Publish to docs/
         run: |
           mkdir -p docs
           mv estonia_shelters.json docs/estonia_shelters.json
@@ -38,5 +42,11 @@ jobs:
           git config user.name "Shelter Bot"
           git config user.email "actions@github.com"
           git add docs/estonia_shelters.json
-          git commit -m "Auto-update Estonia shelter data [skip ci]" || echo "No changes to commit"
-          git push
+          if git diff --staged --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "Auto-update Estonia shelter data [skip ci]"
+          # Rebase onto and push to the branch this run is on (main for scheduled runs).
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"

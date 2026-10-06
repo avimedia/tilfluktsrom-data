@@ -108,8 +108,11 @@ def denmark_place(address: str, kommune_code: str = "") -> str:
 
 
 def estonia_place(address: str) -> str:
+    """Settlement; for Tallinn's districts ("Haabersti linnaosa") the city instead."""
     parts = [p.strip() for p in (address or "").split(",")]
-    return parts[2] if len(parts) >= 4 else ""
+    if len(parts) < 4:
+        return ""
+    return parts[1] if parts[2].endswith("linnaosa") else parts[2]
 
 
 def lithuania_place(address: str) -> str:
