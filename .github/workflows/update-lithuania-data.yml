@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Set up Python 3.10
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
@@ -67,7 +67,12 @@ jobs:
         run: |
           git config user.name "Shelter Bot"
           git config user.email "actions@github.com"
-          git add -A
-          git diff --staged --quiet || git commit -m "Auto-update Lithuania shelter data [skip ci]"
-          git pull --rebase origin main || true
-          git push
+          # Only the published file; the downloaded .gdb/.zip are inputs, not data to keep.
+          git add docs/lithuania_shelters.json
+          if git diff --staged --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "Auto-update Lithuania shelter data [skip ci]"
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"
