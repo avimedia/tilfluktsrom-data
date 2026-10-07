@@ -16,7 +16,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 DOCS = Path(__file__).resolve().parent / "docs"
-COUNTRIES = ["norway", "sweden", "denmark", "estonia", "lithuania"]
+COUNTRIES = ["norway", "sweden", "denmark", "estonia", "lithuania", "poland"]
 
 
 def describe(path: Path) -> dict:

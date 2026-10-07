@@ -1,30 +1,23 @@
 # Tilfluktsrom Data Repository
 
-This repository contains scripts and data for shelter locations in Norway, Denmark, and Sweden.
+This repository contains scripts and data for shelter locations in Norway, Sweden, Denmark, Estonia, Lithuania and Poland.
 
 ## Data Files
 
-The shelter data is available via GitHub Pages:
-
-- **Norway**: `https://avimedia.github.io/tilfluktsrom-data/norway_shelters.json`
-- **Denmark**: `https://avimedia.github.io/tilfluktsrom-data/denmark_shelters.json`
-- **Sweden**: `https://avimedia.github.io/tilfluktsrom-data/sweden_shelters.json`
+The shelter data is available via GitHub Pages as `https://avimedia.github.io/tilfluktsrom-data/<country>_shelters.json`, where `<country>` is `norway`, `sweden`, `denmark`, `estonia`, `lithuania` or `poland`. `manifest.json` lists the sha256, count and latest extraction date of each file.
 
 ## Automated Updates
 
-GitHub Actions workflows automatically update the data:
+| Country | Source | Workflow schedule |
+|---------|--------|-------------------|
+| 🇳🇴 Norway | GeoNorge (DSB) | Weekly |
+| 🇸🇪 Sweden | MCF (formerly MSB) ArcGIS API | Daily |
+| 🇩🇰 Denmark | Datafordeler BBR v2 + DAR v2 GraphQL | Weekly |
+| 🇪🇪 Estonia | Päästeamet open data (WFS) | Weekly |
+| 🇱🇹 Lithuania | PAGD via Geoportal.lt | Manual |
+| 🇵🇱 Poland | dane.gov.pl dataset 28058 (PSP/MSWiA, CC BY 4.0) via the portal API | Weekly (Tuesdays) |
 
-- **Norwegian shelters**: Weekly on Mondays at 2:00 AM UTC (from GeoNorge)
-- **Danish shelters**: Weekly on Tuesdays at 2:10 AM UTC (from Datafordeler BBR v2 + DAR v2 GraphQL)
-- **Swedish shelters**: Daily at 3:00 AM UTC (from MSB ArcGIS API)
-
-## Data Statistics
-
-| Country | Shelters | File Size | Update Frequency |
-|---------|----------|-----------|------------------|
-| 🇳🇴 Norway | ~560 | 0.3 MB | Weekly (Mondays) |
-| 🇩🇰 Denmark | ~10,500 | 3.6 MB | Weekly (Tuesdays) |
-| 🇸🇪 Sweden | ~63,500 | 21 MB | Daily |
+Every push to `docs/` redeploys GitHub Pages, and each deployment counts against the account's Actions storage, so new sources should update weekly at most and write compact JSON (as `fetch_poland_shelters.py` does).
 
 ## Running Scripts Locally
 
@@ -114,6 +107,7 @@ All shelter data follows the GeoJSON format:
 | Denmark | Postal town from the DAR address, else the municipality |
 | Estonia | Settlement part of the address |
 | Lithuania | Settlement (`gyvenviete`) |
+| Poland | Locality after the last comma of the address, else the gmina |
 
 ## Data Sources
 

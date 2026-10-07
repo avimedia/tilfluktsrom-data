@@ -1,0 +1,52 @@
+name: Update Poland Shelters Data
+
+# Source: dane.gov.pl dataset 28058 "Punkty schronienia w Polsce" (CC BY 4.0), read
+# through the portal's API (about 830 requests, around 40 minutes). No secrets needed.
+# Weekly, like the source; no artifacts or caches, to save the account's Actions storage.
+
+on:
+  schedule:
+    - cron: '0 4 * * 2'  # Tuesdays at 04:00 UTC (the source updates on Mondays)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch_and_publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history, so the rebase before pushing can find a common ancestor
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Fetch Polish shelter points
+        run: python -u fetch_poland_shelters.py
+
+      - name: Publish to docs/
+        run: |
+          mkdir -p docs
+          mv poland_shelters.json docs/poland_shelters.json
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "Shelter Bot"
+          git config user.email "actions@github.com"
+          git add docs/poland_shelters.json
+          if git diff --staged --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "Auto-update Poland shelter data [skip ci]"
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"
