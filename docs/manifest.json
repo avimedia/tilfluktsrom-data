@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "generated": "2026-10-07T09:48:30Z",
+  "countries": {
+    "norway": {
+      "file": "norway_shelters.json",
+      "sha256": "ab113f9aa619b18cac0cc3c0b5cc464d2945bc83a645208d47e5165f825b5929",
+      "bytes": 348383,
+      "count": 556,
+      "latestExtractDate": "2026-10-05"
+    },
+    "sweden": {
+      "file": "sweden_shelters.json",
+      "sha256": "89b5b904eba61f5188041f5a904400ef3109486587999a0dab27255501033c46",
+      "bytes": 23388133,
+      "count": 63377,
+      "latestExtractDate": "2026-10-07"
+    },
+    "denmark": {
+      "file": "denmark_shelters.json",
+      "sha256": "f3737b93bf678b2f385555948c11694ec314464fca2fd151f752ae5cbaccdc88",
+      "bytes": 9877855,
+      "count": 23653,
+      "latestExtractDate": "2026-10-06"
+    },
+    "estonia": {
+      "file": "estonia_shelters.json",
+      "sha256": "65dc2c5fafd25b807c6adf7986d0e13d577d5d2111b8c40aebf0b508aae5dffc",
+      "bytes": 130486,
+      "count": 303,
+      "latestExtractDate": "2026-09-23"
+    },
+    "lithuania": {
+      "file": "lithuania_shelters.json",
+      "sha256": "15e28eb33832f73a9a2b53a21b9034e740c41485f229f7c900b9953bd70ed058",
+      "bytes": 2885525,
+      "count": 6582,
+      "latestExtractDate": "2026-09-18"
+    }
+  }
+}
