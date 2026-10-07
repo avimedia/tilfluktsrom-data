@@ -1,0 +1,59 @@
+name: Update data manifest
+
+# Regenerates docs/manifest.json (sha256, count and latest extraction date per country).
+# The iOS app uses it to skip unchanged downloads and to show "newer data available".
+# Pushes made with GITHUB_TOKEN don't trigger `push` workflows, so this listens for the
+# update workflows finishing, plus a daily run that covers any workflow not listed here.
+
+on:
+  workflow_run:
+    workflows:
+      - Auto-update Swedish shelter data
+      - Auto-update Norwegian shelter data
+      - Update Denmark Shelters Data
+      - Update Estonia Shelters Data
+      - Update Lithuanian Shelter Data
+    types: [completed]
+  schedule:
+    - cron: '30 5 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: update-manifest
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  update-manifest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0   # full history, so the rebase before pushing can find a common ancestor
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate manifest
+        run: python3 generate_manifest.py
+
+      - name: Commit and push if changed
+        run: |
+          # Only the generated timestamp changes when the data didn't; ignore that case.
+          if git diff --quiet -I '"generated"' -- docs/manifest.json && git ls-files --error-unmatch docs/manifest.json >/dev/null 2>&1; then
+            echo "Manifest unchanged"
+            exit 0
+          fi
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "GitHub Actions Bot"
+          git add docs/manifest.json
+          git commit -m "Update data manifest - $(date +%Y-%m-%d)"
+          git pull --rebase origin main
+          git push origin HEAD:main

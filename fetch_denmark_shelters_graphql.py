@@ -1,662 +1,291 @@
-import requests
+#!/usr/bin/env python3
+"""Fetch Danish public shelters (sikringsrum) from Datafordeler and write denmark_shelters.json.
+
+1. BBR (Bygnings- og Boligregistret) GraphQL v2: buildings per municipality with
+   shelter capacity (byg069Sikringsrumpladser), position and their DAR address id
+   (husnummer).
+2. DAR (Danmarks Adresseregister) GraphQL v2: the official address of each of those
+   buildings, looked up in batches ("Bakken 1, 2600 Glostrup").
+3. "sted" is the postal town from that address, or the municipality name.
+
+History: until 2026 this used BBR v1 (now HTTP 404) and the DAWA API for a
+nearest-address search (now HTTP 410 Gone), which left ~90% of addresses empty.
+
+Requires BBR_API_KEY (a Datafordeler API key with access to BBR and DAR).
+"""
+
 import json
-import time
-from datetime import datetime
-from typing import List, Dict, Any
-from tqdm import tqdm
-import concurrent.futures
 import os
-import threading
+import sys
+import time
+from datetime import datetime, timezone
+from typing import Any, Dict, List, Optional
 
-def load_partial_shelters(path="partial_denmark_shelters.json"):
-    if os.path.exists(path):
-        print(f"Loading previous partial results from {path}")
-        with open(path, "r", encoding="utf-8") as f:
-            data = json.load(f)
-            return data.get("shelters", []), set(data.get("processed_kommuner", []))
-    return [], set()
+import requests
+from pyproj import Transformer
 
-def save_partial_shelters(shelters, processed_kommuner, path="partial_denmark_shelters.json"):
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump({
-            "shelters": shelters,
-            "processed_kommuner": list(processed_kommuner)
-        }, f, ensure_ascii=False, indent=2)
+from place_names import DENMARK_MUNICIPALITIES, denmark_place
 
-def start_heartbeat(interval=100):
-    def beat():
-        while True:
-            print("⏳ Still working, please be patient...")
-            time.sleep(interval)
-    t = threading.Thread(target=beat, daemon=True)
-    t.start()
+BBR_URL = "https://graphql.datafordeler.dk/BBR/v2"
+DAR_URL = "https://graphql.datafordeler.dk/DAR/v2"
+# Buildings per page when scanning a municipality. Datafordeler aborts queries after 60 s,
+# so a page that times out is retried at half the size (down to MIN_PAGE_SIZE).
+PAGE_SIZE = 1000
+MIN_PAGE_SIZE = 100
+# Ids per request when fetching details (BBR) and addresses (DAR).
+DETAIL_BATCH = 100
+DAR_BATCH = 100
+# Progress older than this is discarded rather than resumed (data would be inconsistent).
+PARTIAL_MAX_AGE_SECONDS = 7 * 24 * 3600
+# Every building BBR lists with shelter places. Most are sikringsrum (for the people who
+# live or work in the building); the app says so on every Danish shelter.
+MIN_CAPACITY = 1
+# Refuse to publish if far fewer shelters than usual come back (an API change, not reality).
+MIN_EXPECTED_SHELTERS = 5000
+PARTIAL_PATH = "partial_denmark_shelters.json"
+OUTPUT_PATH = "denmark_shelters.json"
+
+
+class QueryTimeout(RuntimeError):
+    """Datafordeler aborted the query after its 60-second limit (HC0045)."""
+
+
+class DatafordelerClient:
+    def __init__(self, api_key: str):
+        self.api_key = api_key
+        self.session = requests.Session()
+        self.session.headers["Content-Type"] = "application/json"
+
+    def _clean(self, text: str) -> str:
+        """Never let the API key reach logs (it is part of the URL)."""
+        return text.replace(self.api_key, "<api-key>")
+
+    def query(self, url: str, query: str, attempts: int = 5) -> Dict[str, Any]:
+        service = url.rstrip("/").rsplit("/", 2)[-2]
+        for attempt in range(1, attempts + 1):
+            try:
+                response = self.session.post(f"{url}?apiKey={self.api_key}", json={"query": query}, timeout=(20, 120))
+                data = response.json() if response.headers.get("content-type", "").startswith("application") else {}
+                errors = data.get("errors") or []
+                if any(e.get("extensions", {}).get("code") == "HC0045" for e in errors):
+                    raise QueryTimeout(f"{service} query timed out")
+                if response.status_code in (429, 500, 502, 503, 504):
+                    raise RuntimeError(f"{service} HTTP {response.status_code}")
+                if response.status_code != 200:
+                    raise RuntimeError(f"{service} HTTP {response.status_code} (not retried)")
+                if errors:
+                    raise RuntimeError(f"{service}: {errors[0].get('message', 'GraphQL error')}")
+                return data["data"]
+            except QueryTimeout:
+                raise  # the caller can retry with a smaller query
+            except (requests.RequestException, RuntimeError, ValueError) as error:
+                message = self._clean(str(error))
+                if "not retried" in message or attempt == attempts:
+                    raise RuntimeError(message) from None
+                wait = min(60, 5 * 2 ** (attempt - 1))
+                print(f"   ↻ {message[:120]}; retrying in {wait}s", flush=True)
+                time.sleep(wait)
+        raise RuntimeError("unreachable")
+
 
 class DenmarkShelterFetcher:
-    def __init__(self, api_key: str, dataforsyningen_token: str = None):
-        self.api_key = api_key
-        self.dataforsyningen_token = dataforsyningen_token
-        self.base_url = "https://graphql.datafordeler.dk/BBR/v1"
-        self.dawa_base_url = "https://api.dataforsyningen.dk"
-        self.headers = {
-            "Content-Type": "application/json",
-            "Accept": "application/graphql-response+json"
-        }
-        
-        # Try to import pyproj for accurate coordinate conversion
-        try:
-            from pyproj import Transformer
-            # EPSG:25832 (ETRS89/UTM Zone 32N) to EPSG:4326 (WGS84)
-            self.transformer = Transformer.from_crs("EPSG:25832", "EPSG:4326", always_xy=True)
-            self.use_pyproj = True
-            print("✓ Using pyproj for accurate coordinate conversion")
-        except ImportError:
-            self.transformer = None
-            self.use_pyproj = False
-            print("⚠ pyproj not available, using fallback conversion (install with: pip install pyproj)")
-        
-        # Check if Dataforsyningen token is provided
-        if dataforsyningen_token:
-            print("✓ Using Dataforsyningen.dk token for address lookups")
-        else:
-            print("⚠ No Dataforsyningen.dk token provided - address lookups may be limited")
-        
-        # Danish municipality codes (all 98 municipalities)
-        self.municipality_codes = [
-            "0101", "0147", "0151", "0153", "0155", "0157", "0159", "0161", "0163", "0165",
-            "0167", "0169", "0173", "0175", "0183", "0185", "0187", "0190", "0201", "0210",
-            "0217", "0219", "0223", "0230", "0240", "0250", "0253", "0259", "0260", "0265",
-            "0269", "0270", "0306", "0316", "0320", "0326", "0329", "0330", "0336", "0340",
-            "0350", "0360", "0370", "0376", "0390", "0400", "0410", "0411", "0420", "0430",
-            "0440", "0450", "0461", "0479", "0480", "0482", "0492", "0510", "0530", "0540",
-            "0550", "0561", "0563", "0573", "0575", "0580", "0607", "0615", "0621", "0630",
-            "0657", "0661", "0665", "0671", "0706", "0707", "0710", "0727", "0730", "0740",
-            "0741", "0746", "0751", "0756", "0760", "0766", "0773", "0779", "0787", "0791",
-            "0810", "0813", "0820", "0825", "0840", "0846", "0849", "0851"
-        ]
-        
-        # Cache for DAWA address lookups
-        self.address_cache = {}
-        self.address_lookup_count = 0
-        self.address_success_count = 0
-    
-    def fetch_shelters(self, batch_size: int = 500, max_retries: int = 3) -> List[Dict[str, Any]]:
-        start_heartbeat(300) # Heartbeat every 5 minutes
+    def __init__(self, api_key: str):
+        self.client = DatafordelerClient(api_key)
+        # EPSG:25832 (ETRS89 / UTM 32N) -> WGS84 lon/lat
+        self.transformer = Transformer.from_crs("EPSG:25832", "EPSG:4326", always_xy=True)
+        self.now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        self.today = datetime.now().strftime("%Y-%m-%d")
+        self.addresses_found = 0
+        self.addresses_missing = 0
 
-        all_shelters, processed_kommuner = load_partial_shelters()
-        start_time = time.time()
-        
-        print("\nStarting GraphQL query for Danish shelters... (partial results loaded, {} shelters from {} kommuner)".format(
-            len(all_shelters), len(processed_kommuner)))
-        print(f"Processing {len(self.municipality_codes)} municipalities...\n")
-        
-        try:
-            for idx, kommune_code in enumerate(tqdm(self.municipality_codes, desc="Municipalities", ncols=80), 1):
-                if kommune_code in processed_kommuner:
-                    print(f"⏩ Skipping kommune {kommune_code} (already processed)")
-                    continue
-                kommune_name = "København (Copenhagen)" if kommune_code == "0101" else f"Kommune {kommune_code}"
-                success = False
-                retry_count = 0
-                kommune_shelters = []
+    def fetch_all(self) -> List[Dict[str, Any]]:
+        shelters, done = self._load_partial()
+        codes = sorted(DENMARK_MUNICIPALITIES)
+        failures = []
+        start = time.time()
 
-                # Max time per municipality in seconds (force skip if really stuck)
-                kommune_force_timeout = 5 * 60
-
-                def process_kommune():
-                    return self._fetch_kommune_shelters(kommune_code, batch_size)
-                
-                try:
-                    with concurrent.futures.ThreadPoolExecutor(max_workers=1) as execpool:
-                        future = execpool.submit(process_kommune)
-                        kommune_shelters = future.result(timeout=kommune_force_timeout)
-                        all_shelters.extend(kommune_shelters)
-                        success = True
-                except concurrent.futures.TimeoutError:
-                    print(f"\n🚨 Force skipping {kommune_name} after {kommune_force_timeout/60:.1f} minutes due to timeout.")
-                    # Don't add to processed_kommuner so it can be retried in a rerun
-                    continue
-                except Exception as e:
-                    print(f"\n✗ error with {kommune_name}: {str(e)[:200]}")
-                    retry_count += 1
-                    time.sleep(2)
-                    # We still mark this try for force-continue
-
-                if success:
-                    processed_kommuner.add(kommune_code)
-                    # Save partial after each completed kommune to file
-                    save_partial_shelters(all_shelters, processed_kommuner)
-            
-                elapsed = time.time() - start_time
-                est_total = elapsed / max(idx, 1) * len(self.municipality_codes)
-                print(f"\n✓ Progress: {idx}/{len(self.municipality_codes)}: {kommune_name} done or skipped. {len(all_shelters)} shelters so far.")
-                print(f"Elapsed: {elapsed/60:.1f} min | Estimated total: {est_total/60:.1f} min\n")
-
-        except Exception as outer_e:
-            print(f"\n💥 Unhandled error: {str(outer_e)}")
-            print("Partial results saved. You can re-run the script to resume.")
-
-        print(f"\n{'='*60}")
-        print(f"Total shelters found: {len(all_shelters)}")
-        print(f"{'='*60}")
-        return all_shelters
-    
-    def _fetch_kommune_shelters(self, kommune_code: str, batch_size: int) -> List[Dict[str, Any]]:
-        """
-        Fetch shelters for a specific municipality ― now with parallel address lookup!
-        """
-        shelters = []
-        has_next_page = True
-        after_cursor = None
-        page_count = 0
-        max_pages = 50
-        total_buildings = 0
-
-        print(f"\n--- Starting kommune {kommune_code} ---")
-
-        buildings_to_process = []
-
-        while has_next_page and page_count < max_pages:
-            page_count += 1
-            query = self._build_query(kommune_code, batch_size, after_cursor)
-            
-            response = requests.post(
-                f"{self.base_url}?apiKey={self.api_key}",
-                headers=self.headers,
-                json={"query": query},
-                timeout=60
-            )
-            
-            if response.status_code != 200:
-                raise Exception(f"HTTP {response.status_code}")
-            
-            data = response.json()
-            
-            if "errors" in data:
-                error_msg = data['errors'][0].get('message', 'Unknown error')
-                raise Exception(error_msg)
-            
-            buildings_data = data.get("data", {}).get("BBR_Bygning", {})
-            nodes = buildings_data.get("nodes", [])
-            page_info = buildings_data.get("pageInfo", {})
-
-            total_buildings += len(nodes)
-
-            for b_idx, building in enumerate(nodes, 1):
-                shelter_capacity = building.get("byg069Sikringsrumpladser")
-                if shelter_capacity and shelter_capacity >= 30:
-                    buildings_to_process.append(building)
-                if b_idx % 100 == 0 or b_idx == len(nodes):
-                    print(f"   ...Queued {b_idx}/{len(nodes)} buildings for parallel address lookup in kommune {kommune_code}")
-            
-            has_next_page = page_info.get("hasNextPage", False)
-            after_cursor = page_info.get("endCursor")
-            
-            if not nodes:
+        # Stop starting new municipalities before the workflow's time limit, so progress is
+        # saved and cached for the next run instead of being lost when the job is killed.
+        deadline = start + float(os.environ.get("FETCH_DEADLINE_MINUTES", "0")) * 60
+        for index, code in enumerate(codes, 1):
+            if code in done:
+                continue
+            if deadline > start and time.time() > deadline:
+                failures.append("deadline")
+                print(f"⏱ Time limit reached after {len(done)} municipalities; progress saved for the next run", flush=True)
                 break
+            name = DENMARK_MUNICIPALITIES[code]
+            try:
+                found = self.fetch_municipality(code)
+            except Exception as error:  # keep going; failures are reported and fail the run
+                failures.append(code)
+                print(f"✗ {code} {name}: {error}", flush=True)
+                continue
+            shelters.extend(found)
+            done.add(code)
+            self._save_partial(shelters, done)
+            print(f"✓ {index}/{len(codes)} {code} {name}: {len(found)} shelters ({len(shelters)} total, {(time.time() - start) / 60:.1f} min)", flush=True)
 
-        # Process buildings in parallel for address lookup!
-        shelters = self._process_buildings_parallel(buildings_to_process, kommune_code=kommune_code)
-        print(f"--- Finished kommune {kommune_code}: found {len(shelters)} shelters out of {total_buildings} buildings checked ---\n")
+        if failures:
+            print(f"\n⚠ Municipalities that failed: {', '.join(failures)} (re-run to resume)")
+        self.failures = failures
         return shelters
-    
-    def _process_buildings_parallel(self, buildings: List[Dict[str, Any]], kommune_code: str = "") -> List[Dict[str, Any]]:
-        shelters = []
-        max_workers = min(16, (os.cpu_count() or 8))  # UNIVERSAL: never use concurrent.futures.thread
-        print(f"--> Running parallel DAWA lookups for {len(buildings)} buildings in kommune {kommune_code} (workers={max_workers})")
-        with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
-            futures = []
-            for building in buildings:
-                futures.append(executor.submit(self._process_building, building))
-            for idx, future in enumerate(concurrent.futures.as_completed(futures), 1):
-                try:
-                    shelter = future.result(timeout=30)  # Ensure each shelter lookup fails fast if DAWA/network stalls
-                except Exception as e:
-                    print(f"     [Parallel error] DAWA lookup error: {str(e)}")
-                    shelter = None
-                if shelter:
-                    shelters.append(shelter)
-                if idx % 100 == 0 or idx == len(futures):
-                    print(f"      ...processed {idx}/{len(futures)} shelters")
-        return shelters
-    
-    def _build_query(self, kommune_code: str, first: int, after_cursor: str = None) -> str:
+
+    def fetch_municipality(self, code: str) -> List[Dict[str, Any]]:
+        shelter_ids = self.scan_for_shelters(code)
+        buildings = self.lookup_buildings(shelter_ids)
+        addresses = self.lookup_addresses([b["husnummer"] for b in buildings if b.get("husnummer")])
+        features = []
+        for building in buildings:
+            feature = self.make_feature(building, addresses.get(building.get("husnummer") or ""), code)
+            if feature:
+                features.append(feature)
+        return features
+
+    def scan_for_shelters(self, code: str) -> List[str]:
+        """Ids of the municipality's buildings with shelter places.
+
+        Only id and capacity are fetched while paging through every building (under 1% have
+        shelters), which keeps each page small for Datafordeler's 60-second query limit.
         """
-        Build the GraphQL query for BBR buildings in a specific municipality.
-        """
-        after_param = f', after: "{after_cursor}"' if after_cursor else ""
-        
-        # Get current timestamp for bitemporal query (required by API)
-        current_time = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
-        
-        # Simplified query - only fetch fields we know work
-        query = f"""
-        query {{
-          BBR_Bygning(
-            first: {first}{after_param}
-            registreringstid: "{current_time}"
-            virkningstid: "{current_time}"
-            where: {{
-              kommunekode: {{ eq: "{kommune_code}" }}
-              status: {{ eq: "6" }}
-            }}
-          ) {{
-            pageInfo {{
-              hasNextPage
-              endCursor
-            }}
-            nodes {{
-              id_lokalId
-              byg069Sikringsrumpladser
-              kommunekode
-              byg404Koordinat {{
-                wkt
+        ids: List[str] = []
+        after = None
+        page_size = PAGE_SIZE
+        while True:
+            cursor = f', after: "{after}"' if after else ""
+            try:
+                data = self.client.query(BBR_URL, f"""
+                {{
+                  BBR_Bygning(first: {page_size}{cursor}, registreringstid: "{self.now}", virkningstid: "{self.now}",
+                              where: {{ kommunekode: {{ eq: "{code}" }}, status: {{ eq: "6" }} }}) {{
+                    pageInfo {{ hasNextPage endCursor }}
+                    nodes {{ id_lokalId byg069Sikringsrumpladser }}
+                  }}
+                }}""")["BBR_Bygning"]
+            except QueryTimeout:
+                if page_size <= MIN_PAGE_SIZE:
+                    raise RuntimeError(f"BBR timed out even at {page_size} buildings per page")
+                page_size = max(MIN_PAGE_SIZE, page_size // 2)
+                print(f"   ↻ BBR page timed out; retrying with {page_size} per page", flush=True)
+                continue
+            ids += [b["id_lokalId"] for b in data["nodes"] if (b.get("byg069Sikringsrumpladser") or 0) >= MIN_CAPACITY]
+            if not data["pageInfo"]["hasNextPage"] or not data["nodes"]:
+                return ids
+            after = data["pageInfo"]["endCursor"]
+            page_size = min(PAGE_SIZE, page_size * 2) if page_size < PAGE_SIZE else page_size
+
+    def lookup_buildings(self, ids: List[str]) -> List[Dict[str, Any]]:
+        """Capacity, position and DAR address id for the given buildings, in batches."""
+        buildings: List[Dict[str, Any]] = []
+        for start in range(0, len(ids), DETAIL_BATCH):
+            batch = ids[start:start + DETAIL_BATCH]
+            id_list = ", ".join(json.dumps(i) for i in batch)
+            buildings += self.client.query(BBR_URL, f"""
+            {{
+              BBR_Bygning(first: {len(batch)}, registreringstid: "{self.now}", virkningstid: "{self.now}",
+                          where: {{ id_lokalId: {{ in: [{id_list}] }} }}) {{
+                nodes {{ id_lokalId husnummer byg069Sikringsrumpladser byg404Koordinat {{ wkt }} }}
               }}
-            }}
-          }}
-        }}
-        """
-        return query
-    
-    def _process_building(self, building: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        Process a single building record and convert to GeoJSON feature format.
-        Fully safe for parallel usage.
-        """
-        try:
-            # Extract coordinates from byg404Koordinat
-            koordinat = building.get("byg404Koordinat")
-            if not koordinat:
-                return None
-            
-            # Extract WKT and parse coordinates
-            wkt = koordinat.get("wkt")
-            if not wkt:
-                return None
-            
-            coordinates = self._extract_coordinates_from_wkt(wkt)
-            if not coordinates:
-                return None
-            
-            # Look up nearest address by coordinates (within 200m)
-            lon, lat = coordinates
-            try:
-                # Catch DAWA lookup error very tightly
-                address, distance = self._lookup_address_by_coordinates(lon, lat, max_distance=200)
-            except Exception:
-                address, distance = ("", None)
-            
-            # If no address found within 200m, use empty string (shelter will still be included)
-            if not address:
-                address = ""
-                distance = None
-            
-            # Get shelter capacity
-            shelter_capacity = building.get("byg069Sikringsrumpladser", 0)
-            
-            # Create unique room number from id_lokalId
-            id_lokalid = building.get("id_lokalId", "")
-            try:
-                # Extract numbers from UUID-like id
-                romnr = int(''.join(filter(str.isdigit, id_lokalid))[:9]) % 1000000
-            except:
-                romnr = hash(id_lokalid) % 1000000
-            
-            # Create GeoJSON feature
-            feature = {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": coordinates
-                },
-                "properties": {
-                    "romnr": romnr,
-                    "plasser": shelter_capacity,
-                    "adresse": address,
-                    "adresse_avstand": distance,
-                    "datauttaksdato": datetime.now().strftime("%Y-%m-%d")
-                }
-            }
-            
-            return feature
-            
-        except Exception as e:
-            return None
-    
-    def _build_fallback_address(self, building: Dict[str, Any]) -> str:
-        return ""
-    
-    def _extract_coordinates_from_wkt(self, wkt_string: str) -> List[float]:
-        """
-        Extract coordinates from WKT (Well-Known Text) format.
-        Expected format: "POINT (easting northing)" in EPSG:25832
-        We need to convert to WGS84 (lon, lat) for GeoJSON
-        """
-        if not wkt_string:
-            return None
-        
-        try:
-            # Remove "POINT (" prefix and ")" suffix
-            coords_str = wkt_string.replace("POINT (", "").replace("POINT(", "").replace(")", "").strip()
-            parts = coords_str.split()
-            
-            if len(parts) >= 2:
-                easting = float(parts[0])
-                northing = float(parts[1])
-                
-                # Convert from EPSG:25832 (UTM Zone 32N) to WGS84
-                lon, lat = self._convert_utm32_to_wgs84(easting, northing)
-                
-                # REMOVE verbose debug print, only print on first 2 for safety
-                if hasattr(self, "_coord_debug_count"):
-                    self._coord_debug_count += 1
-                else:
-                    self._coord_debug_count = 1
+            }}""")["BBR_Bygning"]["nodes"]
+        return buildings
 
-                if self._coord_debug_count <= 2:
-                    print(f"Converted UTM32 ({easting},{northing}) → WGS84 (lon={lon}, lat={lat}) [Check at https://epsg.io/transform]")
-                
-                return [lon, lat]
-        except Exception as e:
-            print(f"Coordinate conversion error: {e}")
-        
-        return None
-    
-    def _convert_utm32_to_wgs84(self, easting: float, northing: float) -> tuple:
-        """
-        Convert from EPSG:25832 (ETRS89/UTM Zone 32N) to EPSG:4326 (WGS84 lon, lat).
-        """
-        if self.use_pyproj and self.transformer:
-            # Use pyproj for accurate conversion
-            lon, lat = self.transformer.transform(easting, northing)
-            return (lon, lat)
+    def lookup_addresses(self, husnummer_ids: List[str]) -> Dict[str, str]:
+        """DAR husnummer id -> "Vej 1, 1234 By"."""
+        result: Dict[str, str] = {}
+        unique = sorted(set(husnummer_ids))
+        for start in range(0, len(unique), DAR_BATCH):
+            batch = unique[start:start + DAR_BATCH]
+            ids = ", ".join(json.dumps(i) for i in batch)
+            nodes = self.client.query(DAR_URL, f"""
+            {{
+              DAR_Husnummer(first: {len(batch)}, registreringstid: "{self.now}", virkningstid: "{self.now}",
+                            where: {{ id_lokalId: {{ in: [{ids}] }} }}) {{
+                nodes {{ id_lokalId adgangsadressebetegnelse }}
+              }}
+            }}""")["DAR_Husnummer"]["nodes"]
+            for node in nodes:
+                if node.get("adgangsadressebetegnelse"):
+                    result[node["id_lokalId"]] = node["adgangsadressebetegnelse"].strip()
+        return result
+
+    def make_feature(self, building: Dict[str, Any], address: Optional[str], code: str) -> Optional[Dict[str, Any]]:
+        wkt = (building.get("byg404Koordinat") or {}).get("wkt") or ""
+        try:
+            easting, northing = (float(v) for v in wkt.replace("POINT", "").strip(" ()").split()[:2])
+        except ValueError:
+            return None
+        lon, lat = self.transformer.transform(easting, northing)
+
+        if address:
+            self.addresses_found += 1
         else:
-            # Fallback: Use proper UTM Zone 32N conversion formulas
-            return self._utm32_to_wgs84_fallback(easting, northing)
-    
-    def _utm32_to_wgs84_fallback(self, easting: float, northing: float) -> tuple:
-        """
-        Fallback UTM to WGS84 conversion using proper formulas.
-        Based on the Karney-Krüger transverse Mercator projection.
-        """
-        import math
-        
-        # WGS84 ellipsoid parameters
-        a = 6378137.0  # Semi-major axis
-        f = 1/298.257223563  # Flattening
-        
-        # UTM Zone 32N parameters
-        k0 = 0.9996  # Scale factor
-        lon0 = 9.0 * math.pi / 180.0  # Central meridian (9°E)
-        E0 = 500000.0  # False easting
-        N0 = 0.0  # False northing (0 for northern hemisphere)
-        
-        # Remove false easting/northing
-        x = easting - E0
-        y = northing - N0
-        
-        # Derived constants
-        n = f / (2 - f)
-        n2 = n * n
-        n3 = n2 * n
-        n4 = n3 * n
-        
-        A = (a / (1 + n)) * (1 + n2/4 + n4/64)
-        
-        # Coefficients for inverse formulas
-        alpha = [
-            None,
-            n/2 - 2*n2/3 + 5*n3/16,
-            13*n2/48 - 3*n3/5,
-            61*n3/240
-        ]
-        
-        beta = [
-            None,
-            n/2 - 2*n2/3 + 37*n3/96,
-            n2/48 + n3/15,
-            17*n3/480
-        ]
-        
-        # Calculate footpoint latitude
-        xi = y / (k0 * A)
-        
-        xi_prime = xi
-        for j in range(1, 4):
-            xi_prime -= beta[j] * math.sin(2*j*xi) * math.cosh(2*j*x/(k0*A))
-        
-        eta_prime = x / (k0 * A)
-        for j in range(1, 4):
-            eta_prime -= beta[j] * math.cos(2*j*xi) * math.sinh(2*j*x/(k0*A))
-        
-        # Calculate latitude and longitude
-        chi = math.asin(math.sin(xi_prime) / math.cosh(eta_prime))
-        
-        lat = chi
-        for j in range(1, 4):
-            lat += alpha[j] * math.sin(2*j*chi)
-        
-        lon = lon0 + math.atan(math.sinh(eta_prime) / math.cos(xi_prime))
-        
-        # Convert to degrees
-        lat_deg = lat * 180.0 / math.pi
-        lon_deg = lon * 180.0 / math.pi
-        
-        return (lon_deg, lat_deg)
-    
-    def _lookup_address_by_coordinates(self, lon: float, lat: float, max_distance: int = 200) -> tuple:
-        """
-        Look up nearest address by coordinates using DAWA circle search.
-        Uses WGS84 coordinates (EPSG:4326).
+            self.addresses_missing += 1
+            address = ""
 
-        Args:
-            lon: Longitude in WGS84
-            lat: Latitude in WGS84  
-            max_distance: Maximum acceptable distance in meters (default 200m)
-        Returns:
-            tuple: (address_string, distance_in_meters) or (None, None) if not found
-        """
-        cache_key = f"{lon:.6f},{lat:.6f}"
-        # Check cache first
-        if cache_key in self.address_cache:
-            cached = self.address_cache.get(cache_key)
-            return (cached, None) if cached else (None, None)
-        self.address_lookup_count += 1
-        debug = self.address_lookup_count <= 3
-        if debug:
-            print(f"\n  [DEBUG] Looking up nearest address for: {lat:.6f}°N, {lon:.6f}°E")
-            print(f"  [DEBUG] Max acceptable distance: {max_distance}m")
+        lokal_id = building.get("id_lokalId", "")
+        digits = "".join(filter(str.isdigit, lokal_id))
+        romnr = int(digits[:9]) % 1_000_000 if digits else abs(hash(lokal_id)) % 1_000_000
 
-        # First, try adgangsadresser (entrance addresses)
-        try:
-            search_radius = 500
-            url = f"{self.dawa_base_url}/adgangsadresser"
-            params = {
-                "cirkel": f"{lon},{lat},{search_radius}",
-                "srid": "4326",
-                "struktur": "mini"
-            }
-            if self.dataforsyningen_token:
-                params["token"] = self.dataforsyningen_token
-            response = requests.get(url, params=params, timeout=5)
-            if debug:
-                print(f"  [DEBUG] Response status: {response.status_code} adgangsadresser")
-            if response.status_code == 200:
-                data = response.json()
-                if isinstance(data, list) and len(data) > 0:
-                    addr_data = data[0]
-                    addr_lon = addr_data.get("x", 0)
-                    addr_lat = addr_data.get("y", 0)
-                    import math
-                    dlat = math.radians(addr_lat - lat)
-                    dlon = math.radians(addr_lon - lon)
-                    a = math.sin(dlat/2)**2 + math.cos(math.radians(lat)) * math.cos(math.radians(addr_lat)) * math.sin(dlon/2)**2
-                    c = 2 * math.asin(math.sqrt(a))
-                    distance = 6371000 * c
-                    if debug:
-                        print(f"  [DEBUG] Nearest adgangsadresser distance: {distance:.1f}m")
-                    if distance <= max_distance:
-                        vejnavn = addr_data.get("vejnavn", "")
-                        husnr = addr_data.get("husnr", "")
-                        postnr = addr_data.get("postnr", "")
-                        postnrnavn = addr_data.get("postnrnavn", "")
-                        if vejnavn and husnr:
-                            address = f"{vejnavn} {husnr}"
-                            if postnr and postnrnavn:
-                                address += f", {postnr} {postnrnavn}"
-                            self.address_cache[cache_key] = address
-                            self.address_success_count += 1
-                            if debug:
-                                print(f"  [DEBUG] ✓ Resolved to: {address} (distance: {distance:.1f}m)\n")
-                            return (address, round(distance))
-        except Exception as e:
-            if debug:
-                print(f"  [DEBUG] ✗ Error adgangsadresser: {str(e)}\n")
-
-        # Fallback: try a broad search in 'adresser' endpoint
-        try:
-            url = f"{self.dawa_base_url}/adresser"
-            params = {
-                "cirkel": f"{lon},{lat},500",
-                "srid": "4326",
-                "struktur": "mini"
-            }
-            if self.dataforsyningen_token:
-                params["token"] = self.dataforsyningen_token
-            response = requests.get(url, params=params, timeout=5)
-            if debug:
-                print(f"  [DEBUG] Response status: {response.status_code} adresser")
-            if response.status_code == 200:
-                data = response.json()
-                if isinstance(data, list) and len(data) > 0:
-                    addr_data = data[0]
-                    addr_lon = addr_data.get("x", 0)
-                    addr_lat = addr_data.get("y", 0)
-                    import math
-                    dlat = math.radians(addr_lat - lat)
-                    dlon = math.radians(addr_lon - lon)
-                    a = math.sin(dlat/2)**2 + math.cos(math.radians(lat)) * math.cos(math.radians(addr_lat)) * math.sin(dlon/2)**2
-                    c = 2 * math.asin(math.sqrt(a))
-                    distance = 6371000 * c
-                    if debug:
-                        print(f"  [DEBUG] Nearest adresser distance: {distance:.1f}m")
-                    if distance <= max_distance:
-                        vejnavn = addr_data.get("vejnavn", "")
-                        husnr = addr_data.get("husnr", "")
-                        postnr = addr_data.get("postnr", "")
-                        postnrnavn = addr_data.get("postnrnavn", "")
-                        if vejnavn and husnr:
-                            address = f"{vejnavn} {husnr}"
-                            if postnr and postnrnavn:
-                                address += f", {postnr} {postnrnavn}"
-                            self.address_cache[cache_key] = address
-                            self.address_success_count += 1
-                            if debug:
-                                print(f"  [DEBUG] ✓ Resolved to: {address} (distance: {distance:.1f}m) [fallback: adresser]\n")
-                            return (address, round(distance))
-        except Exception as e:
-            if debug:
-                print(f"  [DEBUG] ✗ Error adresser fallback: {str(e)}\n")
-
-        # Optionally, further fallback: reverse API
-
-        self.address_cache[cache_key] = None
-        return (None, None)
-
-    def _lookup_dar_address(self, husnummer_id: str) -> str:
-        """
-        Look up actual street address from DAWA (Danish Address Web API).
-        NOTE: This method is kept for compatibility but BBR husnummer IDs
-        don't match DAWA address IDs. Use _lookup_address_by_coordinates instead.
-        """
-        return None
-
-    def _lookup_address_by_husnummer_id(self, husnummer_id: str) -> str:
-        """
-        This method is kept for compatibility but BBR doesn't provide husnummer IDs.
-        """
-        return None
-
-    def _build_address(self, building: Dict[str, Any]) -> str:
-        """
-        Build a human-readable address from building data.
-        NOTE: This is no longer used - addresses are now resolved in _process_building.
-        """
-        kommune = building.get("kommunekode", "")
-        husnummer_id = building.get("husnummer", "")
-        
-        parts = []
-        if kommune:
-            parts.append(f"Kommune {kommune}")
-        if husnummer_id:
-            parts.append(f"Husnummer: {husnummer_id}")
-        
-        return ", ".join(parts) if parts else "Ukendt adresse"
-    
-    def save_to_geojson(self, shelters: List[Dict[str, Any]], output_file: str):
-        geojson = {
-            "type": "FeatureCollection",
-            "name": "Beskyttelsesrum Danmark",
-            "features": shelters
+        return {
+            "type": "Feature",
+            "geometry": {"type": "Point", "coordinates": [lon, lat]},
+            "properties": {
+                "romnr": romnr,
+                "plasser": building["byg069Sikringsrumpladser"],
+                "adresse": address,
+                # The address is the building's own, so there is no distance to report.
+                "adresse_avstand": None,
+                "sted": denmark_place(address, code),
+                "datauttaksdato": self.today,
+            },
         }
-        
-        with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(geojson, f, ensure_ascii=False, indent=2)
-        
-        print(f"\n✓ Saved {len(shelters)} shelters to {output_file}")
 
-        # Remove partial on full success
-        try:
-            os.remove("partial_denmark_shelters.json")
-            print("Removed partial progress file (full run completed)")
-        except Exception:
-            pass
-        
-        # Show address lookup statistics
-        if self.address_lookup_count > 0:
-            success_rate = (self.address_success_count / self.address_lookup_count) * 100
-            print(f"\nAddress resolution statistics:")
-            print(f"  Total lookups:     {self.address_lookup_count}")
-            print(f"  Successful:        {self.address_success_count} ({success_rate:.1f}%)")
-            print(f"  Failed/Not found:  {self.address_lookup_count - self.address_success_count}")
+    @staticmethod
+    def _load_partial():
+        if os.path.exists(PARTIAL_PATH):
+            with open(PARTIAL_PATH, encoding="utf-8") as f:
+                data = json.load(f)
+            age = time.time() - data.get("saved_at", 0)
+            if age > PARTIAL_MAX_AGE_SECONDS:
+                print(f"Ignoring progress from {age / 86400:.0f} days ago; starting over")
+                return [], set()
+            print(f"Resuming: {len(data.get('shelters', []))} shelters from {len(data.get('processed_kommuner', []))} municipalities")
+            return data.get("shelters", []), set(data.get("processed_kommuner", []))
+        return [], set()
+
+    @staticmethod
+    def _save_partial(shelters, done):
+        with open(PARTIAL_PATH, "w", encoding="utf-8") as f:
+            json.dump({"saved_at": time.time(), "shelters": shelters, "processed_kommuner": sorted(done)}, f, ensure_ascii=False)
 
 
-def main():
-    # REMOVE: Old hardcoded API keys
-    # ADD: Read API keys from environment variables
-    BBR_API_KEY = os.environ.get("BBR_API_KEY")
-    DATAFORSYNINGEN_TOKEN = os.environ.get("DATAFORSYNINGEN_TOKEN")
-    
-    if not BBR_API_KEY:
-        print("❌ ERROR: BBR_API_KEY environment variable not set!")
-        print("Please set it with: export BBR_API_KEY='your-key-here'")
-        exit(1)
-    
-    if not DATAFORSYNINGEN_TOKEN:
-        print("⚠ WARNING: DATAFORSYNINGEN_TOKEN not set - address lookups may be limited")
-    
-    print("="*60)
-    print("Danish Shelter Data Fetcher (BBR GraphQL)")
-    print("="*60)
-    print("\nThis will fetch real shelter data from Denmark's BBR registry.")
-    print("It will take approximately 5-10 minutes to process all")
-    print("98 municipalities...\n")
-    
-    # Create fetcher instance
-    fetcher = DenmarkShelterFetcher(BBR_API_KEY, DATAFORSYNINGEN_TOKEN)
-    
-    # Fetch all shelters
-    shelters = fetcher.fetch_shelters(batch_size=500, max_retries=3)
-    
-    if shelters:
-        # Save to file
-        output_file = "denmark_shelters.json"
-        fetcher.save_to_geojson(shelters, output_file)
-        print("\n" + "="*60)
-        print(f"SUCCESS! Found {len(shelters)} shelters with 40+ capacity")
-        print("="*60)
-    else:
-        print("\n⚠ No shelters found.")
+def main() -> int:
+    api_key = os.environ.get("BBR_API_KEY")
+    if not api_key:
+        print("❌ BBR_API_KEY is not set")
+        return 1
+
+    fetcher = DenmarkShelterFetcher(api_key)
+    shelters = fetcher.fetch_all()
+
+    total = fetcher.addresses_found + fetcher.addresses_missing
+    if total:
+        print(f"\nAddresses: {fetcher.addresses_found}/{total} resolved via DAR ({100 * fetcher.addresses_found / total:.1f}%)")
+
+    if fetcher.failures:
+        print("❌ Some municipalities failed; not publishing an incomplete file.")
+        return 1
+    if len(shelters) < MIN_EXPECTED_SHELTERS:
+        print(f"❌ Only {len(shelters)} shelters (expected at least {MIN_EXPECTED_SHELTERS}); not publishing.")
+        return 1
+
+    with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
+        json.dump({"type": "FeatureCollection", "name": "Beskyttelsesrum Danmark", "features": shelters}, f, ensure_ascii=False, indent=2)
+    if os.path.exists(PARTIAL_PATH):
+        os.remove(PARTIAL_PATH)
+    print(f"✓ Saved {len(shelters)} shelters to {OUTPUT_PATH}")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

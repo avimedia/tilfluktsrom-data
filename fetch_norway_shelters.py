@@ -104,6 +104,14 @@ if __name__ == "__main__":
     geojson = fetch_norwegian_shelters()
     
     if geojson:
+        # Add the town ("sted") for each shelter, reusing last run's lookups.
+        from place_names import enrich_collection
+        previous = None
+        if os.path.exists("docs/norway_shelters.json"):
+            with open("docs/norway_shelters.json", encoding="utf-8") as f:
+                previous = json.load(f)
+        filled = enrich_collection(geojson, "norway", previous)
+        print(f"📍 Added town names to {filled} shelters")
         success = save_geojson(geojson)
         exit(0 if success else 1)
     else:

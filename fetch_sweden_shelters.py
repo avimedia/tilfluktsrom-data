@@ -69,6 +69,7 @@ def convert_to_app_format(arcgis_features):
         if any(char in address for char in ['å', 'ä', 'ö', 'Å', 'Ä', 'Ö']):
             swedish_char_count += 1
         capacity = attrs.get("AntalPlatser", 0) or 0
+        municipality = str(attrs.get("Kommunnamn") or "").strip()
 
         feature = {
             "type": "Feature",
@@ -80,6 +81,7 @@ def convert_to_app_format(arcgis_features):
                 "romnr": idx,
                 "plasser": int(capacity),
                 "adresse": address,
+                "sted": municipality,
                 "datauttaksdato": datetime.now().strftime("%Y-%m-%d")
             }
         }

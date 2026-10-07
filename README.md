@@ -15,7 +15,7 @@ The shelter data is available via GitHub Pages:
 GitHub Actions workflows automatically update the data:
 
 - **Norwegian shelters**: Weekly on Mondays at 2:00 AM UTC (from GeoNorge)
-- **Danish shelters**: Weekly on Tuesdays at 2:10 AM UTC (from BBR GraphQL API)
+- **Danish shelters**: Weekly on Tuesdays at 2:10 AM UTC (from Datafordeler BBR v2 + DAR v2 GraphQL)
 - **Swedish shelters**: Daily at 3:00 AM UTC (from MSB ArcGIS API)
 
 ## Data Statistics
@@ -59,8 +59,7 @@ The Danish shelter script requires API keys from Datafordeler.dk:
 1. Set environment variables:
 
 ```bash
-export BBR_API_KEY="your-bbr-api-key"
-export DATAFORSYNINGEN_TOKEN="your-dataforsyningen-token"
+export BBR_API_KEY="your-datafordeler-api-key"   # needs access to BBR and DAR
 ```
 
 2. Run the script:
@@ -96,6 +95,7 @@ All shelter data follows the GeoJSON format:
         "romnr": 12345,
         "plasser": 150,
         "adresse": "Street Name 123",
+        "sted": "Town",
         "datauttaksdato": "2026-01-11"
       }
     }
@@ -105,10 +105,20 @@ All shelter data follows the GeoJSON format:
 
 **Note**: Norwegian data uses UTM33 (EPSG:25833) coordinates, which need to be converted to WGS84 by the app.
 
+`sted` (town or municipality) is optional; older files don't have it and the app handles both. Sources (see `place_names.py`):
+
+| Country | `sted` from |
+|---|---|
+| Norway | Kartverket address API (postal town), municipality if no address within 1 km |
+| Sweden | MSB `Kommunnamn` |
+| Denmark | Postal town from the DAR address, else the municipality |
+| Estonia | Settlement part of the address |
+| Lithuania | Settlement (`gyvenviete`) |
+
 ## Data Sources
 
 - **Norway**: DSB (Direktoratet for samfunnssikkerhet og beredskap) via GeoNorge
-- **Denmark**: BBR (Bygnings- og Boligregistret) via Datafordeler.dk
+- **Denmark**: BBR (Bygnings- og Boligregistret) for all buildings with shelter capacity (mostly *sikringsrum*, meant for the building's occupants; BBR can't distinguish public *offentlige beskyttelsesrum*), and DAR (Danmarks Adresseregister) for each building's official address, both via Datafordeler.dk GraphQL v2. (The v1 endpoint and the DAWA address API used until 2026 have been shut down.)
 - **Sweden**: MSB (Myndigheten för samhällsskydd och beredskap) via ArcGIS Feature Service
 
 ## Manual Workflow Triggers

@@ -35,3 +35,6 @@ temp_*.json
 
 # Test files
 test_*.py
+# Lithuania raw download, re-fetched by every workflow run
+PAGD_civiline_sauga.gdb/
+PAGD_civiline_sauga.zip

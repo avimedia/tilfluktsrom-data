@@ -10,6 +10,7 @@ from datetime import datetime
 import pandas as pd
 import os
 import fiona
+from place_names import lithuania_place
 
 def convert_lithuania_shelters():
     print("="*70)
@@ -94,9 +95,11 @@ def convert_lithuania_shelters():
                     break
             
             # City/Settlement
+            settlement = ""
             for field in ['gyvenviete', 'GYVENVIETE', 'city', 'miestas', 'MIESTAS', 'City']:
                 if field in row.index and row.get(field) and not pd.isna(row[field]):
-                    address_parts.append(str(row[field]))
+                    settlement = str(row[field])
+                    address_parts.append(settlement)
                     break
             
             # Municipality
@@ -142,6 +145,7 @@ def convert_lithuania_shelters():
                     "plasser": capacity,
                     "adresse": address,
                     "adresse_avstand": None,
+                    "sted": settlement or lithuania_place(address),
                     "datauttaksdato": date_str
                 }
             }
