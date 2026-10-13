@@ -50,7 +50,7 @@ jobs:
           ls -lh docs/sweden_shelters.json
           echo ""
           echo "Number of shelters:"
-          grep -c '"type": "Feature"' docs/sweden_shelters.json || echo "0"
+          python3 -c "import json; print(len(json.load(open('docs/sweden_shelters.json'))['features']))"
 
       - name: Commit and push changes
         if: steps.check_changes.outputs.changed == 'true'

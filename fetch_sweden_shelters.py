@@ -97,6 +97,27 @@ def convert_to_app_format(arcgis_features):
     print(f"📝 Found {swedish_char_count} addresses with Swedish characters")
     return geojson
 
+def without_dates(features):
+    return [
+        {**f, "properties": {k: v for k, v in f["properties"].items() if k != "datauttaksdato"}}
+        for f in features
+    ]
+
+
+def unchanged_date(geojson, path):
+    """The previous file's date if its shelters equal the new ones apart from the date, else None."""
+    try:
+        with open(path, encoding="utf-8") as f:
+            previous = json.load(f)
+    except (OSError, ValueError):
+        return None
+    old_features = previous.get("features", [])
+    if without_dates(old_features) != without_dates(geojson["features"]):
+        return None
+    dates = [f["properties"].get("datauttaksdato") for f in old_features if f["properties"].get("datauttaksdato")]
+    return max(dates) if dates else None
+
+
 if __name__ == "__main__":
     print("🇸🇪 Swedish Shelter Data Converter (ArcGIS)")
     print("=" * 50)
@@ -108,8 +129,17 @@ if __name__ == "__main__":
     output_dir = "docs"
     os.makedirs(output_dir, exist_ok=True)
     output_file = os.path.join(output_dir, "sweden_shelters.json")
+    previous_date = unchanged_date(geojson, output_file)
+    if previous_date:
+        # Same shelters as last time: keep the old date, so the app doesn't report
+        # "newer data" every day for a file where only the date changed.
+        print(f"\n= Shelters unchanged since {previous_date}; keeping that date")
+        for feature in geojson["features"]:
+            feature["properties"]["datauttaksdato"] = previous_date
     with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(geojson, f, ensure_ascii=False, indent=2)
+        # Compact JSON: GitHub Pages redeploys on every change, and each deployment
+        # counts against the account's Actions storage.
+        json.dump(geojson, f, ensure_ascii=False, separators=(",", ":"))
     print(f"\n✅ SUCCESS! File saved as: {output_file}")
     file_size_mb = os.path.getsize(output_file) / 1024 / 1024
     print(f"📊 File size: {file_size_mb:.2f} MB")
@@ -120,7 +150,7 @@ if __name__ == "__main__":
         if found_chars:
             print(f"✅ Swedish characters preserved correctly: {', '.join(sorted(set(found_chars)))}")
             import re
-            matches = re.findall(r'"adresse": "([^"]*[åäöÅÄÖ][^"]*)"', content)
+            matches = re.findall(r'"adresse": ?"([^"]*[åäöÅÄÖ][^"]*)"', content)
             if matches:
                 print(f"\n📋 Sample addresses with Swedish characters:")
                 for addr in matches[:5]:
