@@ -79,150 +79,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          26.7282436,
-          58.3771849
-        ]
-      },
-      "properties": {
-        "romnr": 243677,
-        "plasser": 0,
-        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Riia tn 2",
-        "adresse_avstand": null,
-        "sted": "Tartu linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.7174474,
-          58.3819963
-        ]
-      },
-      "properties": {
-        "romnr": 256767,
-        "plasser": 0,
-        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Lutsu tn 2",
-        "adresse_avstand": null,
-        "sted": "Tartu linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.8591458,
-          59.4490445
-        ]
-      },
-      "properties": {
-        "romnr": 240308,
-        "plasser": 0,
-        "adresse": "Lääne-Viru maakond, Viru-Nigula vald, Aseri alevik, Kooli tn 2",
-        "adresse_avstand": null,
-        "sted": "Aseri alevik",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          27.763957,
-          59.3739888
-        ]
-      },
-      "properties": {
-        "romnr": 229552,
-        "plasser": 0,
-        "adresse": "Ida-Viru maakond, Narva-Jõesuu linn, Vaivara küla, Poe tn 3",
-        "adresse_avstand": null,
-        "sted": "Vaivara küla",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.7533537,
-          58.6632844
-        ]
-      },
-      "properties": {
-        "romnr": 244388,
-        "plasser": 0,
-        "adresse": "Viljandi maakond, Põhja-Sakala vald, Pilistvere küla, Pilistvere kirikla",
-        "adresse_avstand": null,
-        "sted": "Pilistvere küla",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.749031,
-          59.4355946
-        ]
-      },
-      "properties": {
-        "romnr": 234455,
-        "plasser": 0,
-        "adresse": "Harju maakond, Tallinn, Kesklinna linnaosa, Müürivahe tn 28 // Pärnu mnt 6",
-        "adresse_avstand": null,
-        "sted": "Tallinn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.5335178,
-          59.4279073
-        ]
-      },
-      "properties": {
-        "romnr": 226016,
-        "plasser": 0,
-        "adresse": "Harju maakond, Harku vald, Tabasalu alevik, Kooli tn 11",
-        "adresse_avstand": null,
-        "sted": "Tabasalu alevik",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.9277955,
-          58.0077152
-        ]
-      },
-      "properties": {
-        "romnr": 250482,
-        "plasser": 0,
-        "adresse": "Valga maakond, Tõrva vald, Tõrva linn, Puiestee tn 1",
-        "adresse_avstand": null,
-        "sted": "Tõrva linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           28.1981204,
           59.3728804
         ]
@@ -295,6 +151,150 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          25.9277955,
+          58.0077152
+        ]
+      },
+      "properties": {
+        "romnr": 250482,
+        "plasser": 0,
+        "adresse": "Valga maakond, Tõrva vald, Tõrva linn, Puiestee tn 1",
+        "adresse_avstand": null,
+        "sted": "Tõrva linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.7282436,
+          58.3771849
+        ]
+      },
+      "properties": {
+        "romnr": 243677,
+        "plasser": 0,
+        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Riia tn 2",
+        "adresse_avstand": null,
+        "sted": "Tartu linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.7174474,
+          58.3819963
+        ]
+      },
+      "properties": {
+        "romnr": 256767,
+        "plasser": 0,
+        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Lutsu tn 2",
+        "adresse_avstand": null,
+        "sted": "Tartu linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.8591458,
+          59.4490445
+        ]
+      },
+      "properties": {
+        "romnr": 240308,
+        "plasser": 0,
+        "adresse": "Lääne-Viru maakond, Viru-Nigula vald, Aseri alevik, Kooli tn 2",
+        "adresse_avstand": null,
+        "sted": "Aseri alevik",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.7533537,
+          58.6632844
+        ]
+      },
+      "properties": {
+        "romnr": 244388,
+        "plasser": 0,
+        "adresse": "Viljandi maakond, Põhja-Sakala vald, Pilistvere küla, Pilistvere kirikla",
+        "adresse_avstand": null,
+        "sted": "Pilistvere küla",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.749031,
+          59.4355946
+        ]
+      },
+      "properties": {
+        "romnr": 234455,
+        "plasser": 0,
+        "adresse": "Harju maakond, Tallinn, Kesklinna linnaosa, Müürivahe tn 28 // Pärnu mnt 6",
+        "adresse_avstand": null,
+        "sted": "Tallinn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.763957,
+          59.3739888
+        ]
+      },
+      "properties": {
+        "romnr": 229552,
+        "plasser": 0,
+        "adresse": "Ida-Viru maakond, Narva-Jõesuu linn, Vaivara küla, Poe tn 3",
+        "adresse_avstand": null,
+        "sted": "Vaivara küla",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.5335178,
+          59.4279073
+        ]
+      },
+      "properties": {
+        "romnr": 226016,
+        "plasser": 0,
+        "adresse": "Harju maakond, Harku vald, Tabasalu alevik, Kooli tn 11",
+        "adresse_avstand": null,
+        "sted": "Tabasalu alevik",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           24.5064388,
           58.3874787
         ]
@@ -331,24 +331,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          26.7599462,
-          57.9867842
-        ]
-      },
-      "properties": {
-        "romnr": 242351,
-        "plasser": 0,
-        "adresse": "Põlva maakond, Kanepi vald, Kanepi alevik, Kooli tn 1",
-        "adresse_avstand": null,
-        "sted": "Kanepi alevik",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           26.8420515,
           58.0725274
         ]
@@ -359,6 +341,24 @@
         "adresse": "Põlva maakond, Kanepi vald, Krootuse küla, Kooli tn 1",
         "adresse_avstand": null,
         "sted": "Krootuse küla",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.7599462,
+          57.9867842
+        ]
+      },
+      "properties": {
+        "romnr": 242351,
+        "plasser": 0,
+        "adresse": "Põlva maakond, Kanepi vald, Kanepi alevik, Kooli tn 1",
+        "adresse_avstand": null,
+        "sted": "Kanepi alevik",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -475,6 +475,150 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          24.8376673,
+          59.513359
+        ]
+      },
+      "properties": {
+        "romnr": 244313,
+        "plasser": 0,
+        "adresse": "Harju maakond, Viimsi vald, Lubja küla, Randvere tee 20",
+        "adresse_avstand": null,
+        "sted": "Lubja küla",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.1436574,
+          59.2263
+        ]
+      },
+      "properties": {
+        "romnr": 255947,
+        "plasser": 0,
+        "adresse": "Harju maakond, Lääne-Harju vald, Padise küla, Kloostri-Kõrtsi",
+        "adresse_avstand": null,
+        "sted": "Padise küla",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.1928499,
+          59.3547151
+        ]
+      },
+      "properties": {
+        "romnr": 243676,
+        "plasser": 0,
+        "adresse": "Ida-Viru maakond, Jõhvi vald, Kohtla-Nõmme alev, Kooli tn 6",
+        "adresse_avstand": null,
+        "sted": "Kohtla-Nõmme alev",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.2242862,
+          59.3537607
+        ]
+      },
+      "properties": {
+        "romnr": 255911,
+        "plasser": 0,
+        "adresse": "Lääne-Viru maakond, Kadrina vald, Hulja alevik, Tõnismäe tee 18",
+        "adresse_avstand": null,
+        "sted": "Hulja alevik",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.7281626,
+          58.377972
+        ]
+      },
+      "properties": {
+        "romnr": 243675,
+        "plasser": 0,
+        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Riia tn 1",
+        "adresse_avstand": null,
+        "sted": "Tartu linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.6400401,
+          59.409846
+        ]
+      },
+      "properties": {
+        "romnr": 254213,
+        "plasser": 0,
+        "adresse": "Harju maakond, Tallinn, Haabersti linnaosa, Järveotsa tee 31",
+        "adresse_avstand": null,
+        "sted": "Tallinn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.8972979,
+          59.3567126
+        ]
+      },
+      "properties": {
+        "romnr": 255932,
+        "plasser": 0,
+        "adresse": "Harju maakond, Rae vald, Jüri alevik, Veetorni tn 3",
+        "adresse_avstand": null,
+        "sted": "Jüri alevik",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.8365228,
+          59.5129919
+        ]
+      },
+      "properties": {
+        "romnr": 243708,
+        "plasser": 0,
+        "adresse": "Harju maakond, Viimsi vald, Haabneeme alevik, Randvere tee 18/3",
+        "adresse_avstand": null,
+        "sted": "Haabneeme alevik",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           24.7591802,
           59.432914
         ]
@@ -529,286 +673,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          24.6400401,
-          59.409846
+          24.5051167,
+          58.3881119
         ]
       },
       "properties": {
-        "romnr": 254213,
+        "romnr": 254733,
         "plasser": 0,
-        "adresse": "Harju maakond, Tallinn, Haabersti linnaosa, Järveotsa tee 31",
+        "adresse": "Pärnu maakond, Pärnu linn, Pärnu linn, Lai tn 14",
         "adresse_avstand": null,
-        "sted": "Tallinn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.8376673,
-          59.513359
-        ]
-      },
-      "properties": {
-        "romnr": 244313,
-        "plasser": 0,
-        "adresse": "Harju maakond, Viimsi vald, Lubja küla, Randvere tee 20",
-        "adresse_avstand": null,
-        "sted": "Lubja küla",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.2242862,
-          59.3537607
-        ]
-      },
-      "properties": {
-        "romnr": 255911,
-        "plasser": 0,
-        "adresse": "Lääne-Viru maakond, Kadrina vald, Hulja alevik, Tõnismäe tee 18",
-        "adresse_avstand": null,
-        "sted": "Hulja alevik",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.8972979,
-          59.3567126
-        ]
-      },
-      "properties": {
-        "romnr": 255932,
-        "plasser": 0,
-        "adresse": "Harju maakond, Rae vald, Jüri alevik, Veetorni tn 3",
-        "adresse_avstand": null,
-        "sted": "Jüri alevik",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.8365228,
-          59.5129919
-        ]
-      },
-      "properties": {
-        "romnr": 243708,
-        "plasser": 0,
-        "adresse": "Harju maakond, Viimsi vald, Haabneeme alevik, Randvere tee 18/3",
-        "adresse_avstand": null,
-        "sted": "Haabneeme alevik",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.1436574,
-          59.2263
-        ]
-      },
-      "properties": {
-        "romnr": 255947,
-        "plasser": 0,
-        "adresse": "Harju maakond, Lääne-Harju vald, Padise küla, Kloostri-Kõrtsi",
-        "adresse_avstand": null,
-        "sted": "Padise küla",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          27.1928499,
-          59.3547151
-        ]
-      },
-      "properties": {
-        "romnr": 243676,
-        "plasser": 0,
-        "adresse": "Ida-Viru maakond, Jõhvi vald, Kohtla-Nõmme alev, Kooli tn 6",
-        "adresse_avstand": null,
-        "sted": "Kohtla-Nõmme alev",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.7281626,
-          58.377972
-        ]
-      },
-      "properties": {
-        "romnr": 243675,
-        "plasser": 0,
-        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Riia tn 1",
-        "adresse_avstand": null,
-        "sted": "Tartu linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.6963271,
-          59.4499228
-        ]
-      },
-      "properties": {
-        "romnr": 257988,
-        "plasser": 0,
-        "adresse": "Harju maakond, Tallinn, Põhja-Tallinna linnaosa, Sõle tn 61a",
-        "adresse_avstand": null,
-        "sted": "Tallinn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          28.1792651,
-          59.3752515
-        ]
-      },
-      "properties": {
-        "romnr": 226074,
-        "plasser": 0,
-        "adresse": "Ida-Viru maakond, Narva linn, P. Kerese tn 20",
-        "adresse_avstand": null,
-        "sted": "Narva linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          28.2018451,
-          59.3826475
-        ]
-      },
-      "properties": {
-        "romnr": 226100,
-        "plasser": 0,
-        "adresse": "Ida-Viru maakond, Narva linn, Pimeaia tn 1",
-        "adresse_avstand": null,
-        "sted": "Narva linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          27.4084261,
-          59.3595108
-        ]
-      },
-      "properties": {
-        "romnr": 255948,
-        "plasser": 0,
-        "adresse": "Ida-Viru maakond, Jõhvi vald, Jõhvi linn, Rakvere tn 8",
-        "adresse_avstand": null,
-        "sted": "Jõhvi linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.2900331,
-          59.2434993
-        ]
-      },
-      "properties": {
-        "romnr": 243671,
-        "plasser": 0,
-        "adresse": "Harju maakond, Lääne-Harju vald, Vasalemma alevik, Ranna tee 8",
-        "adresse_avstand": null,
-        "sted": "Vasalemma alevik",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          23.5348577,
-          58.9486943
-        ]
-      },
-      "properties": {
-        "romnr": 225987,
-        "plasser": 0,
-        "adresse": "Lääne maakond, Haapsalu linn, Haapsalu linn, Ehte tn 9",
-        "adresse_avstand": null,
-        "sted": "Haapsalu linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          28.1934186,
-          59.3632756
-        ]
-      },
-      "properties": {
-        "romnr": 225988,
-        "plasser": 0,
-        "adresse": "Ida-Viru maakond, Narva linn, Haigla tn 6",
-        "adresse_avstand": null,
-        "sted": "Narva linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          27.4183651,
-          59.3570316
-        ]
-      },
-      "properties": {
-        "romnr": 228631,
-        "plasser": 0,
-        "adresse": "Ida-Viru maakond, Jõhvi vald, Jõhvi linn, Narva mnt 4b // 8",
-        "adresse_avstand": null,
-        "sted": "Jõhvi linn",
+        "sted": "Pärnu linn",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -925,6 +799,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          26.6323089,
+          59.3252235
+        ]
+      },
+      "properties": {
+        "romnr": 226017,
+        "plasser": 0,
+        "adresse": "Lääne-Viru maakond, Vinni vald, Ulvi küla, Mõisa tee 7",
+        "adresse_avstand": null,
+        "sted": "Ulvi küla",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           24.4247802,
           59.3081333
         ]
@@ -1033,60 +925,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          26.7286869,
-          58.3784978
-        ]
-      },
-      "properties": {
-        "romnr": 246552,
-        "plasser": 0,
-        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Vabaduse pst 1",
-        "adresse_avstand": null,
-        "sted": "Tartu linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.6453397,
-          58.4032128
-        ]
-      },
-      "properties": {
-        "romnr": 254731,
-        "plasser": 0,
-        "adresse": "Pärnu maakond, Tori vald, Sindi linn, Pärnu mnt 12",
-        "adresse_avstand": null,
-        "sted": "Sindi linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.5051167,
-          58.3881119
-        ]
-      },
-      "properties": {
-        "romnr": 254733,
-        "plasser": 0,
-        "adresse": "Pärnu maakond, Pärnu linn, Pärnu linn, Lai tn 14",
-        "adresse_avstand": null,
-        "sted": "Pärnu linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           25.4362055,
           58.1554701
         ]
@@ -1123,34 +961,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          24.6728776,
-          59.407438
+          22.9451288,
+          58.8702153
         ]
       },
       "properties": {
-        "romnr": 226129,
+        "romnr": 226079,
         "plasser": 0,
-        "adresse": "Harju maakond, Tallinn, Mustamäe linnaosa, Ehitajate tee 82",
+        "adresse": "Hiiu maakond, Hiiumaa vald, Suuremõisa küla, Lossi tee 3",
         "adresse_avstand": null,
-        "sted": "Tallinn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.6323089,
-          59.3252235
-        ]
-      },
-      "properties": {
-        "romnr": 226017,
-        "plasser": 0,
-        "adresse": "Lääne-Viru maakond, Vinni vald, Ulvi küla, Mõisa tee 7",
-        "adresse_avstand": null,
-        "sted": "Ulvi küla",
+        "sted": "Suuremõisa küla",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -1169,24 +989,6 @@
         "adresse": "Lääne maakond, Haapsalu linn, Haapsalu linn, F. J. Wiedemanni tn 4",
         "adresse_avstand": null,
         "sted": "Haapsalu linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.7200021,
-          58.3758003
-        ]
-      },
-      "properties": {
-        "romnr": 226078,
-        "plasser": 0,
-        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Vanemuise tn 33",
-        "adresse_avstand": null,
-        "sted": "Tartu linn",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -1231,16 +1033,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          22.9451288,
-          58.8702153
+          27.4183651,
+          59.3570316
         ]
       },
       "properties": {
-        "romnr": 226079,
+        "romnr": 228631,
         "plasser": 0,
-        "adresse": "Hiiu maakond, Hiiumaa vald, Suuremõisa küla, Lossi tee 3",
+        "adresse": "Ida-Viru maakond, Jõhvi vald, Jõhvi linn, Narva mnt 4b // 8",
         "adresse_avstand": null,
-        "sted": "Suuremõisa küla",
+        "sted": "Jõhvi linn",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -1249,14 +1051,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          26.7204832,
-          58.3822801
+          26.7286869,
+          58.3784978
         ]
       },
       "properties": {
-        "romnr": 226080,
+        "romnr": 246552,
         "plasser": 0,
-        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Munga tn 12",
+        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Vabaduse pst 1",
         "adresse_avstand": null,
         "sted": "Tartu linn",
         "datauttaksdato": "2026-09-23"
@@ -1267,16 +1069,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          22.4875242,
-          58.2541833
+          24.6453397,
+          58.4032128
         ]
       },
       "properties": {
-        "romnr": 226064,
+        "romnr": 254731,
         "plasser": 0,
-        "adresse": "Saare maakond, Saaremaa vald, Kuressaare linn, Tallinna tn 15",
+        "adresse": "Pärnu maakond, Tori vald, Sindi linn, Pärnu mnt 12",
         "adresse_avstand": null,
-        "sted": "Kuressaare linn",
+        "sted": "Sindi linn",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -1285,16 +1087,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          27.2733498,
-          59.3993724
+          26.7200021,
+          58.3758003
         ]
       },
       "properties": {
-        "romnr": 232097,
+        "romnr": 226078,
         "plasser": 0,
-        "adresse": "Ida-Viru maakond, Kohtla-Järve linn, Järve linnaosa, Keskallee 36",
+        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Vanemuise tn 33",
         "adresse_avstand": null,
-        "sted": "Kohtla-Järve linn",
+        "sted": "Tartu linn",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -1303,16 +1105,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          27.4263717,
-          59.3271898
+          24.6728776,
+          59.407438
         ]
       },
       "properties": {
-        "romnr": 229545,
+        "romnr": 226129,
         "plasser": 0,
-        "adresse": "Ida-Viru maakond, Kohtla-Järve linn, Ahtme linnaosa, Maleva tn 4",
+        "adresse": "Harju maakond, Tallinn, Mustamäe linnaosa, Ehitajate tee 82",
         "adresse_avstand": null,
-        "sted": "Kohtla-Järve linn",
+        "sted": "Tallinn",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -1321,32 +1123,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          26.7822172,
-          58.2528788
+          28.1934186,
+          59.3632756
         ]
       },
       "properties": {
-        "romnr": 226106,
+        "romnr": 225988,
         "plasser": 0,
-        "adresse": "Tartu maakond, Kambja vald, Vana-Kuuste küla, Kooli tee 2",
-        "adresse_avstand": null,
-        "sted": "Vana-Kuuste küla",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          28.1964559,
-          59.3756607
-        ]
-      },
-      "properties": {
-        "romnr": 226112,
-        "plasser": 0,
-        "adresse": "Ida-Viru maakond, Narva linn, Peetri plats 5",
+        "adresse": "Ida-Viru maakond, Narva linn, Haigla tn 6",
         "adresse_avstand": null,
         "sted": "Narva linn",
         "datauttaksdato": "2026-09-23"
@@ -1357,124 +1141,106 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          24.685657,
-          59.4564179
+          28.1792651,
+          59.3752515
         ]
       },
       "properties": {
-        "romnr": 243669,
+        "romnr": 226074,
         "plasser": 0,
-        "adresse": "Harju maakond, Tallinn, Põhja-Tallinna linnaosa, Kopli tn 98 // Uus-Maleva tn 10",
+        "adresse": "Ida-Viru maakond, Narva linn, P. Kerese tn 20",
+        "adresse_avstand": null,
+        "sted": "Narva linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.2900331,
+          59.2434993
+        ]
+      },
+      "properties": {
+        "romnr": 243671,
+        "plasser": 0,
+        "adresse": "Harju maakond, Lääne-Harju vald, Vasalemma alevik, Ranna tee 8",
+        "adresse_avstand": null,
+        "sted": "Vasalemma alevik",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.2018451,
+          59.3826475
+        ]
+      },
+      "properties": {
+        "romnr": 226100,
+        "plasser": 0,
+        "adresse": "Ida-Viru maakond, Narva linn, Pimeaia tn 1",
+        "adresse_avstand": null,
+        "sted": "Narva linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.5348577,
+          58.9486943
+        ]
+      },
+      "properties": {
+        "romnr": 225987,
+        "plasser": 0,
+        "adresse": "Lääne maakond, Haapsalu linn, Haapsalu linn, Ehte tn 9",
+        "adresse_avstand": null,
+        "sted": "Haapsalu linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.4084261,
+          59.3595108
+        ]
+      },
+      "properties": {
+        "romnr": 255948,
+        "plasser": 0,
+        "adresse": "Ida-Viru maakond, Jõhvi vald, Jõhvi linn, Rakvere tn 8",
+        "adresse_avstand": null,
+        "sted": "Jõhvi linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.6963271,
+          59.4499228
+        ]
+      },
+      "properties": {
+        "romnr": 257988,
+        "plasser": 0,
+        "adresse": "Harju maakond, Tallinn, Põhja-Tallinna linnaosa, Sõle tn 61a",
         "adresse_avstand": null,
         "sted": "Tallinn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          27.0550809,
-          58.0493773
-        ]
-      },
-      "properties": {
-        "romnr": 226132,
-        "plasser": 0,
-        "adresse": "Põlva maakond, Põlva vald, Põlva linn, Metsa tn 7",
-        "adresse_avstand": null,
-        "sted": "Põlva linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          27.0723894,
-          58.0595226
-        ]
-      },
-      "properties": {
-        "romnr": 226133,
-        "plasser": 0,
-        "adresse": "Põlva maakond, Põlva vald, Põlva linn, Lina tn 13",
-        "adresse_avstand": null,
-        "sted": "Põlva linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.707694,
-          59.4277462
-        ]
-      },
-      "properties": {
-        "romnr": 226101,
-        "plasser": 0,
-        "adresse": "Harju maakond, Tallinn, Kristiine linnaosa, Metalli tn 5",
-        "adresse_avstand": null,
-        "sted": "Tallinn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.771987,
-          58.376167
-        ]
-      },
-      "properties": {
-        "romnr": 226102,
-        "plasser": 0,
-        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Kaunase pst 70",
-        "adresse_avstand": null,
-        "sted": "Tartu linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.7250661,
-          58.3853332
-        ]
-      },
-      "properties": {
-        "romnr": 226043,
-        "plasser": 0,
-        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Narva mnt 18",
-        "adresse_avstand": null,
-        "sted": "Tartu linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.5584838,
-          59.0675319
-        ]
-      },
-      "properties": {
-        "romnr": 226107,
-        "plasser": 0,
-        "adresse": "Lääne-Viru maakond, Vinni vald, Laekvere alevik, Kesk tn 12",
-        "adresse_avstand": null,
-        "sted": "Laekvere alevik",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -1627,6 +1393,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          23.5416288,
+          58.9354867
+        ]
+      },
+      "properties": {
+        "romnr": 250489,
+        "plasser": 0,
+        "adresse": "Lääne maakond, Haapsalu linn, Haapsalu linn, Lihula mnt 12/1",
+        "adresse_avstand": null,
+        "sted": "Haapsalu linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           25.7528199,
           58.8362208
         ]
@@ -1691,564 +1475,6 @@
         "adresse": "Harju maakond, Tallinn, Mustamäe linnaosa, E. Vilde tee 118",
         "adresse_avstand": null,
         "sted": "Tallinn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.7508967,
-          59.4446848
-        ]
-      },
-      "properties": {
-        "romnr": 228633,
-        "plasser": 0,
-        "adresse": "Harju maakond, Tallinn, Põhja-Tallinna linnaosa, Kursi tn 3",
-        "adresse_avstand": null,
-        "sted": "Tallinn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          22.4869493,
-          58.2528798
-        ]
-      },
-      "properties": {
-        "romnr": 226103,
-        "plasser": 0,
-        "adresse": "Saare maakond, Saaremaa vald, Kuressaare linn, Tallinna tn 6",
-        "adresse_avstand": null,
-        "sted": "Kuressaare linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          22.4898916,
-          58.2542003
-        ]
-      },
-      "properties": {
-        "romnr": 226104,
-        "plasser": 0,
-        "adresse": "Saare maakond, Saaremaa vald, Kuressaare linn, Tallinna tn 20",
-        "adresse_avstand": null,
-        "sted": "Kuressaare linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.4999947,
-          58.609723
-        ]
-      },
-      "properties": {
-        "romnr": 226137,
-        "plasser": 0,
-        "adresse": "Pärnu maakond, Põhja-Pärnumaa vald, Pärnu-Jaagupi alev, Kooli tn 3",
-        "adresse_avstand": null,
-        "sted": "Pärnu-Jaagupi alev",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.3503156,
-          59.3503603
-        ]
-      },
-      "properties": {
-        "romnr": 225994,
-        "plasser": 0,
-        "adresse": "Lääne-Viru maakond, Rakvere linn, F. R. Kreutzwaldi tn 2",
-        "adresse_avstand": null,
-        "sted": "Rakvere linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.729636,
-          59.4448951
-        ]
-      },
-      "properties": {
-        "romnr": 226005,
-        "plasser": 0,
-        "adresse": "Harju maakond, Tallinn, Põhja-Tallinna linnaosa, Salme tn 12",
-        "adresse_avstand": null,
-        "sted": "Tallinn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.6535489,
-          58.4057504
-        ]
-      },
-      "properties": {
-        "romnr": 226010,
-        "plasser": 0,
-        "adresse": "Pärnu maakond, Tori vald, Sindi linn, Kooli tn 2a",
-        "adresse_avstand": null,
-        "sted": "Sindi linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          28.1946275,
-          59.3729313
-        ]
-      },
-      "properties": {
-        "romnr": 226011,
-        "plasser": 0,
-        "adresse": "Ida-Viru maakond, Narva linn, Malmi tn 5a",
-        "adresse_avstand": null,
-        "sted": "Narva linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.712558,
-          59.3744386
-        ]
-      },
-      "properties": {
-        "romnr": 226012,
-        "plasser": 0,
-        "adresse": "Harju maakond, Tallinn, Nõmme linnaosa, Pihlaka tn 12",
-        "adresse_avstand": null,
-        "sted": "Tallinn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.7128078,
-          58.3661188
-        ]
-      },
-      "properties": {
-        "romnr": 226013,
-        "plasser": 0,
-        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Tamme pst 1",
-        "adresse_avstand": null,
-        "sted": "Tartu linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.4367496,
-          59.3598929
-        ]
-      },
-      "properties": {
-        "romnr": 226014,
-        "plasser": 0,
-        "adresse": "Lääne-Viru maakond, Rakvere vald, Sõmeru alevik, Tiigi tn 2",
-        "adresse_avstand": null,
-        "sted": "Sõmeru alevik",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.5499993,
-          59.429009
-        ]
-      },
-      "properties": {
-        "romnr": 226015,
-        "plasser": 0,
-        "adresse": "Harju maakond, Harku vald, Tabasalu alevik, Kallaste tn 7",
-        "adresse_avstand": null,
-        "sted": "Tabasalu alevik",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.1106019,
-          59.1605562
-        ]
-      },
-      "properties": {
-        "romnr": 226019,
-        "plasser": 0,
-        "adresse": "Lääne-Viru maakond, Tapa vald, Tamsalu linn, Paide mnt 3 // Tamsalu raudteejaam",
-        "adresse_avstand": null,
-        "sted": "Tamsalu linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.1177612,
-          59.1629881
-        ]
-      },
-      "properties": {
-        "romnr": 226020,
-        "plasser": 0,
-        "adresse": "Lääne-Viru maakond, Tapa vald, Tamsalu linn, Sõpruse tn 3",
-        "adresse_avstand": null,
-        "sted": "Tamsalu linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.1077374,
-          59.1669332
-        ]
-      },
-      "properties": {
-        "romnr": 226021,
-        "plasser": 0,
-        "adresse": "Lääne-Viru maakond, Tapa vald, Tamsalu linn, Metsa tn 1",
-        "adresse_avstand": null,
-        "sted": "Tamsalu linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.1044305,
-          59.1666224
-        ]
-      },
-      "properties": {
-        "romnr": 226022,
-        "plasser": 0,
-        "adresse": "Lääne-Viru maakond, Tapa vald, Tamsalu linn, Tehnika tn 2a",
-        "adresse_avstand": null,
-        "sted": "Tamsalu linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.9632553,
-          59.2590294
-        ]
-      },
-      "properties": {
-        "romnr": 226023,
-        "plasser": 0,
-        "adresse": "Lääne-Viru maakond, Tapa vald, Tapa linn, Nooruse tn 2",
-        "adresse_avstand": null,
-        "sted": "Tapa linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.9666522,
-          59.2616246
-        ]
-      },
-      "properties": {
-        "romnr": 226024,
-        "plasser": 0,
-        "adresse": "Lääne-Viru maakond, Tapa vald, Tapa linn, Nooruse tn 11",
-        "adresse_avstand": null,
-        "sted": "Tapa linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.7301256,
-          58.3607349
-        ]
-      },
-      "properties": {
-        "romnr": 226029,
-        "plasser": 0,
-        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Tähe tn 101",
-        "adresse_avstand": null,
-        "sted": "Tartu linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.7196747,
-          58.3753281
-        ]
-      },
-      "properties": {
-        "romnr": 226030,
-        "plasser": 0,
-        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Vanemuise tn 35",
-        "adresse_avstand": null,
-        "sted": "Tartu linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.7140954,
-          58.3988054
-        ]
-      },
-      "properties": {
-        "romnr": 226034,
-        "plasser": 0,
-        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Põllu tn 11a",
-        "adresse_avstand": null,
-        "sted": "Tartu linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.6866916,
-          58.3749458
-        ]
-      },
-      "properties": {
-        "romnr": 226035,
-        "plasser": 0,
-        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Veeriku tn 41",
-        "adresse_avstand": null,
-        "sted": "Tartu linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.7842026,
-          58.5840885
-        ]
-      },
-      "properties": {
-        "romnr": 226039,
-        "plasser": 0,
-        "adresse": "Pärnu maakond, Põhja-Pärnumaa vald, Tootsi alev, Tuleviku tn 1",
-        "adresse_avstand": null,
-        "sted": "Tootsi alev",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.798635,
-          58.4767504
-        ]
-      },
-      "properties": {
-        "romnr": 226040,
-        "plasser": 0,
-        "adresse": "Pärnu maakond, Tori vald, Tori alevik, Virula tn 11",
-        "adresse_avstand": null,
-        "sted": "Tori alevik",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.7064391,
-          58.321238
-        ]
-      },
-      "properties": {
-        "romnr": 226041,
-        "plasser": 0,
-        "adresse": "Tartu maakond, Kambja vald, Tõrvandi alevik, Ringtee 1",
-        "adresse_avstand": null,
-        "sted": "Tõrvandi alevik",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          23.9962201,
-          58.3431362
-        ]
-      },
-      "properties": {
-        "romnr": 226042,
-        "plasser": 0,
-        "adresse": "Pärnu maakond, Pärnu linn, Tõstamaa alevik, Kalli mnt 13",
-        "adresse_avstand": null,
-        "sted": "Tõstamaa alevik",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.6904717,
-          58.3662779
-        ]
-      },
-      "properties": {
-        "romnr": 226044,
-        "plasser": 0,
-        "adresse": "Tartu maakond, Tartu linn, Tartu linn, W. Ostwaldi tn 1",
-        "adresse_avstand": null,
-        "sted": "Tartu linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.7197715,
-          58.3801656
-        ]
-      },
-      "properties": {
-        "romnr": 226045,
-        "plasser": 0,
-        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Lossi tn 3",
-        "adresse_avstand": null,
-        "sted": "Tartu linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.7206009,
-          58.3766422
-        ]
-      },
-      "properties": {
-        "romnr": 226046,
-        "plasser": 0,
-        "adresse": "Tartu maakond, Tartu linn, Tartu linn, W. Struve tn 1",
-        "adresse_avstand": null,
-        "sted": "Tartu linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.43307,
-          58.8077829
-        ]
-      },
-      "properties": {
-        "romnr": 226047,
-        "plasser": 0,
-        "adresse": "Järva maakond, Türi vald, Türi linn, Hariduse tn 3",
-        "adresse_avstand": null,
-        "sted": "Türi linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          23.5416288,
-          58.9354867
-        ]
-      },
-      "properties": {
-        "romnr": 250489,
-        "plasser": 0,
-        "adresse": "Lääne maakond, Haapsalu linn, Haapsalu linn, Lihula mnt 12/1",
-        "adresse_avstand": null,
-        "sted": "Haapsalu linn",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -2509,42 +1735,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.0402956,
-          58.6461461
-        ]
-      },
-      "properties": {
-        "romnr": 226069,
-        "plasser": 0,
-        "adresse": "Pärnu maakond, Põhja-Pärnumaa vald, Vändra alev, Kooli tn 13/2",
-        "adresse_avstand": null,
-        "sted": "Vändra alev",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.2546512,
-          58.7810709
-        ]
-      },
-      "properties": {
-        "romnr": 240309,
-        "plasser": 0,
-        "adresse": "Rapla maakond, Märjamaa vald, Vana-Vigala küla, Kodu tn 5",
-        "adresse_avstand": null,
-        "sted": "Vana-Vigala küla",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           22.4860677,
           58.2536864
         ]
@@ -2725,6 +1915,186 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          24.7508967,
+          59.4446848
+        ]
+      },
+      "properties": {
+        "romnr": 228633,
+        "plasser": 0,
+        "adresse": "Harju maakond, Tallinn, Põhja-Tallinna linnaosa, Kursi tn 3",
+        "adresse_avstand": null,
+        "sted": "Tallinn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.4869493,
+          58.2528798
+        ]
+      },
+      "properties": {
+        "romnr": 226103,
+        "plasser": 0,
+        "adresse": "Saare maakond, Saaremaa vald, Kuressaare linn, Tallinna tn 6",
+        "adresse_avstand": null,
+        "sted": "Kuressaare linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.4898916,
+          58.2542003
+        ]
+      },
+      "properties": {
+        "romnr": 226104,
+        "plasser": 0,
+        "adresse": "Saare maakond, Saaremaa vald, Kuressaare linn, Tallinna tn 20",
+        "adresse_avstand": null,
+        "sted": "Kuressaare linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.9769125,
+          59.361882
+        ]
+      },
+      "properties": {
+        "romnr": 254769,
+        "plasser": 0,
+        "adresse": "Ida-Viru maakond, Lüganuse vald, Kiviõli linn, Võidu tn 12",
+        "adresse_avstand": null,
+        "sted": "Kiviõli linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.707694,
+          59.4277462
+        ]
+      },
+      "properties": {
+        "romnr": 226101,
+        "plasser": 0,
+        "adresse": "Harju maakond, Tallinn, Kristiine linnaosa, Metalli tn 5",
+        "adresse_avstand": null,
+        "sted": "Tallinn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.771987,
+          58.376167
+        ]
+      },
+      "properties": {
+        "romnr": 226102,
+        "plasser": 0,
+        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Kaunase pst 70",
+        "adresse_avstand": null,
+        "sted": "Tartu linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.4999947,
+          58.609723
+        ]
+      },
+      "properties": {
+        "romnr": 226137,
+        "plasser": 0,
+        "adresse": "Pärnu maakond, Põhja-Pärnumaa vald, Pärnu-Jaagupi alev, Kooli tn 3",
+        "adresse_avstand": null,
+        "sted": "Pärnu-Jaagupi alev",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.3503156,
+          59.3503603
+        ]
+      },
+      "properties": {
+        "romnr": 225994,
+        "plasser": 0,
+        "adresse": "Lääne-Viru maakond, Rakvere linn, F. R. Kreutzwaldi tn 2",
+        "adresse_avstand": null,
+        "sted": "Rakvere linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.729636,
+          59.4448951
+        ]
+      },
+      "properties": {
+        "romnr": 226005,
+        "plasser": 0,
+        "adresse": "Harju maakond, Tallinn, Põhja-Tallinna linnaosa, Salme tn 12",
+        "adresse_avstand": null,
+        "sted": "Tallinn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.6535489,
+          58.4057504
+        ]
+      },
+      "properties": {
+        "romnr": 226010,
+        "plasser": 0,
+        "adresse": "Pärnu maakond, Tori vald, Sindi linn, Kooli tn 2a",
+        "adresse_avstand": null,
+        "sted": "Sindi linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           26.5365292,
           58.2800328
         ]
@@ -2815,6 +2185,204 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          28.1946275,
+          59.3729313
+        ]
+      },
+      "properties": {
+        "romnr": 226011,
+        "plasser": 0,
+        "adresse": "Ida-Viru maakond, Narva linn, Malmi tn 5a",
+        "adresse_avstand": null,
+        "sted": "Narva linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.712558,
+          59.3744386
+        ]
+      },
+      "properties": {
+        "romnr": 226012,
+        "plasser": 0,
+        "adresse": "Harju maakond, Tallinn, Nõmme linnaosa, Pihlaka tn 12",
+        "adresse_avstand": null,
+        "sted": "Tallinn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.7128078,
+          58.3661188
+        ]
+      },
+      "properties": {
+        "romnr": 226013,
+        "plasser": 0,
+        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Tamme pst 1",
+        "adresse_avstand": null,
+        "sted": "Tartu linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.4367496,
+          59.3598929
+        ]
+      },
+      "properties": {
+        "romnr": 226014,
+        "plasser": 0,
+        "adresse": "Lääne-Viru maakond, Rakvere vald, Sõmeru alevik, Tiigi tn 2",
+        "adresse_avstand": null,
+        "sted": "Sõmeru alevik",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.5499993,
+          59.429009
+        ]
+      },
+      "properties": {
+        "romnr": 226015,
+        "plasser": 0,
+        "adresse": "Harju maakond, Harku vald, Tabasalu alevik, Kallaste tn 7",
+        "adresse_avstand": null,
+        "sted": "Tabasalu alevik",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.1106019,
+          59.1605562
+        ]
+      },
+      "properties": {
+        "romnr": 226019,
+        "plasser": 0,
+        "adresse": "Lääne-Viru maakond, Tapa vald, Tamsalu linn, Paide mnt 3 // Tamsalu raudteejaam",
+        "adresse_avstand": null,
+        "sted": "Tamsalu linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.1177612,
+          59.1629881
+        ]
+      },
+      "properties": {
+        "romnr": 226020,
+        "plasser": 0,
+        "adresse": "Lääne-Viru maakond, Tapa vald, Tamsalu linn, Sõpruse tn 3",
+        "adresse_avstand": null,
+        "sted": "Tamsalu linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.1077374,
+          59.1669332
+        ]
+      },
+      "properties": {
+        "romnr": 226021,
+        "plasser": 0,
+        "adresse": "Lääne-Viru maakond, Tapa vald, Tamsalu linn, Metsa tn 1",
+        "adresse_avstand": null,
+        "sted": "Tamsalu linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.7250661,
+          58.3853332
+        ]
+      },
+      "properties": {
+        "romnr": 226043,
+        "plasser": 0,
+        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Narva mnt 18",
+        "adresse_avstand": null,
+        "sted": "Tartu linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.0402956,
+          58.6461461
+        ]
+      },
+      "properties": {
+        "romnr": 226069,
+        "plasser": 0,
+        "adresse": "Pärnu maakond, Põhja-Pärnumaa vald, Vändra alev, Kooli tn 13/2",
+        "adresse_avstand": null,
+        "sted": "Vändra alev",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.2546512,
+          58.7810709
+        ]
+      },
+      "properties": {
+        "romnr": 240309,
+        "plasser": 0,
+        "adresse": "Rapla maakond, Märjamaa vald, Vana-Vigala küla, Kodu tn 5",
+        "adresse_avstand": null,
+        "sted": "Vana-Vigala küla",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           24.4279993,
           58.9052844
         ]
@@ -2833,16 +2401,844 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          26.9769125,
-          59.361882
+          26.1044305,
+          59.1666224
         ]
       },
       "properties": {
-        "romnr": 254769,
+        "romnr": 226022,
         "plasser": 0,
-        "adresse": "Ida-Viru maakond, Lüganuse vald, Kiviõli linn, Võidu tn 12",
+        "adresse": "Lääne-Viru maakond, Tapa vald, Tamsalu linn, Tehnika tn 2a",
         "adresse_avstand": null,
-        "sted": "Kiviõli linn",
+        "sted": "Tamsalu linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.5584838,
+          59.0675319
+        ]
+      },
+      "properties": {
+        "romnr": 226107,
+        "plasser": 0,
+        "adresse": "Lääne-Viru maakond, Vinni vald, Laekvere alevik, Kesk tn 12",
+        "adresse_avstand": null,
+        "sted": "Laekvere alevik",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.9632553,
+          59.2590294
+        ]
+      },
+      "properties": {
+        "romnr": 226023,
+        "plasser": 0,
+        "adresse": "Lääne-Viru maakond, Tapa vald, Tapa linn, Nooruse tn 2",
+        "adresse_avstand": null,
+        "sted": "Tapa linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.9666522,
+          59.2616246
+        ]
+      },
+      "properties": {
+        "romnr": 226024,
+        "plasser": 0,
+        "adresse": "Lääne-Viru maakond, Tapa vald, Tapa linn, Nooruse tn 11",
+        "adresse_avstand": null,
+        "sted": "Tapa linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.7301256,
+          58.3607349
+        ]
+      },
+      "properties": {
+        "romnr": 226029,
+        "plasser": 0,
+        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Tähe tn 101",
+        "adresse_avstand": null,
+        "sted": "Tartu linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.7196747,
+          58.3753281
+        ]
+      },
+      "properties": {
+        "romnr": 226030,
+        "plasser": 0,
+        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Vanemuise tn 35",
+        "adresse_avstand": null,
+        "sted": "Tartu linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.7140954,
+          58.3988054
+        ]
+      },
+      "properties": {
+        "romnr": 226034,
+        "plasser": 0,
+        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Põllu tn 11a",
+        "adresse_avstand": null,
+        "sted": "Tartu linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.6866916,
+          58.3749458
+        ]
+      },
+      "properties": {
+        "romnr": 226035,
+        "plasser": 0,
+        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Veeriku tn 41",
+        "adresse_avstand": null,
+        "sted": "Tartu linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.7842026,
+          58.5840885
+        ]
+      },
+      "properties": {
+        "romnr": 226039,
+        "plasser": 0,
+        "adresse": "Pärnu maakond, Põhja-Pärnumaa vald, Tootsi alev, Tuleviku tn 1",
+        "adresse_avstand": null,
+        "sted": "Tootsi alev",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.798635,
+          58.4767504
+        ]
+      },
+      "properties": {
+        "romnr": 226040,
+        "plasser": 0,
+        "adresse": "Pärnu maakond, Tori vald, Tori alevik, Virula tn 11",
+        "adresse_avstand": null,
+        "sted": "Tori alevik",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.7064391,
+          58.321238
+        ]
+      },
+      "properties": {
+        "romnr": 226041,
+        "plasser": 0,
+        "adresse": "Tartu maakond, Kambja vald, Tõrvandi alevik, Ringtee 1",
+        "adresse_avstand": null,
+        "sted": "Tõrvandi alevik",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.9962201,
+          58.3431362
+        ]
+      },
+      "properties": {
+        "romnr": 226042,
+        "plasser": 0,
+        "adresse": "Pärnu maakond, Pärnu linn, Tõstamaa alevik, Kalli mnt 13",
+        "adresse_avstand": null,
+        "sted": "Tõstamaa alevik",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.6904717,
+          58.3662779
+        ]
+      },
+      "properties": {
+        "romnr": 226044,
+        "plasser": 0,
+        "adresse": "Tartu maakond, Tartu linn, Tartu linn, W. Ostwaldi tn 1",
+        "adresse_avstand": null,
+        "sted": "Tartu linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.7197715,
+          58.3801656
+        ]
+      },
+      "properties": {
+        "romnr": 226045,
+        "plasser": 0,
+        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Lossi tn 3",
+        "adresse_avstand": null,
+        "sted": "Tartu linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.7206009,
+          58.3766422
+        ]
+      },
+      "properties": {
+        "romnr": 226046,
+        "plasser": 0,
+        "adresse": "Tartu maakond, Tartu linn, Tartu linn, W. Struve tn 1",
+        "adresse_avstand": null,
+        "sted": "Tartu linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.43307,
+          58.8077829
+        ]
+      },
+      "properties": {
+        "romnr": 226047,
+        "plasser": 0,
+        "adresse": "Järva maakond, Türi vald, Türi linn, Hariduse tn 3",
+        "adresse_avstand": null,
+        "sted": "Türi linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.7204832,
+          58.3822801
+        ]
+      },
+      "properties": {
+        "romnr": 226080,
+        "plasser": 0,
+        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Munga tn 12",
+        "adresse_avstand": null,
+        "sted": "Tartu linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.4875242,
+          58.2541833
+        ]
+      },
+      "properties": {
+        "romnr": 226064,
+        "plasser": 0,
+        "adresse": "Saare maakond, Saaremaa vald, Kuressaare linn, Tallinna tn 15",
+        "adresse_avstand": null,
+        "sted": "Kuressaare linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.7822172,
+          58.2528788
+        ]
+      },
+      "properties": {
+        "romnr": 226106,
+        "plasser": 0,
+        "adresse": "Tartu maakond, Kambja vald, Vana-Kuuste küla, Kooli tee 2",
+        "adresse_avstand": null,
+        "sted": "Vana-Kuuste küla",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.1964559,
+          59.3756607
+        ]
+      },
+      "properties": {
+        "romnr": 226112,
+        "plasser": 0,
+        "adresse": "Ida-Viru maakond, Narva linn, Peetri plats 5",
+        "adresse_avstand": null,
+        "sted": "Narva linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.2733498,
+          59.3993724
+        ]
+      },
+      "properties": {
+        "romnr": 232097,
+        "plasser": 0,
+        "adresse": "Ida-Viru maakond, Kohtla-Järve linn, Järve linnaosa, Keskallee 36",
+        "adresse_avstand": null,
+        "sted": "Kohtla-Järve linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.685657,
+          59.4564179
+        ]
+      },
+      "properties": {
+        "romnr": 243669,
+        "plasser": 0,
+        "adresse": "Harju maakond, Tallinn, Põhja-Tallinna linnaosa, Kopli tn 98 // Uus-Maleva tn 10",
+        "adresse_avstand": null,
+        "sted": "Tallinn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.0550809,
+          58.0493773
+        ]
+      },
+      "properties": {
+        "romnr": 226132,
+        "plasser": 0,
+        "adresse": "Põlva maakond, Põlva vald, Põlva linn, Metsa tn 7",
+        "adresse_avstand": null,
+        "sted": "Põlva linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.0723894,
+          58.0595226
+        ]
+      },
+      "properties": {
+        "romnr": 226133,
+        "plasser": 0,
+        "adresse": "Põlva maakond, Põlva vald, Põlva linn, Lina tn 13",
+        "adresse_avstand": null,
+        "sted": "Põlva linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.4263717,
+          59.3271898
+        ]
+      },
+      "properties": {
+        "romnr": 229545,
+        "plasser": 0,
+        "adresse": "Ida-Viru maakond, Kohtla-Järve linn, Ahtme linnaosa, Maleva tn 4",
+        "adresse_avstand": null,
+        "sted": "Kohtla-Järve linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.2762624,
+          59.3976454
+        ]
+      },
+      "properties": {
+        "romnr": 229549,
+        "plasser": 0,
+        "adresse": "Ida-Viru maakond, Kohtla-Järve linn, Järve linnaosa, Järveküla tee 41",
+        "adresse_avstand": null,
+        "sted": "Kohtla-Järve linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.4048015,
+          59.3587176
+        ]
+      },
+      "properties": {
+        "romnr": 228627,
+        "plasser": 0,
+        "adresse": "Ida-Viru maakond, Jõhvi vald, Jõhvi linn, Jaama tn 10",
+        "adresse_avstand": null,
+        "sted": "Jõhvi linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.6164679,
+          59.3421803
+        ]
+      },
+      "properties": {
+        "romnr": 226138,
+        "plasser": 0,
+        "adresse": "Harju maakond, Saue vald, Laagri alevik, 4 Tallinn-Pärnu-Ikla tee L1",
+        "adresse_avstand": null,
+        "sted": "Laagri alevik",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.7984469,
+          59.392659
+        ]
+      },
+      "properties": {
+        "romnr": 226007,
+        "plasser": 0,
+        "adresse": "Ida-Viru maakond, Sillamäe linn, Geoloogia tn 13",
+        "adresse_avstand": null,
+        "sted": "Sillamäe linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.36449,
+          59.343907
+        ]
+      },
+      "properties": {
+        "romnr": 225997,
+        "plasser": 0,
+        "adresse": "Lääne-Viru maakond, Rakvere linn, Vabaduse tn 1",
+        "adresse_avstand": null,
+        "sted": "Rakvere linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.5964122,
+          58.3654756
+        ]
+      },
+      "properties": {
+        "romnr": 226004,
+        "plasser": 0,
+        "adresse": "Viljandi maakond, Viljandi linn, Tallinna tn 5",
+        "adresse_avstand": null,
+        "sted": "Viljandi linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.7820471,
+          59.4271613
+        ]
+      },
+      "properties": {
+        "romnr": 226002,
+        "plasser": 0,
+        "adresse": "Harju maakond, Tallinn, Lasnamäe linnaosa, Lasnamäe tn 2",
+        "adresse_avstand": null,
+        "sted": "Tallinn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.4330417,
+          58.8101194
+        ]
+      },
+      "properties": {
+        "romnr": 226099,
+        "plasser": 0,
+        "adresse": "Järva maakond, Türi vald, Türi linn, F. J. Wiedemanni tn 3a/1",
+        "adresse_avstand": null,
+        "sted": "Türi linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.5011921,
+          58.3868937
+        ]
+      },
+      "properties": {
+        "romnr": 226135,
+        "plasser": 0,
+        "adresse": "Pärnu maakond, Pärnu linn, Pärnu linn, Aida tn 7",
+        "adresse_avstand": null,
+        "sted": "Pärnu linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.5011899,
+          58.3829408
+        ]
+      },
+      "properties": {
+        "romnr": 226136,
+        "plasser": 0,
+        "adresse": "Pärnu maakond, Pärnu linn, Pärnu linn, Pühavaimu tn 19",
+        "adresse_avstand": null,
+        "sted": "Pärnu linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.7931516,
+          59.0056927
+        ]
+      },
+      "properties": {
+        "romnr": 226001,
+        "plasser": 0,
+        "adresse": "Rapla maakond, Rapla vald, Rapla linn, Tallinna mnt 14",
+        "adresse_avstand": null,
+        "sted": "Rapla linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.7236895,
+          58.3813968
+        ]
+      },
+      "properties": {
+        "romnr": 226032,
+        "plasser": 0,
+        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Kompanii tn 3 // 5",
+        "adresse_avstand": null,
+        "sted": "Tartu linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.7142564,
+          58.3495568
+        ]
+      },
+      "properties": {
+        "romnr": 226033,
+        "plasser": 0,
+        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Kopli tn 1",
+        "adresse_avstand": null,
+        "sted": "Tartu linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.0499419,
+          58.1489805
+        ]
+      },
+      "properties": {
+        "romnr": 226037,
+        "plasser": 0,
+        "adresse": "Pärnu maakond, Saarde vald, Tihemetsa alevik, Valga mnt 21",
+        "adresse_avstand": null,
+        "sted": "Tihemetsa alevik",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.8487769,
+          59.4431959
+        ]
+      },
+      "properties": {
+        "romnr": 226038,
+        "plasser": 0,
+        "adresse": "Harju maakond, Tallinn, Lasnamäe linnaosa, Varraku tn 14",
+        "adresse_avstand": null,
+        "sted": "Tallinn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.0384448,
+          57.7750299
+        ]
+      },
+      "properties": {
+        "romnr": 226054,
+        "plasser": 0,
+        "adresse": "Valga maakond, Valga vald, Valga linn, Lai tn 6a",
+        "adresse_avstand": null,
+        "sted": "Valga linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.4863873,
+          58.25853
+        ]
+      },
+      "properties": {
+        "romnr": 226105,
+        "plasser": 0,
+        "adresse": "Saare maakond, Saaremaa vald, Kuressaare linn, Vallimaa tn 16a",
+        "adresse_avstand": null,
+        "sted": "Kuressaare linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.4212121,
+          59.2875283
+        ]
+      },
+      "properties": {
+        "romnr": 226063,
+        "plasser": 0,
+        "adresse": "Lääne-Viru maakond, Vinni vald, Vinni alevik, Tammiku tn 9",
+        "adresse_avstand": null,
+        "sted": "Vinni alevik",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.2509202,
+          59.1263798
+        ]
+      },
+      "properties": {
+        "romnr": 254234,
+        "plasser": 0,
+        "adresse": "Lääne-Viru maakond, Väike-Maarja vald, Väike-Maarja alevik, Pikk tn 2",
+        "adresse_avstand": null,
+        "sted": "Väike-Maarja alevik",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.5514517,
+          58.1049058
+        ]
+      },
+      "properties": {
+        "romnr": 226145,
+        "plasser": 0,
+        "adresse": "Viljandi maakond, Mulgi vald, Karksi-Nuia linn, Kalda tn 6b",
+        "adresse_avstand": null,
+        "sted": "Karksi-Nuia linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.2770768,
+          59.3989838
+        ]
+      },
+      "properties": {
+        "romnr": 239342,
+        "plasser": 0,
+        "adresse": "Lääne-Viru maakond, Rakvere vald, Veltsi küla, Veltsi tee 9",
+        "adresse_avstand": null,
+        "sted": "Veltsi küla",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.4152472,
+          57.6148315
+        ]
+      },
+      "properties": {
+        "romnr": 226142,
+        "plasser": 0,
+        "adresse": "Valga maakond, Valga vald, Hargla küla, Hargla kool",
+        "adresse_avstand": null,
+        "sted": "Hargla küla",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -3049,16 +3445,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.4330417,
-          58.8101194
+          24.793278,
+          59.4217017
         ]
       },
       "properties": {
-        "romnr": 226099,
+        "romnr": 228387,
         "plasser": 0,
-        "adresse": "Järva maakond, Türi vald, Türi linn, F. J. Wiedemanni tn 3a/1",
+        "adresse": "Harju maakond, Tallinn, Lasnamäe linnaosa, Suur-Sõjamäe tn 4",
         "adresse_avstand": null,
-        "sted": "Türi linn",
+        "sted": "Tallinn",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -3067,16 +3463,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          24.5011921,
-          58.3868937
+          24.8681301,
+          59.454055
         ]
       },
       "properties": {
-        "romnr": 226135,
+        "romnr": 254214,
         "plasser": 0,
-        "adresse": "Pärnu maakond, Pärnu linn, Pärnu linn, Aida tn 7",
+        "adresse": "Harju maakond, Tallinn, Lasnamäe linnaosa, Vormsi tn 3",
         "adresse_avstand": null,
-        "sted": "Pärnu linn",
+        "sted": "Tallinn",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -3085,16 +3481,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          24.5011899,
-          58.3829408
+          24.7563744,
+          59.4290789
         ]
       },
       "properties": {
-        "romnr": 226136,
+        "romnr": 226093,
         "plasser": 0,
-        "adresse": "Pärnu maakond, Pärnu linn, Pärnu linn, Pühavaimu tn 19",
+        "adresse": "Harju maakond, Tallinn, Kesklinna linnaosa, Juhkentali tn 2 // Liivalaia tn 32",
         "adresse_avstand": null,
-        "sted": "Pärnu linn",
+        "sted": "Tallinn",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -3103,14 +3499,122 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          24.7931516,
-          59.0056927
+          25.4639086,
+          58.5364403
         ]
       },
       "properties": {
-        "romnr": 226001,
+        "romnr": 227571,
         "plasser": 0,
-        "adresse": "Rapla maakond, Rapla vald, Rapla linn, Tallinna mnt 14",
+        "adresse": "Viljandi maakond, Põhja-Sakala vald, Suure-Jaani linn, Pärnu tn 10",
+        "adresse_avstand": null,
+        "sted": "Suure-Jaani linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.9596049,
+          59.2633447
+        ]
+      },
+      "properties": {
+        "romnr": 226025,
+        "plasser": 0,
+        "adresse": "Lääne-Viru maakond, Tapa vald, Tapa linn, Kesk tn 4",
+        "adresse_avstand": null,
+        "sted": "Tapa linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.7387432,
+          58.6183044
+        ]
+      },
+      "properties": {
+        "romnr": 226140,
+        "plasser": 0,
+        "adresse": "Tartu maakond, Tartu vald, Maarja-Magdaleena küla, Maarja põhikool/3",
+        "adresse_avstand": null,
+        "sted": "Maarja-Magdaleena küla",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.4117141,
+          59.3147484
+        ]
+      },
+      "properties": {
+        "romnr": 226092,
+        "plasser": 0,
+        "adresse": "Harju maakond, Keila linn, Paldiski mnt 17",
+        "adresse_avstand": null,
+        "sted": "Keila linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.2558632,
+          58.7811816
+        ]
+      },
+      "properties": {
+        "romnr": 240307,
+        "plasser": 0,
+        "adresse": "Rapla maakond, Märjamaa vald, Vana-Vigala küla, Pikk tn 8",
+        "adresse_avstand": null,
+        "sted": "Vana-Vigala küla",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.4637343,
+          58.0963793
+        ]
+      },
+      "properties": {
+        "romnr": 254732,
+        "plasser": 0,
+        "adresse": "Põlva maakond, Räpina vald, Räpina linn, Kooli tn 5",
+        "adresse_avstand": null,
+        "sted": "Räpina linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.7874985,
+          59.0044283
+        ]
+      },
+      "properties": {
+        "romnr": 255955,
+        "plasser": 0,
+        "adresse": "Rapla maakond, Rapla vald, Rapla linn, Keskkooli tn 2",
         "adresse_avstand": null,
         "sted": "Rapla linn",
         "datauttaksdato": "2026-09-23"
@@ -3121,16 +3625,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          26.7236895,
-          58.3813968
+          24.5022503,
+          58.4308404
         ]
       },
       "properties": {
-        "romnr": 226032,
+        "romnr": 226006,
         "plasser": 0,
-        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Kompanii tn 3 // 5",
+        "adresse": "Pärnu maakond, Tori vald, Sauga alevik, Selja tee 1a",
         "adresse_avstand": null,
-        "sted": "Tartu linn",
+        "sted": "Sauga alevik",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -3139,212 +3643,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          26.7142564,
-          58.3495568
+          27.4054831,
+          59.359653
         ]
       },
       "properties": {
-        "romnr": 226033,
+        "romnr": 245829,
         "plasser": 0,
-        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Kopli tn 1",
-        "adresse_avstand": null,
-        "sted": "Tartu linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.0499419,
-          58.1489805
-        ]
-      },
-      "properties": {
-        "romnr": 226037,
-        "plasser": 0,
-        "adresse": "Pärnu maakond, Saarde vald, Tihemetsa alevik, Valga mnt 21",
-        "adresse_avstand": null,
-        "sted": "Tihemetsa alevik",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.8487769,
-          59.4431959
-        ]
-      },
-      "properties": {
-        "romnr": 226038,
-        "plasser": 0,
-        "adresse": "Harju maakond, Tallinn, Lasnamäe linnaosa, Varraku tn 14",
-        "adresse_avstand": null,
-        "sted": "Tallinn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.0384448,
-          57.7750299
-        ]
-      },
-      "properties": {
-        "romnr": 226054,
-        "plasser": 0,
-        "adresse": "Valga maakond, Valga vald, Valga linn, Lai tn 6a",
-        "adresse_avstand": null,
-        "sted": "Valga linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          22.4863873,
-          58.25853
-        ]
-      },
-      "properties": {
-        "romnr": 226105,
-        "plasser": 0,
-        "adresse": "Saare maakond, Saaremaa vald, Kuressaare linn, Vallimaa tn 16a",
-        "adresse_avstand": null,
-        "sted": "Kuressaare linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.2770768,
-          59.3989838
-        ]
-      },
-      "properties": {
-        "romnr": 239342,
-        "plasser": 0,
-        "adresse": "Lääne-Viru maakond, Rakvere vald, Veltsi küla, Veltsi tee 9",
-        "adresse_avstand": null,
-        "sted": "Veltsi küla",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.4152472,
-          57.6148315
-        ]
-      },
-      "properties": {
-        "romnr": 226142,
-        "plasser": 0,
-        "adresse": "Valga maakond, Valga vald, Hargla küla, Hargla kool",
-        "adresse_avstand": null,
-        "sted": "Hargla küla",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.4212121,
-          59.2875283
-        ]
-      },
-      "properties": {
-        "romnr": 226063,
-        "plasser": 0,
-        "adresse": "Lääne-Viru maakond, Vinni vald, Vinni alevik, Tammiku tn 9",
-        "adresse_avstand": null,
-        "sted": "Vinni alevik",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.2509202,
-          59.1263798
-        ]
-      },
-      "properties": {
-        "romnr": 254234,
-        "plasser": 0,
-        "adresse": "Lääne-Viru maakond, Väike-Maarja vald, Väike-Maarja alevik, Pikk tn 2",
-        "adresse_avstand": null,
-        "sted": "Väike-Maarja alevik",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.5514517,
-          58.1049058
-        ]
-      },
-      "properties": {
-        "romnr": 226145,
-        "plasser": 0,
-        "adresse": "Viljandi maakond, Mulgi vald, Karksi-Nuia linn, Kalda tn 6b",
-        "adresse_avstand": null,
-        "sted": "Karksi-Nuia linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          27.2762624,
-          59.3976454
-        ]
-      },
-      "properties": {
-        "romnr": 229549,
-        "plasser": 0,
-        "adresse": "Ida-Viru maakond, Kohtla-Järve linn, Järve linnaosa, Järveküla tee 41",
-        "adresse_avstand": null,
-        "sted": "Kohtla-Järve linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          27.4048015,
-          59.3587176
-        ]
-      },
-      "properties": {
-        "romnr": 228627,
-        "plasser": 0,
-        "adresse": "Ida-Viru maakond, Jõhvi vald, Jõhvi linn, Jaama tn 10",
+        "adresse": "Ida-Viru maakond, Jõhvi vald, Jõhvi linn, Jaama tn 14",
         "adresse_avstand": null,
         "sted": "Jõhvi linn",
         "datauttaksdato": "2026-09-23"
@@ -3355,16 +3661,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          24.6164679,
-          59.3421803
+          26.6951207,
+          58.3913216
         ]
       },
       "properties": {
-        "romnr": 226138,
+        "romnr": 254713,
         "plasser": 0,
-        "adresse": "Harju maakond, Saue vald, Laagri alevik, 4 Tallinn-Pärnu-Ikla tee L1",
+        "adresse": "Tartu maakond, Tartu linn, Tartu linn, F. R. Kreutzwaldi tn 5",
         "adresse_avstand": null,
-        "sted": "Laagri alevik",
+        "sted": "Tartu linn",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -3373,16 +3679,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          26.36449,
-          59.343907
+          23.0819257,
+          58.5597805
         ]
       },
       "properties": {
-        "romnr": 225997,
+        "romnr": 226121,
         "plasser": 0,
-        "adresse": "Lääne-Viru maakond, Rakvere linn, Vabaduse tn 1",
+        "adresse": "Saare maakond, Saaremaa vald, Orissaare alevik, Kuivastu mnt 29/1",
         "adresse_avstand": null,
-        "sted": "Rakvere linn",
+        "sted": "Orissaare alevik",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -3391,50 +3697,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.5964122,
-          58.3654756
+          24.6425367,
+          59.3690366
         ]
       },
       "properties": {
-        "romnr": 226004,
+        "romnr": 246170,
         "plasser": 0,
-        "adresse": "Viljandi maakond, Viljandi linn, Tallinna tn 5",
-        "adresse_avstand": null,
-        "sted": "Viljandi linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          27.7984469,
-          59.392659
-        ]
-      },
-      "properties": {
-        "romnr": 226007,
-        "plasser": 0,
-        "adresse": "Ida-Viru maakond, Sillamäe linn, Geoloogia tn 13",
-        "adresse_avstand": null,
-        "sted": "Sillamäe linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.7820471,
-          59.4271613
-        ]
-      },
-      "properties": {
-        "romnr": 226002,
-        "plasser": 0,
-        "adresse": "Harju maakond, Tallinn, Lasnamäe linnaosa, Lasnamäe tn 2",
+        "adresse": "Harju maakond, Tallinn, Nõmme linnaosa, Rännaku pst 1",
         "adresse_avstand": null,
         "sted": "Tallinn",
         "datauttaksdato": "2026-09-23"
@@ -3445,14 +3715,68 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          24.7515086,
-          59.4331997
+          22.4708681,
+          58.2520032
         ]
       },
       "properties": {
-        "romnr": 243668,
+        "romnr": 255227,
         "plasser": 0,
-        "adresse": "Harju maakond, Tallinn, Kesklinna linnaosa, Estonia pst 9 // Rävala pst 12",
+        "adresse": "Saare maakond, Saaremaa vald, Kuressaare linn, Ravila tn 1a",
+        "adresse_avstand": null,
+        "sted": "Kuressaare linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.7549969,
+          59.143069
+        ]
+      },
+      "properties": {
+        "romnr": 250481,
+        "plasser": 0,
+        "adresse": "Järva maakond, Järva vald, Aravete alevik, Piibe mnt 21/1",
+        "adresse_avstand": null,
+        "sted": "Aravete alevik",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.9277479,
+          58.0071555
+        ]
+      },
+      "properties": {
+        "romnr": 250483,
+        "plasser": 0,
+        "adresse": "Valga maakond, Tõrva vald, Tõrva linn, Puiestee tn 1",
+        "adresse_avstand": null,
+        "sted": "Tõrva linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.645393,
+          59.4135648
+        ]
+      },
+      "properties": {
+        "romnr": 254212,
+        "plasser": 0,
+        "adresse": "Harju maakond, Tallinn, Haabersti linnaosa, Õismäe tee 50",
         "adresse_avstand": null,
         "sted": "Tallinn",
         "datauttaksdato": "2026-09-23"
@@ -3463,16 +3787,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          27.4932559,
-          59.2362335
+          24.8678717,
+          58.9250379
         ]
       },
       "properties": {
-        "romnr": 243989,
+        "romnr": 232091,
         "plasser": 0,
-        "adresse": "Ida-Viru maakond, Alutaguse vald, Illuka küla, Hariduse/1",
+        "adresse": "Rapla maakond, Kehtna vald, Kehtna alevik, Kooli tn 1",
         "adresse_avstand": null,
-        "sted": "Illuka küla",
+        "sted": "Kehtna alevik",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -3481,14 +3805,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          24.7350959,
-          59.4411753
+          24.8797755,
+          59.4459686
         ]
       },
       "properties": {
-        "romnr": 234460,
+        "romnr": 254211,
         "plasser": 0,
-        "adresse": "Harju maakond, Tallinn, Põhja-Tallinna linnaosa, Kopli tn 1",
+        "adresse": "Harju maakond, Tallinn, Lasnamäe linnaosa, K. Kärberi tn 9",
         "adresse_avstand": null,
         "sted": "Tallinn",
         "datauttaksdato": "2026-09-23"
@@ -3499,16 +3823,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          24.8372347,
-          59.4996758
+          26.5675063,
+          59.3963551
         ]
       },
       "properties": {
-        "romnr": 244312,
+        "romnr": 230907,
         "plasser": 0,
-        "adresse": "Harju maakond, Viimsi vald, Viimsi alevik, Nelgi tee 1",
+        "adresse": "Lääne-Viru maakond, Rakvere vald, Uhtna alevik, Nooruse tn 18",
         "adresse_avstand": null,
-        "sted": "Viimsi alevik",
+        "sted": "Uhtna alevik",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -3517,16 +3841,106 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          22.7727549,
-          58.830735
+          24.7390996,
+          59.4400416
         ]
       },
       "properties": {
-        "romnr": 225989,
+        "romnr": 226084,
         "plasser": 0,
-        "adresse": "Hiiu maakond, Hiiumaa vald, Käina alevik, Mäe tn 4",
+        "adresse": "Harju maakond, Tallinn, Kesklinna linnaosa, Toompuiestee T2",
         "adresse_avstand": null,
-        "sted": "Käina alevik",
+        "sted": "Tallinn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.0369934,
+          57.7771928
+        ]
+      },
+      "properties": {
+        "romnr": 225992,
+        "plasser": 0,
+        "adresse": "Valga maakond, Valga vald, Valga linn, Vabaduse tn 6",
+        "adresse_avstand": null,
+        "sted": "Valga linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.7453341,
+          58.3795014
+        ]
+      },
+      "properties": {
+        "romnr": 226027,
+        "plasser": 0,
+        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Uus tn 54",
+        "adresse_avstand": null,
+        "sted": "Tartu linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.2160854,
+          59.2508582
+        ]
+      },
+      "properties": {
+        "romnr": 239343,
+        "plasser": 0,
+        "adresse": "Lääne-Viru maakond, Rakvere vald, Lasila küla, Vahtra pst 17/1",
+        "adresse_avstand": null,
+        "sted": "Lasila küla",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.689356,
+          59.4471127
+        ]
+      },
+      "properties": {
+        "romnr": 234448,
+        "plasser": 0,
+        "adresse": "Lääne-Viru maakond, Viru-Nigula vald, Viru-Nigula alevik, Kirikaia tn 2",
+        "adresse_avstand": null,
+        "sted": "Viru-Nigula alevik",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.0093161,
+          59.4403589
+        ]
+      },
+      "properties": {
+        "romnr": 234457,
+        "plasser": 0,
+        "adresse": "Ida-Viru maakond, Narva-Jõesuu linn, Narva-Jõesuu linn, L. Koidula tn 21",
+        "adresse_avstand": null,
+        "sted": "Narva-Jõesuu linn",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -3571,6 +3985,60 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          26.9971033,
+          57.8479198
+        ]
+      },
+      "properties": {
+        "romnr": 226036,
+        "plasser": 0,
+        "adresse": "Võru maakond, Võru linn, Lembitu tn 2",
+        "adresse_avstand": null,
+        "sted": "Võru linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.7941426,
+          59.0045562
+        ]
+      },
+      "properties": {
+        "romnr": 225999,
+        "plasser": 0,
+        "adresse": "Rapla maakond, Rapla vald, Rapla linn, Tallinna mnt 17a",
+        "adresse_avstand": null,
+        "sted": "Rapla linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.7576229,
+          58.3755889
+        ]
+      },
+      "properties": {
+        "romnr": 226028,
+        "plasser": 0,
+        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Anne tn 65",
+        "adresse_avstand": null,
+        "sted": "Tartu linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           26.7188865,
           58.3790613
         ]
@@ -3607,6 +4075,42 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          27.4932559,
+          59.2362335
+        ]
+      },
+      "properties": {
+        "romnr": 243989,
+        "plasser": 0,
+        "adresse": "Ida-Viru maakond, Alutaguse vald, Illuka küla, Hariduse/1",
+        "adresse_avstand": null,
+        "sted": "Illuka küla",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.561389,
+          58.8924731
+        ]
+      },
+      "properties": {
+        "romnr": 235154,
+        "plasser": 0,
+        "adresse": "Järva maakond, Paide linn, Paide linn, Soo tn 16",
+        "adresse_avstand": null,
+        "sted": "Paide linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           24.804473,
           59.4195879
         ]
@@ -3615,6 +4119,24 @@
         "romnr": 234452,
         "plasser": 0,
         "adresse": "Harju maakond, Tallinn, Lasnamäe linnaosa, Valukoja tn 8/2",
+        "adresse_avstand": null,
+        "sted": "Tallinn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.7350959,
+          59.4411753
+        ]
+      },
+      "properties": {
+        "romnr": 234460,
+        "plasser": 0,
+        "adresse": "Harju maakond, Tallinn, Põhja-Tallinna linnaosa, Kopli tn 1",
         "adresse_avstand": null,
         "sted": "Tallinn",
         "datauttaksdato": "2026-09-23"
@@ -3697,178 +4219,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          24.7514351,
-          59.4406746
+          24.8372347,
+          59.4996758
         ]
       },
       "properties": {
-        "romnr": 234459,
+        "romnr": 244312,
         "plasser": 0,
-        "adresse": "Harju maakond, Tallinn, Kesklinna linnaosa, Aia tn 20",
+        "adresse": "Harju maakond, Viimsi vald, Viimsi alevik, Nelgi tee 1",
         "adresse_avstand": null,
-        "sted": "Tallinn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.7007118,
-          59.4237566
-        ]
-      },
-      "properties": {
-        "romnr": 234456,
-        "plasser": 0,
-        "adresse": "Harju maakond, Tallinn, Kristiine linnaosa, Kirsi tn 1 // Mustamäe tee 33",
-        "adresse_avstand": null,
-        "sted": "Tallinn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.0369934,
-          57.7771928
-        ]
-      },
-      "properties": {
-        "romnr": 225992,
-        "plasser": 0,
-        "adresse": "Valga maakond, Valga vald, Valga linn, Vabaduse tn 6",
-        "adresse_avstand": null,
-        "sted": "Valga linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.7453341,
-          58.3795014
-        ]
-      },
-      "properties": {
-        "romnr": 226027,
-        "plasser": 0,
-        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Uus tn 54",
-        "adresse_avstand": null,
-        "sted": "Tartu linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.689356,
-          59.4471127
-        ]
-      },
-      "properties": {
-        "romnr": 234448,
-        "plasser": 0,
-        "adresse": "Lääne-Viru maakond, Viru-Nigula vald, Viru-Nigula alevik, Kirikaia tn 2",
-        "adresse_avstand": null,
-        "sted": "Viru-Nigula alevik",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          28.0093161,
-          59.4403589
-        ]
-      },
-      "properties": {
-        "romnr": 234457,
-        "plasser": 0,
-        "adresse": "Ida-Viru maakond, Narva-Jõesuu linn, Narva-Jõesuu linn, L. Koidula tn 21",
-        "adresse_avstand": null,
-        "sted": "Narva-Jõesuu linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.9971033,
-          57.8479198
-        ]
-      },
-      "properties": {
-        "romnr": 226036,
-        "plasser": 0,
-        "adresse": "Võru maakond, Võru linn, Lembitu tn 2",
-        "adresse_avstand": null,
-        "sted": "Võru linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.7941426,
-          59.0045562
-        ]
-      },
-      "properties": {
-        "romnr": 225999,
-        "plasser": 0,
-        "adresse": "Rapla maakond, Rapla vald, Rapla linn, Tallinna mnt 17a",
-        "adresse_avstand": null,
-        "sted": "Rapla linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.7576229,
-          58.3755889
-        ]
-      },
-      "properties": {
-        "romnr": 226028,
-        "plasser": 0,
-        "adresse": "Tartu maakond, Tartu linn, Tartu linn, Anne tn 65",
-        "adresse_avstand": null,
-        "sted": "Tartu linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.561389,
-          58.8924731
-        ]
-      },
-      "properties": {
-        "romnr": 235154,
-        "plasser": 0,
-        "adresse": "Järva maakond, Paide linn, Paide linn, Soo tn 16",
-        "adresse_avstand": null,
-        "sted": "Paide linn",
+        "sted": "Viimsi alevik",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -3931,6 +4291,42 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          24.7514351,
+          59.4406746
+        ]
+      },
+      "properties": {
+        "romnr": 234459,
+        "plasser": 0,
+        "adresse": "Harju maakond, Tallinn, Kesklinna linnaosa, Aia tn 20",
+        "adresse_avstand": null,
+        "sted": "Tallinn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.7007118,
+          59.4237566
+        ]
+      },
+      "properties": {
+        "romnr": 234456,
+        "plasser": 0,
+        "adresse": "Harju maakond, Tallinn, Kristiine linnaosa, Kirsi tn 1 // Mustamäe tee 33",
+        "adresse_avstand": null,
+        "sted": "Tallinn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           25.3402539,
           59.3282098
         ]
@@ -3967,16 +4363,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          26.2160854,
-          59.2508582
+          22.7727549,
+          58.830735
         ]
       },
       "properties": {
-        "romnr": 239343,
+        "romnr": 225989,
         "plasser": 0,
-        "adresse": "Lääne-Viru maakond, Rakvere vald, Lasila küla, Vahtra pst 17/1",
+        "adresse": "Hiiu maakond, Hiiumaa vald, Käina alevik, Mäe tn 4",
         "adresse_avstand": null,
-        "sted": "Lasila küla",
+        "sted": "Käina alevik",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -3985,412 +4381,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          24.793278,
-          59.4217017
+          24.7515086,
+          59.4331997
         ]
       },
       "properties": {
-        "romnr": 228387,
+        "romnr": 243668,
         "plasser": 0,
-        "adresse": "Harju maakond, Tallinn, Lasnamäe linnaosa, Suur-Sõjamäe tn 4",
+        "adresse": "Harju maakond, Tallinn, Kesklinna linnaosa, Estonia pst 9 // Rävala pst 12",
         "adresse_avstand": null,
         "sted": "Tallinn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.5675063,
-          59.3963551
-        ]
-      },
-      "properties": {
-        "romnr": 230907,
-        "plasser": 0,
-        "adresse": "Lääne-Viru maakond, Rakvere vald, Uhtna alevik, Nooruse tn 18",
-        "adresse_avstand": null,
-        "sted": "Uhtna alevik",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.7563744,
-          59.4290789
-        ]
-      },
-      "properties": {
-        "romnr": 226093,
-        "plasser": 0,
-        "adresse": "Harju maakond, Tallinn, Kesklinna linnaosa, Juhkentali tn 2 // Liivalaia tn 32",
-        "adresse_avstand": null,
-        "sted": "Tallinn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.7387432,
-          58.6183044
-        ]
-      },
-      "properties": {
-        "romnr": 226140,
-        "plasser": 0,
-        "adresse": "Tartu maakond, Tartu vald, Maarja-Magdaleena küla, Maarja põhikool/3",
-        "adresse_avstand": null,
-        "sted": "Maarja-Magdaleena küla",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.2558632,
-          58.7811816
-        ]
-      },
-      "properties": {
-        "romnr": 240307,
-        "plasser": 0,
-        "adresse": "Rapla maakond, Märjamaa vald, Vana-Vigala küla, Pikk tn 8",
-        "adresse_avstand": null,
-        "sted": "Vana-Vigala küla",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.5022503,
-          58.4308404
-        ]
-      },
-      "properties": {
-        "romnr": 226006,
-        "plasser": 0,
-        "adresse": "Pärnu maakond, Tori vald, Sauga alevik, Selja tee 1a",
-        "adresse_avstand": null,
-        "sted": "Sauga alevik",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          23.0819257,
-          58.5597805
-        ]
-      },
-      "properties": {
-        "romnr": 226121,
-        "plasser": 0,
-        "adresse": "Saare maakond, Saaremaa vald, Orissaare alevik, Kuivastu mnt 29/1",
-        "adresse_avstand": null,
-        "sted": "Orissaare alevik",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.8678717,
-          58.9250379
-        ]
-      },
-      "properties": {
-        "romnr": 232091,
-        "plasser": 0,
-        "adresse": "Rapla maakond, Kehtna vald, Kehtna alevik, Kooli tn 1",
-        "adresse_avstand": null,
-        "sted": "Kehtna alevik",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.4639086,
-          58.5364403
-        ]
-      },
-      "properties": {
-        "romnr": 227571,
-        "plasser": 0,
-        "adresse": "Viljandi maakond, Põhja-Sakala vald, Suure-Jaani linn, Pärnu tn 10",
-        "adresse_avstand": null,
-        "sted": "Suure-Jaani linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          27.4637343,
-          58.0963793
-        ]
-      },
-      "properties": {
-        "romnr": 254732,
-        "plasser": 0,
-        "adresse": "Põlva maakond, Räpina vald, Räpina linn, Kooli tn 5",
-        "adresse_avstand": null,
-        "sted": "Räpina linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.7874985,
-          59.0044283
-        ]
-      },
-      "properties": {
-        "romnr": 255955,
-        "plasser": 0,
-        "adresse": "Rapla maakond, Rapla vald, Rapla linn, Keskkooli tn 2",
-        "adresse_avstand": null,
-        "sted": "Rapla linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          27.4054831,
-          59.359653
-        ]
-      },
-      "properties": {
-        "romnr": 245829,
-        "plasser": 0,
-        "adresse": "Ida-Viru maakond, Jõhvi vald, Jõhvi linn, Jaama tn 14",
-        "adresse_avstand": null,
-        "sted": "Jõhvi linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.6425367,
-          59.3690366
-        ]
-      },
-      "properties": {
-        "romnr": 246170,
-        "plasser": 0,
-        "adresse": "Harju maakond, Tallinn, Nõmme linnaosa, Rännaku pst 1",
-        "adresse_avstand": null,
-        "sted": "Tallinn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          22.4708681,
-          58.2520032
-        ]
-      },
-      "properties": {
-        "romnr": 255227,
-        "plasser": 0,
-        "adresse": "Saare maakond, Saaremaa vald, Kuressaare linn, Ravila tn 1a",
-        "adresse_avstand": null,
-        "sted": "Kuressaare linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.7549969,
-          59.143069
-        ]
-      },
-      "properties": {
-        "romnr": 250481,
-        "plasser": 0,
-        "adresse": "Järva maakond, Järva vald, Aravete alevik, Piibe mnt 21/1",
-        "adresse_avstand": null,
-        "sted": "Aravete alevik",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.9277479,
-          58.0071555
-        ]
-      },
-      "properties": {
-        "romnr": 250483,
-        "plasser": 0,
-        "adresse": "Valga maakond, Tõrva vald, Tõrva linn, Puiestee tn 1",
-        "adresse_avstand": null,
-        "sted": "Tõrva linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.8797755,
-          59.4459686
-        ]
-      },
-      "properties": {
-        "romnr": 254211,
-        "plasser": 0,
-        "adresse": "Harju maakond, Tallinn, Lasnamäe linnaosa, K. Kärberi tn 9",
-        "adresse_avstand": null,
-        "sted": "Tallinn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.7390996,
-          59.4400416
-        ]
-      },
-      "properties": {
-        "romnr": 226084,
-        "plasser": 0,
-        "adresse": "Harju maakond, Tallinn, Kesklinna linnaosa, Toompuiestee T2",
-        "adresse_avstand": null,
-        "sted": "Tallinn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.8681301,
-          59.454055
-        ]
-      },
-      "properties": {
-        "romnr": 254214,
-        "plasser": 0,
-        "adresse": "Harju maakond, Tallinn, Lasnamäe linnaosa, Vormsi tn 3",
-        "adresse_avstand": null,
-        "sted": "Tallinn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.9596049,
-          59.2633447
-        ]
-      },
-      "properties": {
-        "romnr": 226025,
-        "plasser": 0,
-        "adresse": "Lääne-Viru maakond, Tapa vald, Tapa linn, Kesk tn 4",
-        "adresse_avstand": null,
-        "sted": "Tapa linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.645393,
-          59.4135648
-        ]
-      },
-      "properties": {
-        "romnr": 254212,
-        "plasser": 0,
-        "adresse": "Harju maakond, Tallinn, Haabersti linnaosa, Õismäe tee 50",
-        "adresse_avstand": null,
-        "sted": "Tallinn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.4117141,
-          59.3147484
-        ]
-      },
-      "properties": {
-        "romnr": 226092,
-        "plasser": 0,
-        "adresse": "Harju maakond, Keila linn, Paldiski mnt 17",
-        "adresse_avstand": null,
-        "sted": "Keila linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.6951207,
-          58.3913216
-        ]
-      },
-      "properties": {
-        "romnr": 254713,
-        "plasser": 0,
-        "adresse": "Tartu maakond, Tartu linn, Tartu linn, F. R. Kreutzwaldi tn 5",
-        "adresse_avstand": null,
-        "sted": "Tartu linn",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -4489,16 +4489,52 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.5393502,
-          58.3072583
+          25.3269054,
+          59.2462282
         ]
       },
       "properties": {
-        "romnr": 226148,
+        "romnr": 243670,
         "plasser": 0,
-        "adresse": "Viljandi maakond, Viljandi vald, Ramsi alevik, Ramsi tee 5",
+        "adresse": "Harju maakond, Anija vald, Alavere küla, Kose mnt 6",
         "adresse_avstand": null,
-        "sted": "Ramsi alevik",
+        "sted": "Alavere küla",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.5580784,
+          58.630382
+        ]
+      },
+      "properties": {
+        "romnr": 227570,
+        "plasser": 0,
+        "adresse": "Viljandi maakond, Põhja-Sakala vald, Võhma linn, Tallinna tn 26",
+        "adresse_avstand": null,
+        "sted": "Võhma linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.7599546,
+          59.4338435
+        ]
+      },
+      "properties": {
+        "romnr": 228634,
+        "plasser": 0,
+        "adresse": "Harju maakond, Tallinn, Kesklinna linnaosa, Väike-Pääsukese tn 5",
+        "adresse_avstand": null,
+        "sted": "Tallinn",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -4543,42 +4579,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          26.4093331,
-          58.2234525
-        ]
-      },
-      "properties": {
-        "romnr": 227572,
-        "plasser": 0,
-        "adresse": "Tartu maakond, Elva vald, Elva linn, Tartu mnt 3/1",
-        "adresse_avstand": null,
-        "sted": "Elva linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.7599546,
-          59.4338435
-        ]
-      },
-      "properties": {
-        "romnr": 228634,
-        "plasser": 0,
-        "adresse": "Harju maakond, Tallinn, Kesklinna linnaosa, Väike-Pääsukese tn 5",
-        "adresse_avstand": null,
-        "sted": "Tallinn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           25.3357814,
           59.3338581
         ]
@@ -4597,16 +4597,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.3269054,
-          59.2462282
+          26.4093331,
+          58.2234525
         ]
       },
       "properties": {
-        "romnr": 243670,
+        "romnr": 227572,
         "plasser": 0,
-        "adresse": "Harju maakond, Anija vald, Alavere küla, Kose mnt 6",
+        "adresse": "Tartu maakond, Elva vald, Elva linn, Tartu mnt 3/1",
         "adresse_avstand": null,
-        "sted": "Alavere küla",
+        "sted": "Elva linn",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -4615,16 +4615,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.5580784,
-          58.630382
+          25.5393502,
+          58.3072583
         ]
       },
       "properties": {
-        "romnr": 227570,
+        "romnr": 226148,
         "plasser": 0,
-        "adresse": "Viljandi maakond, Põhja-Sakala vald, Võhma linn, Tallinna tn 26",
+        "adresse": "Viljandi maakond, Viljandi vald, Ramsi alevik, Ramsi tee 5",
         "adresse_avstand": null,
-        "sted": "Võhma linn",
+        "sted": "Ramsi alevik",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -4633,160 +4633,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          24.7562224,
-          59.4391764
+          24.8693322,
+          58.9290842
         ]
       },
       "properties": {
-        "romnr": 255912,
+        "romnr": 232092,
         "plasser": 0,
-        "adresse": "Harju maakond, Tallinn, Kesklinna linnaosa, Rotermanni tn 5",
+        "adresse": "Rapla maakond, Kehtna vald, Kehtna alevik, Staadioni tn 16",
         "adresse_avstand": null,
-        "sted": "Tallinn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.7721499,
-          59.4210261
-        ]
-      },
-      "properties": {
-        "romnr": 228393,
-        "plasser": 0,
-        "adresse": "Harju maakond, Tallinn, Kesklinna linnaosa, Järvevana tee T2",
-        "adresse_avstand": null,
-        "sted": "Tallinn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.3636998,
-          59.3437633
-        ]
-      },
-      "properties": {
-        "romnr": 254757,
-        "plasser": 0,
-        "adresse": "Lääne-Viru maakond, Rakvere linn, Vabaduse tn 4",
-        "adresse_avstand": null,
-        "sted": "Rakvere linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.8743008,
-          59.4429985
-        ]
-      },
-      "properties": {
-        "romnr": 228391,
-        "plasser": 0,
-        "adresse": "Harju maakond, Tallinn, Lasnamäe linnaosa, Mahtra tn 31 // Laagna tee T8",
-        "adresse_avstand": null,
-        "sted": "Tallinn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.7342352,
-          59.4092063
-        ]
-      },
-      "properties": {
-        "romnr": 228398,
-        "plasser": 0,
-        "adresse": "Harju maakond, Tallinn, Kesklinna linnaosa, Hallivanamehe tn 4",
-        "adresse_avstand": null,
-        "sted": "Tallinn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.3837503,
-          58.1352558
-        ]
-      },
-      "properties": {
-        "romnr": 227573,
-        "plasser": 0,
-        "adresse": "Tartu maakond, Elva vald, Hellenurme küla, Hellenurme mõis",
-        "adresse_avstand": null,
-        "sted": "Hellenurme küla",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.7197009,
-          59.3887822
-        ]
-      },
-      "properties": {
-        "romnr": 228628,
-        "plasser": 0,
-        "adresse": "Harju maakond, Tallinn, Nõmme linnaosa, Männiku tee T1",
-        "adresse_avstand": null,
-        "sted": "Tallinn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.3087275,
-          58.2662822
-        ]
-      },
-      "properties": {
-        "romnr": 227574,
-        "plasser": 0,
-        "adresse": "Tartu maakond, Elva vald, Annikoru küla, Annikoru tee 7",
-        "adresse_avstand": null,
-        "sted": "Annikoru küla",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.8592442,
-          59.4411624
-        ]
-      },
-      "properties": {
-        "romnr": 228392,
-        "plasser": 0,
-        "adresse": "Harju maakond, Tallinn, Lasnamäe linnaosa, Laagna tee T7",
-        "adresse_avstand": null,
-        "sted": "Tallinn",
+        "sted": "Kehtna alevik",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -4831,34 +4687,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          26.3602964,
-          59.3478277
+          24.8150616,
+          58.7752646
         ]
       },
       "properties": {
-        "romnr": 228629,
+        "romnr": 232094,
         "plasser": 0,
-        "adresse": "Lääne-Viru maakond, Rakvere linn, Lai tn 20",
+        "adresse": "Rapla maakond, Kehtna vald, Järvakandi alev, Pargi tn 3",
         "adresse_avstand": null,
-        "sted": "Rakvere linn",
-        "datauttaksdato": "2026-09-23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.8693322,
-          58.9290842
-        ]
-      },
-      "properties": {
-        "romnr": 232092,
-        "plasser": 0,
-        "adresse": "Rapla maakond, Kehtna vald, Kehtna alevik, Staadioni tn 16",
-        "adresse_avstand": null,
-        "sted": "Kehtna alevik",
+        "sted": "Järvakandi alev",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -4903,6 +4741,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          26.3602964,
+          59.3478277
+        ]
+      },
+      "properties": {
+        "romnr": 228629,
+        "plasser": 0,
+        "adresse": "Lääne-Viru maakond, Rakvere linn, Lai tn 20",
+        "adresse_avstand": null,
+        "sted": "Rakvere linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           24.6279975,
           59.3507669
         ]
@@ -4921,16 +4777,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          24.8150616,
-          58.7752646
+          24.8592442,
+          59.4411624
         ]
       },
       "properties": {
-        "romnr": 232094,
+        "romnr": 228392,
         "plasser": 0,
-        "adresse": "Rapla maakond, Kehtna vald, Järvakandi alev, Pargi tn 3",
+        "adresse": "Harju maakond, Tallinn, Lasnamäe linnaosa, Laagna tee T7",
         "adresse_avstand": null,
-        "sted": "Järvakandi alev",
+        "sted": "Tallinn",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -4939,16 +4795,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          24.8050141,
-          58.7753238
+          24.8743008,
+          59.4429985
         ]
       },
       "properties": {
-        "romnr": 232095,
+        "romnr": 228391,
         "plasser": 0,
-        "adresse": "Rapla maakond, Kehtna vald, Järvakandi alev, Nõlva tn 16",
+        "adresse": "Harju maakond, Tallinn, Lasnamäe linnaosa, Mahtra tn 31 // Laagna tee T8",
         "adresse_avstand": null,
-        "sted": "Järvakandi alev",
+        "sted": "Tallinn",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -4957,16 +4813,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          24.5695092,
-          59.3095504
+          26.3837503,
+          58.1352558
         ]
       },
       "properties": {
-        "romnr": 228396,
+        "romnr": 227573,
         "plasser": 0,
-        "adresse": "Harju maakond, Saue vald, Jõgisoo küla, 4 Tallinn-Pärnu-Ikla tee L11",
+        "adresse": "Tartu maakond, Elva vald, Hellenurme küla, Hellenurme mõis",
         "adresse_avstand": null,
-        "sted": "Jõgisoo küla",
+        "sted": "Hellenurme küla",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -4975,16 +4831,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.1607858,
-          59.1840196
+          24.7342352,
+          59.4092063
         ]
       },
       "properties": {
-        "romnr": 228399,
+        "romnr": 228398,
         "plasser": 0,
-        "adresse": "Harju maakond, Kose vald, Kose alevik, Hariduse tn 2",
+        "adresse": "Harju maakond, Tallinn, Kesklinna linnaosa, Hallivanamehe tn 4",
         "adresse_avstand": null,
-        "sted": "Kose alevik",
+        "sted": "Tallinn",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -4993,16 +4849,124 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          26.5129172,
-          59.4996858
+          24.7562224,
+          59.4391764
         ]
       },
       "properties": {
-        "romnr": 234449,
+        "romnr": 255912,
         "plasser": 0,
-        "adresse": "Lääne-Viru maakond, Viru-Nigula vald, Kunda linn, Kasemäe tn 19",
+        "adresse": "Harju maakond, Tallinn, Kesklinna linnaosa, Rotermanni tn 5",
         "adresse_avstand": null,
-        "sted": "Kunda linn",
+        "sted": "Tallinn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.7721499,
+          59.4210261
+        ]
+      },
+      "properties": {
+        "romnr": 228393,
+        "plasser": 0,
+        "adresse": "Harju maakond, Tallinn, Kesklinna linnaosa, Järvevana tee T2",
+        "adresse_avstand": null,
+        "sted": "Tallinn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.7197009,
+          59.3887822
+        ]
+      },
+      "properties": {
+        "romnr": 228628,
+        "plasser": 0,
+        "adresse": "Harju maakond, Tallinn, Nõmme linnaosa, Männiku tee T1",
+        "adresse_avstand": null,
+        "sted": "Tallinn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.3636998,
+          59.3437633
+        ]
+      },
+      "properties": {
+        "romnr": 254757,
+        "plasser": 0,
+        "adresse": "Lääne-Viru maakond, Rakvere linn, Vabaduse tn 4",
+        "adresse_avstand": null,
+        "sted": "Rakvere linn",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.3087275,
+          58.2662822
+        ]
+      },
+      "properties": {
+        "romnr": 227574,
+        "plasser": 0,
+        "adresse": "Tartu maakond, Elva vald, Annikoru küla, Annikoru tee 7",
+        "adresse_avstand": null,
+        "sted": "Annikoru küla",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.8265346,
+          59.5038126
+        ]
+      },
+      "properties": {
+        "romnr": 243707,
+        "plasser": 0,
+        "adresse": "Harju maakond, Viimsi vald, Haabneeme alevik, Paadi tee 3",
+        "adresse_avstand": null,
+        "sted": "Haabneeme alevik",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.7989099,
+          59.4163959
+        ]
+      },
+      "properties": {
+        "romnr": 243672,
+        "plasser": 0,
+        "adresse": "Harju maakond, Tallinn, Lasnamäe linnaosa, Tartu mnt 101",
+        "adresse_avstand": null,
+        "sted": "Tallinn",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -5083,16 +5047,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          24.8265346,
-          59.5038126
+          24.8050141,
+          58.7753238
         ]
       },
       "properties": {
-        "romnr": 243707,
+        "romnr": 232095,
         "plasser": 0,
-        "adresse": "Harju maakond, Viimsi vald, Haabneeme alevik, Paadi tee 3",
+        "adresse": "Rapla maakond, Kehtna vald, Järvakandi alev, Nõlva tn 16",
         "adresse_avstand": null,
-        "sted": "Haabneeme alevik",
+        "sted": "Järvakandi alev",
         "datauttaksdato": "2026-09-23"
       }
     },
@@ -5101,16 +5065,52 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          24.7989099,
-          59.4163959
+          24.5695092,
+          59.3095504
         ]
       },
       "properties": {
-        "romnr": 243672,
+        "romnr": 228396,
         "plasser": 0,
-        "adresse": "Harju maakond, Tallinn, Lasnamäe linnaosa, Tartu mnt 101",
+        "adresse": "Harju maakond, Saue vald, Jõgisoo küla, 4 Tallinn-Pärnu-Ikla tee L11",
         "adresse_avstand": null,
-        "sted": "Tallinn",
+        "sted": "Jõgisoo küla",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.1607858,
+          59.1840196
+        ]
+      },
+      "properties": {
+        "romnr": 228399,
+        "plasser": 0,
+        "adresse": "Harju maakond, Kose vald, Kose alevik, Hariduse tn 2",
+        "adresse_avstand": null,
+        "sted": "Kose alevik",
+        "datauttaksdato": "2026-09-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.5129172,
+          59.4996858
+        ]
+      },
+      "properties": {
+        "romnr": 234449,
+        "plasser": 0,
+        "adresse": "Lääne-Viru maakond, Viru-Nigula vald, Kunda linn, Kasemäe tn 19",
+        "adresse_avstand": null,
+        "sted": "Kunda linn",
         "datauttaksdato": "2026-09-23"
       }
     },
