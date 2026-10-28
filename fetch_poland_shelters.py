@@ -145,6 +145,38 @@ def to_feature(row: dict, date: str):
     }
 
 
+def has_position(row: dict) -> bool:
+    try:
+        float(value(row, LAT)), float(value(row, LON))
+        return True
+    except (TypeError, ValueError):
+        return False
+
+
+def refetch_rows_without_position(rows: dict, attempts: int = 3) -> None:
+    """Fetch rows without a usable position again, one by one.
+
+    A page sometimes comes back with ids but no coordinates, which would silently drop
+    those shelters (100 in Mazowieckie on 2026-10-28). Rows still without a position
+    after this are genuinely missing one in the source and are left out.
+    """
+    missing = [identifier for identifier, row in rows.items() if not has_position(row)]
+    if not missing:
+        return
+    print(f"  {len(missing)} rows without a position, fetching them again", flush=True)
+    for identifier in missing:
+        for attempt in range(attempts):
+            data = get(f"/resources/{RESOURCE_ID}/data", {"q": f'{ID}:"{identifier}"', "per_page": 5})["data"]
+            row = next((r for r in data if value(r, ID) == identifier), None)
+            if row and has_position(row):
+                rows[identifier] = row
+                break
+            time.sleep(2 * (attempt + 1))
+        time.sleep(0.2)
+    still_missing = sum(not has_position(row) for row in rows.values())
+    print(f"  {len(missing) - still_missing} recovered, {still_missing} still without a position", flush=True)
+
+
 def main() -> int:
     dataset = get(f"/datasets/{DATASET_ID}")["data"]["attributes"]
     date = str(dataset.get("modified") or "")[:10]
@@ -160,6 +192,7 @@ def main() -> int:
     if len(rows) != total:
         print(f"❌ Got {len(rows)} rows but the dataset has {total}; not publishing.")
         return 1
+    refetch_rows_without_position(rows)
     features = [f for f in (to_feature(r, date) for r in rows.values()) if f]
     features.sort(key=lambda f: f["properties"]["romnr"])  # stable order, so unchanged data gives an unchanged file
     if len(features) < MIN_EXPECTED_SHELTERS:
