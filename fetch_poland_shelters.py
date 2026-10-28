@@ -53,7 +53,7 @@ def get(path: str, params: dict = None, attempts: int = 5) -> dict:
             if response.status_code < 500:
                 response.raise_for_status()
                 return response.json()
-        except requests.ConnectionError:
+        except (requests.ConnectionError, requests.Timeout):
             pass
         time.sleep(5 * (attempt + 1))
     raise RuntimeError(f"{path} kept failing")
@@ -80,14 +80,25 @@ def fetch_window(voivodeship: str, sort: str, limit: int) -> list:
     return rows
 
 
-def fetch_voivodeship(voivodeship: str) -> dict:
-    """All rows of one voivodeship, keyed by id."""
-    count = get(f"/resources/{RESOURCE_ID}/data", {"q": f'{VOIVODESHIP}:"{voivodeship}"', "per_page": 1})["meta"]["count"]
-    if count > 2 * QUERY_WINDOW:
-        raise RuntimeError(f"{voivodeship}: {count} rows is more than two query windows")
-    rows = fetch_window(voivodeship, ID, min(count, QUERY_WINDOW))
-    if count > QUERY_WINDOW:
-        rows += fetch_window(voivodeship, f"-{ID}", count - QUERY_WINDOW + PAGE_SIZE)
+def fetch_voivodeship(voivodeship: str, attempts: int = 3) -> dict:
+    """All rows of one voivodeship, keyed by id.
+
+    Paging sometimes returns a page twice (seen while the portal reindexes after an
+    update), which silently drops another page; so the fetch is repeated until the
+    distinct ids match the query's count.
+    """
+    for attempt in range(attempts):
+        count = get(f"/resources/{RESOURCE_ID}/data", {"q": f'{VOIVODESHIP}:"{voivodeship}"', "per_page": 1})["meta"]["count"]
+        if count > 2 * QUERY_WINDOW:
+            raise RuntimeError(f"{voivodeship}: {count} rows is more than two query windows")
+        rows = fetch_window(voivodeship, ID, min(count, QUERY_WINDOW))
+        if count > QUERY_WINDOW:
+            rows += fetch_window(voivodeship, f"-{ID}", count - QUERY_WINDOW + PAGE_SIZE)
+        fetched = len({value(r, ID) for r in rows})
+        if fetched == count:
+            break
+        print(f"  {voivodeship}: got {fetched} of {count} rows, retrying", flush=True)
+        time.sleep(30)
     return {value(r, ID): r for r in rows if value(r, VOIVODESHIP) == voivodeship}
 
 
