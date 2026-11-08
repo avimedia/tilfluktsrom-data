@@ -44,6 +44,10 @@ ID, MUNICIPALITY, COUNTY, VOIVODESHIP, LAT, LON, ADDRESS, AVAILABILITY = (
     "col1", "col5", "col6", "col7", "col8", "col9", "col10", "col11",
 )
 UNKNOWN_MUNICIPALITY = "Nieznana"
+# The source's stand-in when it has no real position: rows from all over Poland share this
+# point in the middle of the country. Showing them there would send people to a shelter
+# that isn't there, so they are left out.
+PLACEHOLDER_POSITION = (52.21593, 19.13442)
 
 
 def get(path: str, params: dict = None, attempts: int = 5) -> dict:
@@ -125,6 +129,8 @@ def to_feature(row: dict, date: str):
         lat, lon = float(lat), float(lon)
     except (TypeError, ValueError):
         return None
+    if (round(lat, 5), round(lon, 5)) == PLACEHOLDER_POSITION:
+        return None
     identifier = value(row, ID) or ""
     try:
         number = int(identifier.rsplit("-", 1)[-1], 16)
@@ -194,6 +200,7 @@ def main() -> int:
         return 1
     refetch_rows_without_position(rows)
     features = [f for f in (to_feature(r, date) for r in rows.values()) if f]
+    print(f"Left out {len(rows) - len(features)} rows without a real position", flush=True)
     features.sort(key=lambda f: f["properties"]["romnr"])  # stable order, so unchanged data gives an unchanged file
     if len(features) < MIN_EXPECTED_SHELTERS:
         print(f"❌ Only {len(features)} points with a position (expected at least {MIN_EXPECTED_SHELTERS}); not publishing.")
