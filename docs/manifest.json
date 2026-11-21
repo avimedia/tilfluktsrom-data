@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-11-20T10:54:41Z",
+  "generated": "2026-11-21T10:39:01Z",
   "countries": {
     "norway": {
       "file": "norway_shelters.json",
@@ -11,10 +11,10 @@
     },
     "sweden": {
       "file": "sweden_shelters.json",
-      "sha256": "c0fb2aa4921dd38b170725bf70bcc11c6ad367fb99c021281d0653fd6e62036d",
-      "bytes": 13941919,
-      "count": 63363,
-      "latestExtractDate": "2026-11-20"
+      "sha256": "88e9c889bef4563a0352837ceca45036263250f590ed71ef6b463892637875db",
+      "bytes": 13943474,
+      "count": 63370,
+      "latestExtractDate": "2026-11-21"
     },
     "denmark": {
       "file": "denmark_shelters.json",
